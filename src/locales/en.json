@@ -1,0 +1,11 @@
+{
+  "home": {
+    "title": "Hello, I'm Melvin",
+    "subtitle": "Welcome to my portfolio",
+    "about": "I'm a web developer passionate about creating simple and elegant web apps."
+  },
+  "navbar": {
+    "darkmode": "Dark Mode",
+    "language": "Language"
+  }
+}
