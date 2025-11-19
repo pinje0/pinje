@@ -1,22 +1,21 @@
 import { ReactNode } from "react";
-import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+import ClientThemeProvider from "@/components/ClientThemeProvider";
 
 export default async function RootLayout({
   children,
   params,
 }: {
   children: ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  const { locale } = await params;
+  const { locale } = params;
 
   return (
-    <html lang={locale}>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+    <html lang={locale} suppressHydrationWarning>
+      <body>
+        <ClientThemeProvider>{children}</ClientThemeProvider>
+      </body>
     </html>
   );
 }

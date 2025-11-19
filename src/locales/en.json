@@ -1,11 +1,49 @@
 {
-  "home": {
-    "title": "Hello, I'm Melvin",
-    "subtitle": "Welcome to my portfolio",
-    "about": "I'm a web developer passionate about creating simple and elegant web apps."
+  "meta": {
+    "title": "pinje — portfolio",
+    "description": "God was never on your side."
   },
+
   "navbar": {
-    "darkmode": "Dark Mode",
-    "language": "Language"
+    "home": "Home",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "certifications": "Certifications",
+
+    "theme": "Theme",
+    "light": "Light Mode",
+    "dark": "Dark Mode",
+
+    "language": "Language",
+    "english": "English",
+    "indonesian": "Indonesian",
+    "japanese": "Japanese"
+  },
+
+  "home": {
+    "name": "Melvin",
+    "about1": "I am a web developer who enjoys building simple, clean and functional applications.",
+    "about2": "I focus on writing minimal, fast and accessible user interfaces.",
+
+    "current": "Currently working on personal projects and improving my development workflow.",
+
+    "links": {
+      "projects": "Projects",
+      "certifications": "Certifications",
+      "contact": "Contact"
+    }
+  },
+
+  "socials": {
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "steam": "Steam",
+    "spotify": "Spotify"
+  },
+
+  "footer": {
+    "rights": "All rights reserved."
   }
 }
