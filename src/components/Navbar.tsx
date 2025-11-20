@@ -96,23 +96,67 @@ export default function Navbar({ locale, t }: { locale: string; t: any }) {
             {/* theme */}
             <button
               onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-              className="p-2 rounded-md hover:bg-muted/10 dark:hover:bg-muted/20 transition"
+              className="p-2 rounded-md hover:bg-muted/10 dark:hover:bg-muted/20 transition cursor-pointer"
               aria-label="Toggle theme"
             >
               {theme === "light" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </button>
 
             {/* language dropdown */}
-            <DropdownMenu>
+            {/* <DropdownMenu modal={false}>
               <DropdownMenuTrigger className="px-3 py-2 border rounded-md dark:text-white cursor-pointer">
-                🌐 {locale.toUpperCase()}
+                {locale.toUpperCase()}
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="min-w-[10rem]">
+              <DropdownMenuContent align="end" className="min-w-40">
                 <DropdownMenuItem onClick={() => changeLanguage("en")}>English</DropdownMenuItem>
                 <DropdownMenuItem onClick={() => changeLanguage("id")}>
                   Bahasa Indonesia
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => changeLanguage("jp")}>日本語</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu> */}
+
+            {/* language dropdown */}
+            <DropdownMenu modal={false}>
+              <DropdownMenuTrigger className="px-3 py-2 border rounded-md dark:text-white cursor-pointer flex items-center gap-2">
+                <span
+                  className={`fi fi-${
+                    locale === "en" ? "gb" : locale === "id" ? "id" : "jp"
+                  } h-4 w-6`}
+                ></span>
+                <span className="text-xs">{locale.toUpperCase()}</span>
+              </DropdownMenuTrigger>
+
+              <DropdownMenuContent align="end" className="min-w-[12rem]">
+                <DropdownMenuItem
+                  onClick={() => changeLanguage("en")}
+                  className={`flex items-center gap-2 ${
+                    locale === "en" ? "bg-muted/40 dark:bg-muted/20 font-semibold" : ""
+                  }`}
+                >
+                  <span className="fi fi-gb h-4 w-6"></span>
+                  English
+                </DropdownMenuItem>
+
+                <DropdownMenuItem
+                  onClick={() => changeLanguage("id")}
+                  className={`flex items-center gap-2 ${
+                    locale === "id" ? "bg-muted/40 dark:bg-muted/20 font-semibold" : ""
+                  }`}
+                >
+                  <span className="fi fi-id h-4 w-6"></span>
+                  Bahasa Indonesia
+                </DropdownMenuItem>
+
+                <DropdownMenuItem
+                  onClick={() => changeLanguage("jp")}
+                  className={`flex items-center gap-2 ${
+                    locale === "jp" ? "bg-muted/40 dark:bg-muted/20 font-semibold" : ""
+                  }`}
+                >
+                  <span className="fi fi-jp h-4 w-6"></span>
+                  日本語
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>

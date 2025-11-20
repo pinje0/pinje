@@ -1,37 +1,32 @@
 "use client";
 
-import Link from "next/link";
-import React from "react";
+import Link, { LinkProps } from "next/link";
 import { cn } from "@/lib/utils";
+import { AnchorHTMLAttributes, ReactNode } from "react";
+
+interface AnimatedLinkProps extends LinkProps, AnchorHTMLAttributes<HTMLAnchorElement> {
+  children: ReactNode;
+  block?: boolean; // ➜ kontrol block/inline
+  className?: string;
+}
 
 export default function AnimatedLink({
   href,
   children,
-  className = "",
+  block = false,
+  className,
   ...props
-}: React.ComponentProps<typeof Link> & { className?: string }) {
-  // struktur: wrapper relative, overlay absolute, text z-10
+}: AnimatedLinkProps) {
   return (
-    <Link href={href} {...props} className={cn("relative inline-block", className)}>
-      <span
-        aria-hidden
-        className="absolute inset-0 transform scale-y-0 origin-bottom transition-transform duration-300 bg-foreground dark:bg-background/90"
-        style={{ zIndex: 0 }}
-      />
-      <span className="relative z-10 inline-block transition-colors duration-300 text-foreground dark:text-popover-foreground">
-        {children}
-      </span>
-      <style jsx>{`
-        /* Hover effect: overlay scale up and invert text color */
-        a:hover span[aria-hidden] {
-          transform: scaleY(1);
-        }
-        a:hover span.z-10 {
-          color: var(--color-background);
-        }
-        /* For dark mode we invert background color via CSS variables:
-           ensure --color-background / --color-foreground set in your :root/.dark */
-      `}</style>
+    <Link
+      href={href}
+      {...props}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={cn(block ? "block" : "inline-block", className)}
+    >
+      {/* <span className="link-rise-bg inline-block align-baseline">{children}</span> */}
+      <span className="link-rise-bg inline-block align-baseline leading-none">{children}</span>
     </Link>
   );
 }

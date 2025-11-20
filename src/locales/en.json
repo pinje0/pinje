@@ -1,15 +1,11 @@
 {
   "meta": {
     "title": "pinje — portfolio",
-    "description": "God was never on your side."
+    "description": "Personal portfolio website of Melvin Austin."
   },
 
   "navbar": {
     "home": "Home",
-    "experience": "Experience",
-    "projects": "Projects",
-    "skills": "Skills",
-    "certifications": "Certifications",
 
     "theme": "Theme",
     "light": "Light Mode",
@@ -22,25 +18,35 @@
   },
 
   "home": {
-    "name": "Melvin",
-    "about1": "I am a web developer who enjoys building simple, clean and functional applications.",
-    "about2": "I focus on writing minimal, fast and accessible user interfaces.",
+    
+    "header": {
+      "head-1": {
+        "prevRole": "ex-Full Stack Developer Intern",
+        "orgName": "Telkom Indonesia",
+        "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia"
+      },
+      "head-2": {
+        "prevRole": "Cloud Computing Graduate",
+        "orgName": "Bangkit Academy 2024",
+        "orgUrl": "https://linkedin.com/company/bangkit-academy"
+      },
+      "head-3": {
+        "prevRole": "Fresh Graduate Information System Student",
+        "orgName": "Gunadarma University",
+        "orgUrl": "https://www.linkedin.com/school/universitas-gunadarma/"
+      }
+    },
 
-    "current": "Currently working on personal projects and improving my development workflow.",
+    "about": "My journey began as a self-taught programmer, and since then, I’ve been learning and growing through various projects, with a special focus on Frontend Development. Over time, I’ve expanded into Full-Stack Development and am now deepening my skills in backend technologies and cloud services. Driven by continuous learning and a curiosity for new technologies, I’m always looking for opportunities to take on new challenges and grow as a developer.",
 
-    "links": {
-      "projects": "Projects",
-      "certifications": "Certifications",
-      "contact": "Contact"
+    "current": "Currently Web Developer intern at",
+
+    "socials": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "steam": "Steam",
+      "spotify": "Spotify"
     }
-  },
-
-  "socials": {
-    "instagram": "Instagram",
-    "linkedin": "LinkedIn",
-    "github": "GitHub",
-    "steam": "Steam",
-    "spotify": "Spotify"
   },
 
   "footer": {

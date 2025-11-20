@@ -1,11 +1,54 @@
 {
-  "home": {
-    "title": "Hello, I'm Melvin",
-    "subtitle": "Welcome to my portfolio",
-    "about": "idididididididididiidididd."
+  "meta": {
+    "title": "pinje — portfolio",
+    "description": "Personal portfolio website of Melvin Austin."
   },
+
   "navbar": {
-    "darkmode": "Dark Mode",
-    "language": "Language"
+    "home": "Home",
+
+    "theme": "Theme",
+    "light": "Light Mode",
+    "dark": "Dark Mode",
+
+    "language": "Language",
+    "english": "English",
+    "indonesian": "Indonesian",
+    "japanese": "Japanese"
+  },
+
+  "home": {
+    "header": {
+      "head-1": {
+        "prevRole": "ex-Full Stack Developer Intern",
+        "orgName": "Telkom Indonesia",
+        "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia"
+      },
+      "head-2": {
+        "prevRole": "Cloud Computing Graduate",
+        "orgName": "Bangkit Academy 2024",
+        "orgUrl": "https://linkedin.com/company/bangkit-academy"
+      },
+      "head-3": {
+        "prevRole": "Fresh Graduate Information System Student",
+        "orgName": "Gunadarma University",
+        "orgUrl": "https://www.linkedin.com/school/universitas-gunadarma/"
+      }
+    },
+
+    "about": "My journey began as a self-taught programmer, and since then, I’ve been learning and growing through various projects, with a special focus on Frontend Development. Over time, I’ve expanded into Full-Stack Development and am now deepening my skills in backend technologies and cloud services. Driven by continuous learning and a curiosity for new technologies, I’m always looking for opportunities to take on new challenges and grow as a developer.",
+
+    "current": "Currently Web Developer intern at",
+
+    "socials": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "steam": "Steam",
+      "spotify": "Spotify"
+    }
+  },
+
+  "footer": {
+    "rights": "All rights reserved."
   }
 }

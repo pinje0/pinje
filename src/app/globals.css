@@ -1,15 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "flag-icons/css/flag-icons.min.css";
 
 @custom-variant dark (&:is(.dark *));
-
-/* @font-face {
-  font-family: "Satoshi";
-  src: url("/fonts/satosi-light.otf") format("otf");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-} */
 
 @font-face {
   font-family: "Satoshi";
@@ -31,34 +24,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html,
-body {
-  overflow-y: auto !important;
-}
-
 /* --- Tema: transisi */
 :root,
 html {
-  transition: background-color 1000ms ease, color 1000ms ease;
-  -webkit-transition: background-color 1000ms ease, color 1000ms ease;
-  -moz-transition: background-color 1000ms ease, color 1000ms ease;
-  -ms-transition: background-color 1000ms ease, color 1000ms ease;
-  -o-transition: background-color 1000ms ease, color 1000ms ease;
+  transition: background-color 800ms ease, color 800ms ease;
+  -webkit-transition: background-color 800ms ease, color 800ms ease;
+  -moz-transition: background-color 800ms ease, color 800ms ease;
+  -ms-transition: background-color 800ms ease, color 800ms ease;
+  -o-transition: background-color 800ms ease, color 800ms ease;
 }
 
 /* kelas sementara yang ditambahkan client pada pergantian theme */
 .theme-transition *,
 .theme-transition {
-  transition: background-color 1000ms ease, color 1000ms ease, fill 1000ms ease, stroke 1000ms ease,
-    border-color 1000ms ease;
-  -webkit-transition: background-color 1000ms ease, color 1000ms ease, fill 1000ms ease,
-    stroke 1000ms ease, border-color 1000ms ease;
-  -moz-transition: background-color 1000ms ease, color 1000ms ease, fill 1000ms ease,
-    stroke 1000ms ease, border-color 1000ms ease;
-  -ms-transition: background-color 1000ms ease, color 1000ms ease, fill 1000ms ease,
-    stroke 1000ms ease, border-color 1000ms ease;
-  -o-transition: background-color 1000ms ease, color 1000ms ease, fill 1000ms ease,
-    stroke 1000ms ease, border-color 1000ms ease;
+  transition: background-color 800ms ease, color 800ms ease, fill 800ms ease, stroke 800ms ease,
+    border-color 800ms ease;
+  -webkit-transition: background-color 800ms ease, color 800ms ease, fill 800ms ease,
+    stroke 800ms ease, border-color 800ms ease;
+  -moz-transition: background-color 800ms ease, color 800ms ease, fill 800ms ease, stroke 800ms ease,
+    border-color 800ms ease;
+  -ms-transition: background-color 800ms ease, color 800ms ease, fill 800ms ease, stroke 800ms ease,
+    border-color 800ms ease;
+  -o-transition: background-color 800ms ease, color 800ms ease, fill 800ms ease, stroke 800ms ease,
+    border-color 800ms ease;
 }
 
 @theme inline {
@@ -182,6 +170,16 @@ html {
   }
 }
 
+/* FIX: Prevent layout shift when dropdown opens */
+html {
+  scrollbar-gutter: stable;
+  overflow-y: scroll;
+}
+
+body {
+  scrollbar-gutter: stable;
+}
+
 ::selection {
   background: #000;
   color: #fff;
@@ -197,9 +195,16 @@ html.dark ::selection {
   @apply bg-black text-white;
 }
 
-/* smooth global color animations */
-body * {
-  @apply transition-colors duration-1000;
+/* smooth global color animations - only for theme changes */
+body *:not([data-radix-popper-content-wrapper] *, [data-slot*="dropdown"] *) {
+  transition: background-color 800ms ease, color 800ms ease, border-color 800ms ease,
+    fill 800ms ease, stroke 800ms ease;
+}
+
+/* Keep dropdown animations fast */
+[data-radix-popper-content-wrapper] *,
+[data-slot*="dropdown"] * {
+  transition-duration: 150ms !important;
 }
 
 /* hover opacity effect for nav items */
@@ -230,18 +235,60 @@ body * {
   box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
 }
 
-svg.logo path,
-svg.logo g {
-  transition: fill 0.5s ease, stroke 0.5s ease;
+[data-slot="dropdown-menu-content"] {
+  @apply border shadow-lg backdrop-blur-md;
+
+  background: rgba(255, 255, 255, 0.85);
 }
 
-html {
-  scrollbar-gutter: stable;
+.dark [data-slot="dropdown-menu-content"] {
+  background: rgba(20, 20, 20, 0.6);
 }
 
-/* paksa scrollbar tetap terlihat supaya layout gak geser */
-html,
-body {
-  /* pakai scroll agar ruang scrollbar selalu ada */
-  overflow-y: scroll !important;
+/* UNDERLINE → BACKGROUND FILL EFFECT */
+/* .link-rise-bg {
+  position: relative;
+  padding: 0 0.25rem;
+  overflow: hidden;
+  transition: color 0ms linear 180ms;
+} */
+
+.link-rise-bg {
+  position: relative;
+  padding: 0 0.15rem; /* ↓ lebih kecil → lebih rata dengan text */
+  line-height: 1; /* penting untuk samakan baseline */
+  vertical-align: baseline;
+}
+
+.link-rise-bg::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: auto; /* cegah naik ke atas */
+  height: 2px; /* underline thickness */
+  background: var(--foreground);
+  transform-origin: bottom;
+  transform: scaleY(1);
+  z-index: -1;
+  transition: height 250ms ease;
+}
+
+/* background fill */
+.link-rise-bg:hover::before {
+  height: 100%;
+}
+
+/* text color flips AFTER animation rises */
+.link-rise-bg:hover {
+  color: var(--background); /* but delayed above */
+}
+
+/* dark mode */
+.dark .link-rise-bg::before {
+  background: var(--foreground);
+}
+.dark .link-rise-bg:hover {
+  color: var(--background);
 }
