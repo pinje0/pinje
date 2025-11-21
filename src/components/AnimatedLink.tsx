@@ -6,8 +6,9 @@ import { AnchorHTMLAttributes, ReactNode } from "react";
 
 interface AnimatedLinkProps extends LinkProps, AnchorHTMLAttributes<HTMLAnchorElement> {
   children: ReactNode;
-  block?: boolean; // ➜ kontrol block/inline
+  block?: boolean;
   className?: string;
+  mode?: "text" | "full";
 }
 
 export default function AnimatedLink({
@@ -15,18 +16,29 @@ export default function AnimatedLink({
   children,
   block = false,
   className,
+  mode = "text", // default: hanya teks yang bisa diklik
   ...props
 }: AnimatedLinkProps) {
+  const isExternal =
+    typeof href === "string" && (href.startsWith("http://") || href.startsWith("https://"));
+
   return (
     <Link
       href={href}
       {...props}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={cn(block ? "block" : "inline-block", className)}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
+      className={cn(block ? "block" : "inline-block", "pointer-events-auto", className)}
     >
-      {/* <span className="link-rise-bg inline-block align-baseline">{children}</span> */}
-      <span className="link-rise-bg inline-block align-baseline leading-none">{children}</span>
+      <span
+        className={cn(
+          "link-rise-bg inline-block align-baseline ",
+          mode === "text" && "link-reset",
+          className
+        )}
+      >
+        {children}
+      </span>
     </Link>
   );
 }

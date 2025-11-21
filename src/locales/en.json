@@ -6,6 +6,10 @@
 
   "navbar": {
     "home": "Home",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "certificates": "Certificates",
 
     "theme": "Theme",
     "light": "Light Mode",
@@ -18,7 +22,6 @@
   },
 
   "home": {
-    
     "header": {
       "head-1": {
         "prevRole": "ex-Full Stack Developer Intern",

@@ -1,19 +1,18 @@
 import { getDictionary } from "@/lib/i18n";
-import Navbar from "@/components/Navbar";
-import Image from "next/image";
-import Link from "next/link";
 import Logo from "@/components/Logo";
 import LastUpdate from "@/components/LastUpdate";
 import AnimatedLink from "@/components/AnimatedLink";
+import { notFound } from "next/navigation";
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+
+  if (locale !== "en") notFound();
+
   const t = await getDictionary(locale);
 
   return (
     <main className="pt-32 pb-20 mx-auto px-10 md:px-20 max-w-[820px] w-full">
-      <Navbar locale={locale} t={t} />
-
       <LastUpdate />
 
       {/* Logo */}
@@ -23,23 +22,21 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       {/* About Section */}
       <div className="space-y-5 text-[15px] leading-[1.55] max-w-[70ch]">
-        {/* <p>{t.home.header}</p> */}
-
-        {/* Header Section (3 baris dengan link animated) */}
+        {/* Header Section */}
         <div className="space-y-1">
-          <p className="">
-            {t.home.header["head-1"].prevRole} at{" "}
-            <AnimatedLink href={t.home.header["head-1"].orgUrl}>
+          <p>
+            {t.home.header["head-1"].prevRole} @{" "}
+            <AnimatedLink href={t.home.header["head-1"].orgUrl} mode="text">
               {t.home.header["head-1"].orgName}
             </AnimatedLink>
             {" | "}
-            {t.home.header["head-2"].prevRole} at{" "}
-            <AnimatedLink href={t.home.header["head-2"].orgUrl}>
+            {t.home.header["head-2"].prevRole} @{" "}
+            <AnimatedLink href={t.home.header["head-2"].orgUrl} mode="text">
               {t.home.header["head-2"].orgName}
             </AnimatedLink>
             {" | "}
-            {t.home.header["head-3"].prevRole} at{" "}
-            <AnimatedLink href={t.home.header["head-3"].orgUrl}>
+            {t.home.header["head-3"].prevRole} @{" "}
+            <AnimatedLink href={t.home.header["head-3"].orgUrl} mode="text">
               {t.home.header["head-3"].orgName}
             </AnimatedLink>
           </p>
@@ -49,31 +46,49 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
         <p>
           {t.home.current}{" "}
-          <AnimatedLink href="https://linkedin.com/company/katadata">Katadata</AnimatedLink>.
+          <AnimatedLink href="https://linkedin.com/company/katadata" mode="text">
+            Katadata
+          </AnimatedLink>
+          .
         </p>
       </div>
 
       {/* Social Links */}
       <div className="mt-4 space-y-2 text-[15px] max-w-[70ch]">
-        <AnimatedLink href="https://www.linkedin.com/in/melvin-austin/" block>
+        <AnimatedLink
+          href="https://www.linkedin.com/in/melvin-austin/"
+          block
+          mode="text"
+          className="inline-link"
+        >
           {t.home.socials.linkedin}
         </AnimatedLink>
 
-        <AnimatedLink href="https://github.com/pinje0" block>
+        <AnimatedLink href="https://github.com/pinje0" block mode="text" className="inline-link">
           {t.home.socials.github}
         </AnimatedLink>
 
-        <AnimatedLink href="https://steamcommunity.com/id/kyotorainn" block>
+        <AnimatedLink
+          href="https://steamcommunity.com/id/kyotorainn"
+          block
+          mode="text"
+          className="inline-link"
+        >
           {t.home.socials.steam}
         </AnimatedLink>
 
-        <AnimatedLink href="https://open.spotify.com/user/21mxjp3gplpyos5ef7ung3iwq" block>
+        <AnimatedLink
+          href="https://open.spotify.com/user/21mxjp3gplpyos5ef7ung3iwq"
+          block
+          mode="text"
+          className="inline-link"
+        >
           {t.home.socials.spotify}
         </AnimatedLink>
       </div>
 
       {/* Footer */}
-      <div className="mt-24 text-sm opacity-50">
+      <div className="footer mt-24 text-sm">
         © {new Date().getFullYear()} pinje. {t.footer.rights}
       </div>
     </main>

@@ -1,54 +1,54 @@
 {
   "meta": {
-    "title": "pinje — portfolio",
-    "description": "Personal portfolio website of Melvin Austin."
+    "title": "pinje — ポートフォリオ",
+    "description": "Melvin Austin の個人ポートフォリオサイト。"
   },
 
   "navbar": {
-    "home": "Home",
+    "home": "ホーム",
 
-    "theme": "Theme",
-    "light": "Light Mode",
-    "dark": "Dark Mode",
+    "theme": "テーマ",
+    "light": "ライトモード",
+    "dark": "ダークモード",
 
-    "language": "Language",
-    "english": "English",
-    "indonesian": "Indonesian",
-    "japanese": "Japanese"
+    "language": "言語",
+    "english": "英語",
+    "indonesian": "インドネシア語",
+    "japanese": "日本語"
   },
 
   "home": {
     "header": {
       "head-1": {
-        "prevRole": "ex-Full Stack Developer Intern",
+        "prevRole": "元フルスタック開発者インターン",
         "orgName": "Telkom Indonesia",
-        "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia"
+        "orgUrl": "https://jp.linkedin.com/company/telekomunikasi-indonesia"
       },
       "head-2": {
-        "prevRole": "Cloud Computing Graduate",
+        "prevRole": "クラウドコンピューティング卒業生",
         "orgName": "Bangkit Academy 2024",
-        "orgUrl": "https://linkedin.com/company/bangkit-academy"
+        "orgUrl": "https://jp.linkedin.com/company/bangkit-academy"
       },
       "head-3": {
-        "prevRole": "Fresh Graduate Information System Student",
+        "prevRole": "新卒情報システム学生",
         "orgName": "Gunadarma University",
-        "orgUrl": "https://www.linkedin.com/school/universitas-gunadarma/"
+        "orgUrl": "https://jp.linkedin.com/school/universitas-gunadarma/"
       }
     },
 
-    "about": "My journey began as a self-taught programmer, and since then, I’ve been learning and growing through various projects, with a special focus on Frontend Development. Over time, I’ve expanded into Full-Stack Development and am now deepening my skills in backend technologies and cloud services. Driven by continuous learning and a curiosity for new technologies, I’m always looking for opportunities to take on new challenges and grow as a developer.",
+    "about": "私のキャリアは独学のプログラマーとして始まり、以来、フロントエンド開発に特に注力しながら様々なプロジェクトを通じて学び成長してきました。時を経てフルスタック開発へと領域を広げ、現在はバックエンド技術とクラウドサービスのスキル深化に取り組んでいます。継続的な学習と新技術への好奇心に駆られ、新たな挑戦の機会を常に探し求め、開発者として成長し続けています。",
 
-    "current": "Currently Web Developer intern at",
+    "current": "現在、Web開発者インターン",
 
     "socials": {
-      "linkedin": "LinkedIn",
-      "github": "GitHub",
-      "steam": "Steam",
-      "spotify": "Spotify"
+      "linkedin": "リンクトイン",
+      "github": "ギットハブ",
+      "steam": "スチーム",
+      "spotify": "スポティファイ"
     }
   },
 
   "footer": {
-    "rights": "All rights reserved."
+    "rights": "全著作権所有。"
   }
 }
