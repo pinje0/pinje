@@ -298,7 +298,8 @@ body *:not([data-radix-popper-content-wrapper] *, [data-slot*="dropdown"] *) {
   top: auto;
   /*cegahnaikkeatas*/
   /* height: 2px; */
-  height: 1.5px; /* tipis → tidak mendorong posisi text */
+  /* height: 1.5px; tipis → tidak mendorong posisi text */
+  height: 1px;
   /*underlinethickness*/
   background: var(--foreground);
   transform-origin: bottom;
@@ -343,8 +344,16 @@ body {
   opacity: 1 !important;
 }
 
-.link-reset {
+/* .link-reset {
   padding: 0 !important;
   line-height: inherit !important;
   vertical-align: baseline !important;
+} */
+
+.link-reset {
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: inherit !important;
+  vertical-align: baseline !important;
+  display: inline !important; /* penting */
 }

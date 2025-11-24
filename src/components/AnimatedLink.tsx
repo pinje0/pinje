@@ -28,14 +28,10 @@ export default function AnimatedLink({
       {...props}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
-      className={cn(block ? "block" : "inline-block", "pointer-events-auto", className)}
+      className={cn(block ? "block w-fit" : "inline-block", "pointer-events-auto", className)}
     >
       <span
-        className={cn(
-          "link-rise-bg inline-block align-baseline ",
-          mode === "text" && "link-reset",
-          className
-        )}
+        className={cn("link-rise-bg inline-block align-baseline", mode === "text" && "link-reset")}
       >
         {children}
       </span>

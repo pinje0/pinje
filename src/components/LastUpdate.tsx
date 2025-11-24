@@ -1,6 +1,12 @@
 import { Info } from "lucide-react";
 
-export default function LastUpdate() {
+interface LastUpdateProps {
+  message: string;
+  label: string;
+  date: string;
+}
+
+export default function LastUpdate({ message, label, date }: LastUpdateProps) {
   return (
     <div
       className="
@@ -13,8 +19,10 @@ export default function LastUpdate() {
       <Info className="h-4 w-4 text-foreground/70" />
 
       <p className="text-[13px] text-foreground/80 leading-none whitespace-nowrap">
-        Site is still under reconstruction
-        <span className="font-medium text-foreground ml-1">(Last Update — November 2025)</span>
+        {message}
+        <span className="font-medium text-foreground ml-1">
+          ({label} — {date})
+        </span>
       </p>
     </div>
   );

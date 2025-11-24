@@ -1,54 +1,189 @@
 {
   "meta": {
-    "title": "pinje — portfolio",
-    "description": "Personal portfolio website of Melvin Austin."
+    "title": "pinje — portofolio",
+    "description": "Situs portofolio pribadi Melvin Austin."
   },
 
   "navbar": {
-    "home": "Home",
-
-    "theme": "Theme",
-    "light": "Light Mode",
-    "dark": "Dark Mode",
-
-    "language": "Language",
-    "english": "English",
-    "indonesian": "Indonesian",
-    "japanese": "Japanese"
-  },
-
-  "home": {
-    "header": {
-      "head-1": {
-        "prevRole": "ex-Full Stack Developer Intern",
-        "orgName": "Telkom Indonesia",
-        "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia"
-      },
-      "head-2": {
-        "prevRole": "Cloud Computing Graduate",
-        "orgName": "Bangkit Academy 2024",
-        "orgUrl": "https://linkedin.com/company/bangkit-academy"
-      },
-      "head-3": {
-        "prevRole": "Fresh Graduate Information System Student",
-        "orgName": "Gunadarma University",
-        "orgUrl": "https://www.linkedin.com/school/universitas-gunadarma/"
-      }
+    "links": {
+      "home": "Beranda",
+      "experience": "Pengalaman",
+      "projects": "Proyek",
+      "skills": "Keahlian",
+      "certificates": "Sertifikat"
     },
-
-    "about": "My journey began as a self-taught programmer, and since then, I’ve been learning and growing through various projects, with a special focus on Frontend Development. Over time, I’ve expanded into Full-Stack Development and am now deepening my skills in backend technologies and cloud services. Driven by continuous learning and a curiosity for new technologies, I’m always looking for opportunities to take on new challenges and grow as a developer.",
-
-    "current": "Currently Web Developer intern at",
-
-    "socials": {
-      "linkedin": "LinkedIn",
-      "github": "GitHub",
-      "steam": "Steam",
-      "spotify": "Spotify"
+    "theme": {
+      "label": "Tema",
+      "light": "Terang",
+      "dark": "Gelap"
+    },
+    "language": {
+      "label": "Bahasa",
+      "en": "Inggris",
+      "id": "Indonesia",
+      "jp": "Jepang"
     }
   },
 
+  "homePage": {
+    "hero": {
+      "greeting": "Halo, saya Melvin Austin",
+      "tagline": "Web Developer & Cloud Enthusiast"
+    },
+
+    "experience": {
+      "items": [
+        {
+          "role": "Intern Full Stack Developer",
+          "status": "past",
+          "organization": "Telkom Indonesia",
+          "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia",
+          "period": null
+        },
+        {
+          "role": "Lulusan Cloud Computing",
+          "status": "past",
+          "organization": "Bangkit Academy 2024",
+          "orgUrl": "https://linkedin.com/company/bangkit-academy",
+          "period": null
+        },
+        {
+          "role": "Fresh Graduate Sistem Informasi",
+          "status": "graduated",
+          "organization": "Universitas Gunadarma",
+          "orgUrl": "https://www.linkedin.com/school/universitas-gunadarma/",
+          "period": null
+        }
+      ],
+      "labels": {
+        "prefix": "ex ",
+        "separator": " | ",
+        "at": "@"
+      }
+    },
+
+    "about": {
+      "text": "Perjalanan saya dimulai sebagai programmer otodidak, dan sejak saat itu, saya terus belajar dan berkembang melalui berbagai proyek, dengan fokus khusus pada Frontend Development. Seiring waktu, saya berkembang ke Full-Stack Development dan saat ini sedang memperdalam kemampuan saya di teknologi backend dan layanan cloud. Didorong oleh pembelajaran berkelanjutan dan rasa ingin tahu terhadap teknologi baru, saya selalu mencari peluang untuk menghadapi tantangan baru dan berkembang sebagai developer."
+    },
+
+    "current": {
+      "status": "Saat ini",
+      "role": "Intern Web Developer",
+      "preposition": "di",
+      "company": "Katadata",
+      "companyUrl": "https://linkedin.com/company/katadata",
+      "startDate": "Oktober 2025",
+      "endDate": "Sekarang",
+      "labels": {
+        "dateSeparator": " - "
+      }
+    },
+
+    "socials": {
+      "title": "Temukan saya di",
+      "links": [
+        {
+          "name": "LinkedIn",
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/melvin-austin/"
+        },
+        {
+          "name": "GitHub",
+          "label": "GitHub",
+          "url": "https://github.com/pinje0"
+        },
+        {
+          "name": "Steam",
+          "label": "Steam",
+          "url": "https://steamcommunity.com/id/kyotorainn"
+        },
+        {
+          "name": "Spotify",
+          "label": "Spotify",
+          "url": "https://open.spotify.com/user/21mxjp3gplpyos5ef7ung3iwq"
+        }
+      ]
+    }
+  },
+
+  "experiencePage": {
+    "title": "Experience",
+
+    "items": [
+      {
+        "company": "Tokopedia",
+        "employmentType": "Full-Time",
+        "duration": "2022 – Present",
+        "location": "Jakarta • Remote",
+
+        "roles": [
+          {
+            "title": "Frontend Developer",
+            "start": "Jan 2023",
+            "end": "Present",
+            "locationType": "Remote",
+            "description": "Built UI components using Next.js and TypeScript."
+          },
+          {
+            "title": "Junior Frontend Developer",
+            "start": "2022",
+            "end": "Jan 2023",
+            "locationType": "Hybrid",
+            "description": "Maintained and improved internal dashboards."
+          }
+        ],
+
+        "skills": ["Next.js", "Tailwind", "TypeScript"]
+      },
+
+      {
+        "company": "Telkom Indonesia",
+        "employmentType": "Internship",
+        "duration": "2021",
+        "location": "Jakarta • On-site",
+
+        "roles": [
+          {
+            "title": "Full Stack Developer Intern",
+            "start": "Jan 2021",
+            "end": "Jun 2021",
+            "locationType": "On-site",
+            "description": "Developed internal platforms using Node.js and React."
+          }
+        ],
+
+        "skills": ["React", "Node.js", "REST API"]
+      }
+    ],
+
+    "educationTitle": "Education",
+
+    "education": [
+      {
+        "school": "Binus University",
+        "degree": "Bachelor",
+        "major": "Computer Science",
+        "gpa": "3.78",
+        "start": "2019",
+        "end": "2023"
+      }
+    ]
+  },
+
   "footer": {
-    "rights": "All rights reserved."
+    "copyright": "© {year} pinje. Hak cipta dilindungi.",
+    "builtWith": "Dibuat dengan Next.js & Tailwind CSS"
+  },
+
+  "common": {
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan",
+    "readMore": "Baca selengkapnya",
+    "learnMore": "Pelajari lebih lanjut",
+    "lastUpdate": {
+      "message": "Situs masih dalam rekonstruksi",
+      "label": "Pembaruan Terakhir",
+      "date": "November 2025"
+    }
   }
 }

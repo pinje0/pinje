@@ -5,54 +5,204 @@
   },
 
   "navbar": {
-    "home": "Home",
-    "experience": "Experience",
-    "projects": "Projects",
-    "skills": "Skills",
-    "certificates": "Certificates",
-
-    "theme": "Theme",
-    "light": "Light Mode",
-    "dark": "Dark Mode",
-
-    "language": "Language",
-    "english": "English",
-    "indonesian": "Indonesian",
-    "japanese": "Japanese"
-  },
-
-  "home": {
-    "header": {
-      "head-1": {
-        "prevRole": "ex-Full Stack Developer Intern",
-        "orgName": "Telkom Indonesia",
-        "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia"
-      },
-      "head-2": {
-        "prevRole": "Cloud Computing Graduate",
-        "orgName": "Bangkit Academy 2024",
-        "orgUrl": "https://linkedin.com/company/bangkit-academy"
-      },
-      "head-3": {
-        "prevRole": "Fresh Graduate Information System Student",
-        "orgName": "Gunadarma University",
-        "orgUrl": "https://www.linkedin.com/school/universitas-gunadarma/"
-      }
+    "links": {
+      "home": "Home",
+      "experience": "Experience",
+      "projects": "Projects",
+      "skills": "Skills",
+      "certificates": "Certificates"
     },
-
-    "about": "My journey began as a self-taught programmer, and since then, I’ve been learning and growing through various projects, with a special focus on Frontend Development. Over time, I’ve expanded into Full-Stack Development and am now deepening my skills in backend technologies and cloud services. Driven by continuous learning and a curiosity for new technologies, I’m always looking for opportunities to take on new challenges and grow as a developer.",
-
-    "current": "Currently Web Developer intern at",
-
-    "socials": {
-      "linkedin": "LinkedIn",
-      "github": "GitHub",
-      "steam": "Steam",
-      "spotify": "Spotify"
+    "theme": {
+      "label": "Theme",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "language": {
+      "label": "Language",
+      "en": "English",
+      "id": "Indonesian",
+      "jp": "Japanese"
     }
   },
 
+  "homePage": {
+    "hero": {
+      "greeting": "Hi, I'm Melvin Austin",
+      "tagline": "Web Developer & Cloud Enthusiast"
+    },
+
+    "experience": {
+      "items": [
+        {
+          "role": "Full Stack Developer Intern",
+          "status": "past",
+          "organization": "Telkom Indonesia",
+          "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia",
+          "period": null
+        },
+        {
+          "role": "Cloud Computing Graduate",
+          "status": "past",
+          "organization": "Bangkit Academy 2024",
+          "orgUrl": "https://linkedin.com/company/bangkit-academy",
+          "period": null
+        },
+        {
+          "role": "Information System Student",
+          "status": "graduated",
+          "organization": "Gunadarma University",
+          "orgUrl": "https://www.linkedin.com/school/universitas-gunadarma/",
+          "period": null
+        }
+      ],
+      "labels": {
+        "prefix": "ex-",
+        "separator": " | ",
+        "at": "@"
+      }
+    },
+
+    "about": {
+      "text": "My journey began as a self-taught programmer, and since then, I've been learning and growing through various projects, with a special focus on Frontend Development. Over time, I've expanded into Full-Stack Development and am now deepening my skills in backend technologies and cloud services. Driven by continuous learning and a curiosity for new technologies, I'm always looking for opportunities to take on new challenges and grow as a developer."
+    },
+
+    "current": {
+      "status": "Currently",
+      "role": "Web Developer Intern",
+      "preposition": "at",
+      "company": "Katadata",
+      "companyUrl": "https://linkedin.com/company/katadata",
+      "startDate": "October 2025",
+      "endDate": "Present",
+      "labels": {
+        "dateSeparator": " - "
+      }
+    },
+
+    "socials": {
+      "title": "Find me on",
+      "links": [
+        {
+          "name": "LinkedIn",
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/melvin-austin/"
+        },
+        {
+          "name": "GitHub",
+          "label": "GitHub",
+          "url": "https://github.com/pinje0"
+        },
+        {
+          "name": "Steam",
+          "label": "Steam",
+          "url": "https://steamcommunity.com/id/kyotorainn"
+        },
+        {
+          "name": "Spotify",
+          "label": "Spotify",
+          "url": "https://open.spotify.com/user/21mxjp3gplpyos5ef7ung3iwq"
+        }
+      ]
+    }
+  },
+
+  "experiencePage": {
+    "title": "Experience",
+
+    "items": [
+      {
+        "company": "KATADATAcoid",
+        "employmentType": "Internship",
+        "duration": "2 Month",
+        "location": "Jakarta, Indonesia • Hybrid",
+
+        "roles": [
+          {
+            "title": "Web Developer Intern",
+            "start": "Oct 2025",
+            "end": "Present",
+            "locationType": "Hybrid",
+            "description": ""
+          }
+        ],
+
+        "skills": ["Next.js", "Laravel", "TypeScript", "Tailwind CSS"]
+      },
+
+      {
+        "company": "Telkom Indonesia",
+        "employmentType": "Internship",
+        "duration": "6 Month",
+        "location": "Jakarta, Indonesia • Hybrid",
+
+        "roles": [
+          {
+            "title": "Frontend Developer Intern",
+            "start": "Feb 2025",
+            "end": "Mar 2025",
+            "duration": "4 Months",
+            "locationType": "Hybrid",
+            "description": "Division Digital Business and Technology (DBT) - Project: AI Chatbot Builder Platform\n\n▪ Designed and implemented a real-time Speech-to-Text (STT) feature with Next.js, React, and Tailwind CSS, using WebSocket for live transcription.\n▪ Improved the frontend UI by refining the chatbot deletion flow and implementing validation logic for better user experience.\n▪ Built and designed a Summary page to visualize chatbot analytics, including token usage and API call outcomes.\n▪ Added a document training status indicator UI, allowing users to track the processing status of uploaded documents for topic-specific chatbot training.\n▪ Integrated the chatbot appearance settings API into both the frontend dashboard and embeddable iframe, allowing users to easily customize and preview avatar, logo, header color, text color, and welcome message in real time.",
+            "skills": ["Next.js", "React.js", "Tailwind CSS", "Javascript"]
+          },
+          {
+            "title": "Backend Developer Intern",
+            "start": "Mar 2025",
+            "end": "Jul 2025",
+            "duration": "2 Months",
+            "locationType": "Hybrid",
+            "description": "Division Digital Business and Technology (DBT) - Project: AI Chatbot Builder Platform\n\n▪ Integrated an AI-powered audio/video transcription service by leveraging Python to handle file uploads and retrieve accurate transcriptions via API endpoints\n▪ Built backend services for chatbot appearance customization settings in Node.js, including RESTful APIs using Restify, MongoDB integration, and MinIO for asset management. Wrote unit tests using Mocha for service reliability.\n▪ Created API documentation for the ICA project by converting the Postman collection to Excel, then structured and labeled the data to make backend endpoints easier to reference",
+            "skills": [
+              "Python",
+              "Node.js",
+              "MongoDB",
+              "MinION Object Storage Suite",
+              "Mocha (JavaScript Framework)",
+              "Javascript"
+            ]
+          }
+        ]
+      }
+    ],
+
+    "educationTitle": "Education",
+
+    "education": [
+      {
+        "school": "Binus University",
+        "degree": "Bachelor",
+        "major": "Computer Science",
+        "gpa": "3.78",
+        "start": "2019",
+        "end": "2023"
+      }
+    ]
+  },
+
+  "labels": {
+    "employmentType": "Employment Type",
+    "location": "Location",
+    "skills": "Skills",
+    "present": "Present",
+    "remote": "Remote",
+    "onsite": "On-site",
+    "hybrid": "Hybrid"
+  },
+
   "footer": {
-    "rights": "All rights reserved."
+    "copyright": "© {year} pinje. All rights reserved.",
+    "builtWith": "Built with Next.js & Tailwind CSS"
+  },
+
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "readMore": "Read more",
+    "learnMore": "Learn more",
+    "lastUpdate": {
+      "message": "Site is still under reconstruction",
+      "label": "Last Update",
+      "date": "November 2025"
+    }
   }
 }

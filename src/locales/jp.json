@@ -1,54 +1,189 @@
 {
   "meta": {
     "title": "pinje — ポートフォリオ",
-    "description": "Melvin Austin の個人ポートフォリオサイト。"
+    "description": "Melvin Austinの個人ポートフォリオサイト。"
   },
 
   "navbar": {
-    "home": "ホーム",
-
-    "theme": "テーマ",
-    "light": "ライトモード",
-    "dark": "ダークモード",
-
-    "language": "言語",
-    "english": "英語",
-    "indonesian": "インドネシア語",
-    "japanese": "日本語"
-  },
-
-  "home": {
-    "header": {
-      "head-1": {
-        "prevRole": "元フルスタック開発者インターン",
-        "orgName": "Telkom Indonesia",
-        "orgUrl": "https://jp.linkedin.com/company/telekomunikasi-indonesia"
-      },
-      "head-2": {
-        "prevRole": "クラウドコンピューティング卒業生",
-        "orgName": "Bangkit Academy 2024",
-        "orgUrl": "https://jp.linkedin.com/company/bangkit-academy"
-      },
-      "head-3": {
-        "prevRole": "新卒情報システム学生",
-        "orgName": "Gunadarma University",
-        "orgUrl": "https://jp.linkedin.com/school/universitas-gunadarma/"
-      }
+    "links": {
+      "home": "ホーム",
+      "experience": "経験",
+      "projects": "プロジェクト",
+      "skills": "スキル",
+      "certificates": "資格"
     },
-
-    "about": "私のキャリアは独学のプログラマーとして始まり、以来、フロントエンド開発に特に注力しながら様々なプロジェクトを通じて学び成長してきました。時を経てフルスタック開発へと領域を広げ、現在はバックエンド技術とクラウドサービスのスキル深化に取り組んでいます。継続的な学習と新技術への好奇心に駆られ、新たな挑戦の機会を常に探し求め、開発者として成長し続けています。",
-
-    "current": "現在、Web開発者インターン",
-
-    "socials": {
-      "linkedin": "リンクトイン",
-      "github": "ギットハブ",
-      "steam": "スチーム",
-      "spotify": "スポティファイ"
+    "theme": {
+      "label": "テーマ",
+      "light": "ライト",
+      "dark": "ダーク"
+    },
+    "language": {
+      "label": "言語",
+      "en": "英語",
+      "id": "インドネシア語",
+      "jp": "日本語"
     }
   },
 
+  "homePage": {
+    "hero": {
+      "greeting": "こんにちは、Melvin Austinです",
+      "tagline": "Web Developer & Cloud Enthusiast"
+    },
+
+    "experience": {
+      "items": [
+        {
+          "role": "フルスタック開発インターン",
+          "status": "past",
+          "organization": "Telkom Indonesia",
+          "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia",
+          "period": null
+        },
+        {
+          "role": "クラウドコンピューティング修了生",
+          "status": "past",
+          "organization": "Bangkit Academy 2024",
+          "orgUrl": "https://linkedin.com/company/bangkit-academy",
+          "period": null
+        },
+        {
+          "role": "情報システム学科学生",
+          "status": "graduated",
+          "organization": "Gunadarma University",
+          "orgUrl": "https://www.linkedin.com/school/universitas-gunadarma/",
+          "period": null
+        }
+      ],
+      "labels": {
+        "prefix": "元",
+        "separator": " | ",
+        "at": "@"
+      }
+    },
+
+    "about": {
+      "text": "私の旅は独学のプログラマーとして始まり、それ以来、様々なプロジェクトを通じて学び、成長してきました。特にフロントエンド開発に重点を置いています。時間が経つにつれて、フルスタック開発に拡大し、現在はバックエンド技術とクラウドサービスのスキルを深めています。継続的な学習と新しい技術への好奇心に駆られ、常に新しい課題に取り組み、開発者として成長する機会を探しています。"
+    },
+
+    "current": {
+      "status": "現在",
+      "role": "ウェブ開発インターン",
+      "preposition": "で",
+      "company": "Katadata",
+      "companyUrl": "https://linkedin.com/company/katadata",
+      "startDate": "2025年10月",
+      "endDate": "現在",
+      "labels": {
+        "dateSeparator": " - "
+      }
+    },
+
+    "socials": {
+      "title": "SNS",
+      "links": [
+        {
+          "name": "LinkedIn",
+          "label": "リンクトイン",
+          "url": "https://www.linkedin.com/in/melvin-austin/"
+        },
+        {
+          "name": "GitHub",
+          "label": "ギットハブ",
+          "url": "https://github.com/pinje0"
+        },
+        {
+          "name": "Steam",
+          "label": "スチーム",
+          "url": "https://steamcommunity.com/id/kyotorainn"
+        },
+        {
+          "name": "Spotify",
+          "label": "スポティファイ",
+          "url": "https://open.spotify.com/user/21mxjp3gplpyos5ef7ung3iwq"
+        }
+      ]
+    }
+  },
+
+  "experiencePage": {
+    "title": "Experience",
+
+    "items": [
+      {
+        "company": "Tokopedia",
+        "employmentType": "Full-Time",
+        "duration": "2022 – Present",
+        "location": "Jakarta • Remote",
+
+        "roles": [
+          {
+            "title": "Frontend Developer",
+            "start": "Jan 2023",
+            "end": "Present",
+            "locationType": "Remote",
+            "description": "Built UI components using Next.js and TypeScript."
+          },
+          {
+            "title": "Junior Frontend Developer",
+            "start": "2022",
+            "end": "Jan 2023",
+            "locationType": "Hybrid",
+            "description": "Maintained and improved internal dashboards."
+          }
+        ],
+
+        "skills": ["Next.js", "Tailwind", "TypeScript"]
+      },
+
+      {
+        "company": "Telkom Indonesia",
+        "employmentType": "Internship",
+        "duration": "2021",
+        "location": "Jakarta • On-site",
+
+        "roles": [
+          {
+            "title": "Full Stack Developer Intern",
+            "start": "Jan 2021",
+            "end": "Jun 2021",
+            "locationType": "On-site",
+            "description": "Developed internal platforms using Node.js and React."
+          }
+        ],
+
+        "skills": ["React", "Node.js", "REST API"]
+      }
+    ],
+
+    "educationTitle": "Education",
+
+    "education": [
+      {
+        "school": "Binus University",
+        "degree": "Bachelor",
+        "major": "Computer Science",
+        "gpa": "3.78",
+        "start": "2019",
+        "end": "2023"
+      }
+    ]
+  },
+
   "footer": {
-    "rights": "全著作権所有。"
+    "copyright": "© {year} pinje. 無断転載禁止。",
+    "builtWith": "Next.js & Tailwind CSSで構築"
+  },
+
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "readMore": "続きを読む",
+    "learnMore": "詳しく見る",
+    "lastUpdate": {
+      "message": "サイトは現在改修中です",
+      "label": "最終更新",
+      "date": "2025年11月"
+    }
   }
 }

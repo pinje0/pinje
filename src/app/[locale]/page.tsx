@@ -7,89 +7,81 @@ import { notFound } from "next/navigation";
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
 
-  if (locale !== "en") notFound();
+  // Allow en, id, jp
+  const validLocales = ["en", "id", "jp"];
+  if (!validLocales.includes(locale)) notFound();
 
   const t = await getDictionary(locale);
 
   return (
     <main className="pt-32 pb-20 mx-auto px-10 md:px-20 max-w-[820px] w-full">
-      <LastUpdate />
-
+      <LastUpdate
+        message={t.common.lastUpdate.message}
+        label={t.common.lastUpdate.label}
+        date={t.common.lastUpdate.date}
+      />
       {/* Logo */}
       <div className="mb-8 mt-8">
         <Logo className="w-60 h-60" />
       </div>
 
       {/* About Section */}
-      <div className="space-y-5 text-[15px] leading-[1.55] max-w-[70ch]">
-        {/* Header Section */}
+      <div className="space-y-5 text-[15px] leading-[1.55] max-w-[75ch]">
+        {/* Header Section - Experience highlights */}
         <div className="space-y-1">
           <p>
-            {t.home.header["head-1"].prevRole} @{" "}
-            <AnimatedLink href={t.home.header["head-1"].orgUrl} mode="text">
-              {t.home.header["head-1"].orgName}
-            </AnimatedLink>
-            {" | "}
-            {t.home.header["head-2"].prevRole} @{" "}
-            <AnimatedLink href={t.home.header["head-2"].orgUrl} mode="text">
-              {t.home.header["head-2"].orgName}
-            </AnimatedLink>
-            {" | "}
-            {t.home.header["head-3"].prevRole} @{" "}
-            <AnimatedLink href={t.home.header["head-3"].orgUrl} mode="text">
-              {t.home.header["head-3"].orgName}
-            </AnimatedLink>
+            {t.homePage.experience.items.map((item, index) => (
+              <span key={index}>
+                {index > 0 && t.homePage.experience.labels.separator}
+                {item.status === "past" && t.homePage.experience.labels.prefix}
+                {item.role} {t.homePage.experience.labels.at}{" "}
+                <AnimatedLink href={item.orgUrl} mode="text">
+                  {item.organization}
+                </AnimatedLink>
+              </span>
+            ))}
           </p>
         </div>
 
-        <p>{t.home.about}</p>
+        {/* About text */}
+        <div className="space-y-3">
+          <p>{t.homePage.about.text}</p>
 
-        <p>
-          {t.home.current}{" "}
-          <AnimatedLink href="https://linkedin.com/company/katadata" mode="text">
-            Katadata
-          </AnimatedLink>
-          .
-        </p>
+          {/* Current position */}
+          <div className="border-l-2 border-foreground/20 pl-4 py-2">
+            <p className="text-[15px]">
+              {t.homePage.current.status} {t.homePage.current.role} {t.homePage.current.preposition}{" "}
+              <AnimatedLink href={t.homePage.current.companyUrl} mode="text">
+                {t.homePage.current.company}
+              </AnimatedLink>
+            </p>
+            <p className="text-[13px] text-muted-foreground mt-1">
+              {t.homePage.current.startDate}
+              {t.homePage.current.labels.dateSeparator}
+              {t.homePage.current.endDate}
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Social Links */}
       <div className="mt-4 space-y-2 text-[15px] max-w-[70ch]">
-        <AnimatedLink
-          href="https://www.linkedin.com/in/melvin-austin/"
-          block
-          mode="text"
-          className="inline-link"
-        >
-          {t.home.socials.linkedin}
-        </AnimatedLink>
-
-        <AnimatedLink href="https://github.com/pinje0" block mode="text" className="inline-link">
-          {t.home.socials.github}
-        </AnimatedLink>
-
-        <AnimatedLink
-          href="https://steamcommunity.com/id/kyotorainn"
-          block
-          mode="text"
-          className="inline-link"
-        >
-          {t.home.socials.steam}
-        </AnimatedLink>
-
-        <AnimatedLink
-          href="https://open.spotify.com/user/21mxjp3gplpyos5ef7ung3iwq"
-          block
-          mode="text"
-          className="inline-link"
-        >
-          {t.home.socials.spotify}
-        </AnimatedLink>
+        {t.homePage.socials.links.map((social) => (
+          <AnimatedLink
+            key={social.name}
+            href={social.url}
+            block
+            mode="text"
+            className="inline-link"
+          >
+            {social.label}
+          </AnimatedLink>
+        ))}
       </div>
 
       {/* Footer */}
       <div className="footer mt-24 text-sm">
-        © {new Date().getFullYear()} pinje. {t.footer.rights}
+        {t.footer.copyright.replace("{year}", new Date().getFullYear().toString())}
       </div>
     </main>
   );
