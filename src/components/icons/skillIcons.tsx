@@ -1,0 +1,38 @@
+import React from "react";
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiJavascript,
+  SiReact,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiPython,
+  SiMongodb,
+  SiDocker,
+  SiGooglecloud,
+  SiPostgresql,
+  SiLaravel,
+  SiAwsamplify,
+  SiHtml5,
+  SiCss3,
+  SiFigma,
+} from "react-icons/si";
+
+export const skillIcons: Record<string, React.ReactNode> = {
+  "Next.js": <SiNextdotjs />,
+  "React": <SiReact />,
+  "TypeScript": <SiTypescript />,
+  "Javascript": <SiJavascript />,
+  "Tailwind CSS": <SiTailwindcss />,
+  "Laravel": <SiLaravel />,
+  "Node.js": <SiNodedotjs />,
+  "Python": <SiPython />,
+  "MongoDB": <SiMongodb />,
+  "Docker": <SiDocker />,
+  "Google Cloud Platform (GCP)": <SiGooglecloud />,
+  "PostgreSQL": <SiPostgresql />,
+  "Amazon Web Service (AWS)": <SiAwsamplify />,
+  "HTML": <SiHtml5 />,
+  "CSS": <SiCss3 />,
+  "Figma": <SiFigma />,
+};

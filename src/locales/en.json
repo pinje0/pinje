@@ -122,11 +122,10 @@
             "start": "Oct 2025",
             "end": "Present",
             "locationType": "Hybrid",
-            "description": ""
+            "description": "",
+            "skills": ["Next.js", "Laravel", "TypeScript", "Tailwind CSS"]
           }
-        ],
-
-        "skills": ["Next.js", "Laravel", "TypeScript", "Tailwind CSS"]
+        ]
       },
 
       {
@@ -143,7 +142,7 @@
             "duration": "4 Months",
             "locationType": "Hybrid",
             "description": "Division Digital Business and Technology (DBT) - Project: AI Chatbot Builder Platform\n\n▪ Designed and implemented a real-time Speech-to-Text (STT) feature with Next.js, React, and Tailwind CSS, using WebSocket for live transcription.\n▪ Improved the frontend UI by refining the chatbot deletion flow and implementing validation logic for better user experience.\n▪ Built and designed a Summary page to visualize chatbot analytics, including token usage and API call outcomes.\n▪ Added a document training status indicator UI, allowing users to track the processing status of uploaded documents for topic-specific chatbot training.\n▪ Integrated the chatbot appearance settings API into both the frontend dashboard and embeddable iframe, allowing users to easily customize and preview avatar, logo, header color, text color, and welcome message in real time.",
-            "skills": ["Next.js", "React.js", "Tailwind CSS", "Javascript"]
+            "skills": ["Next.js", "React", "Tailwind CSS", "Javascript"]
           },
           {
             "title": "Backend Developer Intern",
@@ -162,6 +161,100 @@
             ]
           }
         ]
+      },
+      {
+        "company": "Indosat Ooredoo Hutchison Digital Camp",
+        "employmentType": "Scholarship",
+        "duration": "7 Month",
+        "location": "Remote",
+
+        "roles": [
+          {
+            "title": "Back-End Developer - Intermediate Level | Indosat Ooredoo Digital Camp (IDCamp) 2024",
+            "start": "Dec 2024",
+            "end": "Mar 2025",
+            "duration": "4 Months",
+            "locationType": "Remote",
+            "description": "",
+            "skills": ["Node.js", "PostgreSQL", "Javascript", "hapi.js", "REST API"]
+          },
+          {
+            "title": "Back-End Developer - Beginner Level | Indosat Ooredoo Digital Camp (IDCamp) 2024",
+            "start": "Sep 2024",
+            "end": "Dec 2024",
+            "duration": "4 Months",
+            "locationType": "Remote",
+            "description": "",
+            "skills": [
+              "Javascript",
+              "Node.js",
+              "hapi.js",
+              "Amazon Web Service (AWS)",
+              "Artificial Intelligence (AI)"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Bangkit Academy",
+        "employmentType": "Career Readiness",
+        "duration": "6 Month",
+        "location": "Remote",
+
+        "roles": [
+          {
+            "title": "Cohort at Bangkit Academy 2024 – Cloud Computing Learning Path",
+            "start": "Feb 2024",
+            "end": "Jul 2024",
+            "duration": "6 Months",
+            "locationType": "Remote",
+            "description": "▪ Developed a capstone project, Toursantara, an integrated vacation trip planning app aimed at simplifying travel planning. Utilized technologies including JavaScript, Node.js, Docker, Python, and Kotlin, merging elements from Machine Learning, Mobile Development, and Cloud Computing.\n▪ Built the back-end, including the server and database for managing destination places & users, and integrated it with Google Cloud Platform (GCP).\n▪ Designed and implemented REST APIs using Hapi.js to facilitate seamless communication between app components.\n▪ Deployed the application using Docker, setting up containers and utilizing GCP Cloud Run for efficient cloud deployment.\n▪ Assisted in creating comprehensive API documentation to support project maintenance and scalability.",
+            "skills": [
+              "Google Cloud Platform (GCP)",
+              "Cloud Computing",
+              "Node.js",
+              "Docker",
+              "hapi.js",
+              "Javascript"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Indosat Ooredoo Hutchison Digital Camp",
+        "employmentType": "Scholarship",
+        "duration": "4 Month",
+        "location": "Remote",
+
+        "roles": [
+          {
+            "title": "React Developer - Beginner Level | Indosat Ooredoo Digital Camp (IDCamp) 2023",
+            "start": "Sep 2023",
+            "end": "Des 2023",
+            "duration": "4 Months",
+            "locationType": "Remote",
+            "description": "",
+            "skills": ["React", "HTML", "CSS"]
+          }
+        ]
+      },
+      {
+        "company": "Dicoding Indonesia",
+        "employmentType": "Scholarship",
+        "duration": "4 Month",
+        "location": "Remote",
+
+        "roles": [
+          {
+            "title": "Dicoding for University 2023",
+            "start": "Aug 2023",
+            "end": "Nov 2023",
+            "duration": "4 Months",
+            "locationType": "Remote",
+            "description": "▪ Completed a UX case study project, creating user personas and wireframes using Figma, focusing on user-centered design principles.\n▪ Learned Agile methodologies, including Scrum and Sprint planning, enhancing project management skills.",
+            "skills": ["SQL", "Javascript", "User Experience (UX)", "Figma"]
+          }
+        ]
       }
     ],
 
@@ -169,12 +262,12 @@
 
     "education": [
       {
-        "school": "Binus University",
-        "degree": "Bachelor",
-        "major": "Computer Science",
-        "gpa": "3.78",
-        "start": "2019",
-        "end": "2023"
+        "school": "Gunadarma University",
+        "degree": "Bachelor's degree",
+        "major": "Information System",
+        "gpa": "3.73/4.00",
+        "start": "2021",
+        "end": "2025"
       }
     ]
   },

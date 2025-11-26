@@ -3,6 +3,7 @@ import Logo from "@/components/Logo";
 import LastUpdate from "@/components/LastUpdate";
 import AnimatedLink from "@/components/AnimatedLink";
 import { notFound } from "next/navigation";
+import { socialIcons } from "@/components/icons/socialIcons";
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -65,7 +66,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </div>
 
       {/* Social Links */}
-      <div className="mt-4 space-y-2 text-[15px] max-w-[70ch]">
+      {/* <div className="mt-4 space-y-2 text-[15px] max-w-[70ch]">
         {t.homePage.socials.links.map((social) => (
           <AnimatedLink
             key={social.name}
@@ -74,6 +75,22 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             mode="text"
             className="inline-link"
           >
+            {social.label}
+          </AnimatedLink>
+        ))}
+      </div> */}
+
+      {/* Social Links */}
+      <div className="mt-4 space-y-2 text-[15px] max-w-[70ch]">
+        {t.homePage.socials.links.map((social) => (
+          <AnimatedLink
+            key={social.name}
+            href={social.url}
+            block
+            mode="text"
+            className="inline-link flex items-center gap-2"
+          >
+            <span className="text-[18px]">{socialIcons[social.name]}</span>
             {social.label}
           </AnimatedLink>
         ))}
