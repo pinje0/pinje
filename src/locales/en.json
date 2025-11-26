@@ -154,6 +154,7 @@
             "skills": [
               "Python",
               "Node.js",
+              "Restify",
               "MongoDB",
               "MinION Object Storage Suite",
               "Mocha (JavaScript Framework)",
