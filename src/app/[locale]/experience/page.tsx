@@ -25,7 +25,7 @@ export default async function ExperiencePage({ params }: { params: Promise<{ loc
           duration={item.duration}
           location={item.location}
           roles={item.roles}
-          skills={item.skills}
+          // skills={item.skills}
         />
       ))}
 

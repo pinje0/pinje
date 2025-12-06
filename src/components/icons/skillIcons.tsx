@@ -21,7 +21,7 @@ import {
 export const skillIcons: Record<string, React.ReactNode> = {
   "Next.js": <SiNextdotjs />,
   "React": <SiReact />,
-  "TypeScript": <SiTypescript />,
+  "Typescript": <SiTypescript />,
   "Javascript": <SiJavascript />,
   "Tailwind CSS": <SiTailwindcss />,
   "Laravel": <SiLaravel />,

@@ -1,14 +1,15 @@
-"use client";
-
 import Link, { LinkProps } from "next/link";
 import { cn } from "@/lib/utils";
 import { AnchorHTMLAttributes, ReactNode } from "react";
 
-interface AnimatedLinkProps extends LinkProps, AnchorHTMLAttributes<HTMLAnchorElement> {
+interface AnimatedLinkProps
+  extends Omit<LinkProps, "href">,
+    AnchorHTMLAttributes<HTMLAnchorElement> {
   children: ReactNode;
   block?: boolean;
   className?: string;
   mode?: "text" | "full";
+  href: string; // You explicitly define href as string to avoid the conflict
 }
 
 export default function AnimatedLink({

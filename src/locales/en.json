@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "pinje — portfolio",
-    "description": "Personal portfolio website of Melvin Austin."
+    "description": ""
   },
 
   "navbar": {
@@ -27,8 +27,8 @@
 
   "homePage": {
     "hero": {
-      "greeting": "Hi, I'm Melvin Austin",
-      "tagline": "Web Developer & Cloud Enthusiast"
+      "greeting": "",
+      "tagline": ""
     },
 
     "experience": {
@@ -113,7 +113,7 @@
       {
         "company": "KATADATAcoid",
         "employmentType": "Internship",
-        "duration": "2 Month",
+        "duration": "3 Month",
         "location": "Jakarta, Indonesia • Hybrid",
 
         "roles": [
@@ -122,8 +122,8 @@
             "start": "Oct 2025",
             "end": "Present",
             "locationType": "Hybrid",
-            "description": "",
-            "skills": ["Next.js", "Laravel", "TypeScript", "Tailwind CSS"]
+            "description": "▪ Developed a user dashboard for an internal product platform using Next.js, TypeScript, Tailwind CSS, and Zustand. Implemented features such as product creation, product management, and revenue visualization.\n▪ Built the COP30 microsite using Next.js (TypeScript) and Tailwind CSS for Katadata’s coverage of the 30th UN climate conference (COP30).\n▪ Refactored and migrated asset dependencies for several Shorthand-based longform microsites, including 'Data Center Batam' and 'Hutan Hilang, Sumatra Tenggelam'.\n▪ Developed backend payment functionality using Node.js (TypeScript), PostgreSQL, and Midtrans, and integrated the payment API with the frontend.",
+            "skills": ["Next.js", "Node.js", "PostgreSQL", "Typescript", "Tailwind CSS", "Laravel"]
           }
         ]
       },
