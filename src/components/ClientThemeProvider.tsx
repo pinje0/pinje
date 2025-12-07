@@ -6,7 +6,8 @@ import { ReactNode, useEffect, useState } from "react";
 export default function ClientThemeProvider({ children }: { children: ReactNode }) {
   // ThemeProvider harus di root client wrapper; kita juga mount small helper untuk transition
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    // <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
       <ThemeTransitionProvider>{children}</ThemeTransitionProvider>
     </ThemeProvider>
   );
