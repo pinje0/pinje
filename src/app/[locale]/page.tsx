@@ -4,6 +4,20 @@ import LastUpdate from "@/components/LastUpdate";
 import AnimatedLink from "@/components/AnimatedLink";
 import { notFound } from "next/navigation";
 import { socialIcons } from "@/components/icons/socialIcons";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getDictionary(locale);
+
+  return {
+    title: `${t.meta.title} | ${t.meta.pages.home}`,
+  };
+}
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -80,7 +94,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         ))}
       </div> */}
 
-      {/* Social Links */}
+      {/* Social Links
       <div className="mt-4 space-y-2 text-[15px] max-w-[70ch]">
         {t.homePage.socials.links.map((social) => (
           <AnimatedLink
@@ -92,6 +106,32 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           >
             <span className="text-[18px]">{socialIcons[social.name]}</span>
             {social.label}
+          </AnimatedLink>
+        ))}
+      </div> */}
+      {/* Social Links */}
+      {/* <div className="mt-4 space-y-2 text-[15px] max-w-[70ch]">
+        {t.homePage.socials.links.map((social) => (
+          <div key={social.name} className="flex items-center gap-2">
+            <span className="text-[18px]">{socialIcons[social.name]}</span>
+            <AnimatedLink href={social.url} block mode="text">
+              {social.label}
+            </AnimatedLink>
+          </div>
+        ))}
+      </div> */}
+      {/* Social Links */}
+      <div className="mt-4 space-y-2 text-[15px] max-w-[70ch] ">
+        {t.homePage.socials.links.map((social) => (
+          <AnimatedLink
+            key={social.name}
+            href={social.url}
+            block
+            mode="text"
+            className="flex items-center gap-2 pl-1"
+          >
+            <span className="text-[18px] pr-1 pt-0.5">{socialIcons[social.name]}</span>
+            <span>{social.label}</span>
           </AnimatedLink>
         ))}
       </div>

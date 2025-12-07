@@ -1,7 +1,14 @@
 {
   "meta": {
     "title": "pinje — ポートフォリオ",
-    "description": "Melvin Austinの個人ポートフォリオサイト。"
+    "description": "Melvin Austinの個人ポートフォリオサイト。",
+    "pages": {
+      "home": "Home",
+      "experience": "Experience",
+      "projects": "Projects",
+      "skills": "Skills",
+      "certificates": "Certificates"
+    }
   },
 
   "navbar": {

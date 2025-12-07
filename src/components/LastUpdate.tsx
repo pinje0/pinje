@@ -11,8 +11,8 @@ export default function LastUpdate({ message, label, date }: LastUpdateProps) {
     <div
       className="
         mt-6 inline-flex items-center gap-2
-        border border-border/50
-        bg-zinc-200/60 dark:bg-zinc-800/60
+        border border-border/60
+        bg-neutral-200! dark:bg-white/6!
         px-3 py-2 rounded-lg
       "
     >

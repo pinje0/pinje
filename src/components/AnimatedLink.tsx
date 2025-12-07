@@ -9,7 +9,7 @@ interface AnimatedLinkProps
   block?: boolean;
   className?: string;
   mode?: "text" | "full";
-  href: string; // You explicitly define href as string to avoid the conflict
+  href: string;
 }
 
 export default function AnimatedLink({
@@ -17,7 +17,7 @@ export default function AnimatedLink({
   children,
   block = false,
   className,
-  mode = "text", // default: hanya teks yang bisa diklik
+  mode = "text",
   ...props
 }: AnimatedLinkProps) {
   const isExternal =
@@ -32,7 +32,11 @@ export default function AnimatedLink({
       className={cn(block ? "block w-fit" : "inline-block", "pointer-events-auto", className)}
     >
       <span
-        className={cn("link-rise-bg inline-block align-baseline", mode === "text" && "link-reset")}
+        className={cn(
+          "link-rise-bg inline-block align-baseline",
+          mode === "text" && "link-reset",
+          className?.includes("flex") && "!flex" // Override inline-block if flex is needed
+        )}
       >
         {children}
       </span>

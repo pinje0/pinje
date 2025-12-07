@@ -1,15 +1,14 @@
 import { skillIcons } from "@/components/icons/skillIcons";
 import TimelineItem from "./TimelineItem";
 
-//TODO : Adding total experience (Intern, Full-time, Contract, Freelance)
-
 export interface Role {
   title: string;
   start: string;
   end: string;
   duration?: string;
   locationType: string;
-  description: string;
+  context?: string;
+  description: string | string[]; // Support both string and array
   skills?: string[];
 }
 
@@ -48,6 +47,25 @@ export default function ExperienceItem({
     );
   };
 
+  const renderDescription = (description: string | string[], context?: string) => {
+    return (
+      <div className="space-y-2">
+        {context && <p className="text-[14px] text-muted-foreground italic">{context}</p>}
+        {Array.isArray(description) ? (
+          <ul className="list-disc list-outside ml-5 space-y-1.5 text-[14px]">
+            {description.map((item, idx) => (
+              <li key={idx} className="leading-relaxed">
+                {item}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-[14px] whitespace-pre-line">{description}</p>
+        )}
+      </div>
+    );
+  };
+
   return (
     <TimelineItem>
       {/* Header */}
@@ -70,7 +88,7 @@ export default function ExperienceItem({
             {roles[0].locationType && ` • ${roles[0].locationType}`}
           </p>
 
-          <p className="text-[14px] whitespace-pre-line">{roles[0].description}</p>
+          {renderDescription(roles[0].description, roles[0].context)}
 
           {renderSkills(roles[0].skills)}
         </div>
@@ -89,7 +107,7 @@ export default function ExperienceItem({
                 {r.locationType && ` • ${r.locationType}`}
               </p>
 
-              <p className="text-[14px] whitespace-pre-line">{r.description}</p>
+              {renderDescription(r.description, r.context)}
 
               {renderSkills(r.skills)}
             </div>

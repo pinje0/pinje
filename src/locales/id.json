@@ -1,7 +1,14 @@
 {
   "meta": {
     "title": "pinje — portofolio",
-    "description": "Situs portofolio pribadi Melvin Austin."
+    "description": "Situs portofolio pribadi Melvin Austin.",
+    "pages": {
+      "home": "Home",
+      "experience": "Experience",
+      "projects": "Projects",
+      "skills": "Skills",
+      "certificates": "Certificates"
+    }
   },
 
   "navbar": {

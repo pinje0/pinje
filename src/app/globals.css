@@ -161,7 +161,7 @@ html {
   --logo-color: #fff;
 }
 
-.dark {
+/* .dark {
   --background: #121212;
   --foreground: #ffffff;
 
@@ -173,7 +173,7 @@ html {
 
   --sidebar: #1a1a1a;
   --sidebar-foreground: #ffffff;
-}
+} */
 
 @layer base {
   * {

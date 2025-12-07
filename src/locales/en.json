@@ -1,7 +1,14 @@
 {
   "meta": {
-    "title": "pinje — portfolio",
-    "description": ""
+    "title": "pinje",
+    "description": "",
+    "pages": {
+      "home": "Home",
+      "experience": "Experience",
+      "projects": "Projects",
+      "skills": "Skills",
+      "certificates": "Certificates"
+    }
   },
 
   "navbar": {
@@ -122,7 +129,12 @@
             "start": "Oct 2025",
             "end": "Present",
             "locationType": "Hybrid",
-            "description": "▪ Developed a user dashboard for an internal product platform using Next.js, TypeScript, Tailwind CSS, and Zustand. Implemented features such as product creation, product management, and revenue visualization.\n▪ Built the COP30 microsite using Next.js (TypeScript) and Tailwind CSS for Katadata’s coverage of the 30th UN climate conference (COP30).\n▪ Refactored and migrated asset dependencies for several Shorthand-based longform microsites, including 'Data Center Batam' and 'Hutan Hilang, Sumatra Tenggelam'.\n▪ Developed backend payment functionality using Node.js (TypeScript), PostgreSQL, and Midtrans, and integrated the payment API with the frontend.",
+            "description": [
+              "Developed a user dashboard for an internal product platform using Next.js, TypeScript, Tailwind CSS, and Zustand. Implemented features such as product creation, product management, and revenue visualization.",
+              "Built the COP30 microsite using Next.js (TypeScript) and Tailwind CSS for Katadata's coverage of the 30th UN climate conference (COP30).",
+              "Refactored and migrated asset dependencies for several Shorthand-based longform microsites, including 'Data Center Batam' and 'Hutan Hilang, Sumatra Tenggelam'.",
+              "Developed backend payment functionality using Node.js (TypeScript), PostgreSQL, and Midtrans, and integrated the payment API with the frontend."
+            ],
             "skills": ["Next.js", "Node.js", "PostgreSQL", "Typescript", "Tailwind CSS", "Laravel"]
           }
         ]
@@ -137,20 +149,32 @@
         "roles": [
           {
             "title": "Frontend Developer Intern",
-            "start": "Feb 2025",
-            "end": "Mar 2025",
+            "start": "Mar 2025",
+            "end": "Jul 2025",
             "duration": "4 Months",
             "locationType": "Hybrid",
-            "description": "Division Digital Business and Technology (DBT) - Project: AI Chatbot Builder Platform\n\n▪ Designed and implemented a real-time Speech-to-Text (STT) feature with Next.js, React, and Tailwind CSS, using WebSocket for live transcription.\n▪ Improved the frontend UI by refining the chatbot deletion flow and implementing validation logic for better user experience.\n▪ Built and designed a Summary page to visualize chatbot analytics, including token usage and API call outcomes.\n▪ Added a document training status indicator UI, allowing users to track the processing status of uploaded documents for topic-specific chatbot training.\n▪ Integrated the chatbot appearance settings API into both the frontend dashboard and embeddable iframe, allowing users to easily customize and preview avatar, logo, header color, text color, and welcome message in real time.",
+            "context": "Division Digital Business and Technology (DBT) - Project: AI Chatbot Builder Platform",
+            "description": [
+              "Designed and implemented a real-time Speech-to-Text (STT) feature with Next.js, React, and Tailwind CSS, using WebSocket for live transcription",
+              "Improved the frontend UI by refining the chatbot deletion flow and implementing validation logic for better user experience",
+              "Built and designed a Summary page to visualize chatbot analytics, including token usage and API call outcomes",
+              "Added a document training status indicator UI, allowing users to track the processing status of uploaded documents for topic-specific chatbot training",
+              "Integrated the chatbot appearance settings API into both the frontend dashboard and embeddable iframe, allowing users to easily customize and preview avatar, logo, header color, text color, and welcome message in real time"
+            ],
             "skills": ["Next.js", "React", "Tailwind CSS", "Javascript"]
           },
           {
             "title": "Backend Developer Intern",
-            "start": "Mar 2025",
-            "end": "Jul 2025",
+            "start": "Feb 2025",
+            "end": "Mar 2025",
             "duration": "2 Months",
             "locationType": "Hybrid",
-            "description": "Division Digital Business and Technology (DBT) - Project: AI Chatbot Builder Platform\n\n▪ Integrated an AI-powered audio/video transcription service by leveraging Python to handle file uploads and retrieve accurate transcriptions via API endpoints\n▪ Built backend services for chatbot appearance customization settings in Node.js, including RESTful APIs using Restify, MongoDB integration, and MinIO for asset management. Wrote unit tests using Mocha for service reliability.\n▪ Created API documentation for the ICA project by converting the Postman collection to Excel, then structured and labeled the data to make backend endpoints easier to reference",
+            "context": "Division Digital Business and Technology (DBT) - Project: AI Chatbot Builder Platform",
+            "description": [
+              "Integrated an AI-powered audio/video transcription service by leveraging Python to handle file uploads and retrieve accurate transcriptions via API endpoints",
+              "Built backend services for chatbot appearance customization settings in Node.js, including RESTful APIs using Restify, MongoDB integration, and MinIO for asset management. Wrote unit tests using Mocha for service reliability.",
+              "Created API documentation for the ICA project by converting the Postman collection to Excel, then structured and labeled the data to make backend endpoints easier to reference"
+            ],
             "skills": [
               "Python",
               "Node.js",
@@ -209,7 +233,11 @@
             "end": "Jul 2024",
             "duration": "6 Months",
             "locationType": "Remote",
-            "description": "▪ Developed a capstone project, Toursantara, an integrated vacation trip planning app aimed at simplifying travel planning. Utilized technologies including JavaScript, Node.js, Docker, Python, and Kotlin, merging elements from Machine Learning, Mobile Development, and Cloud Computing.\n▪ Built the back-end, including the server and database for managing destination places & users, and integrated it with Google Cloud Platform (GCP).\n▪ Designed and implemented REST APIs using Hapi.js to facilitate seamless communication between app components.\n▪ Deployed the application using Docker, setting up containers and utilizing GCP Cloud Run for efficient cloud deployment.\n▪ Assisted in creating comprehensive API documentation to support project maintenance and scalability.",
+            "description": [
+              "Developed a capstone project, Toursantara, an integrated vacation trip planning app aimed at simplifying travel planning. Utilized technologies including JavaScript, Node.js, Docker, Python, and Kotlin, merging elements from Machine Learning, Mobile Development, and Cloud Computing.\n",
+              "Built the back-end, including the server and database for managing destination places & users, and integrated it with Google Cloud Platform (GCP).\n▪ Designed and implemented REST APIs using Hapi.js to facilitate seamless communication between app components.\n",
+              "Deployed the application using Docker, setting up containers and utilizing GCP Cloud Run for efficient cloud deployment.\n▪ Assisted in creating comprehensive API documentation to support project maintenance and scalability."
+            ],
             "skills": [
               "Google Cloud Platform (GCP)",
               "Cloud Computing",
@@ -252,7 +280,10 @@
             "end": "Nov 2023",
             "duration": "4 Months",
             "locationType": "Remote",
-            "description": "▪ Completed a UX case study project, creating user personas and wireframes using Figma, focusing on user-centered design principles.\n▪ Learned Agile methodologies, including Scrum and Sprint planning, enhancing project management skills.",
+            "description": [
+              "Completed a UX case study project, creating user personas and wireframes using Figma, focusing on user-centered design principles.\n",
+              "Learned Agile methodologies, including Scrum and Sprint planning, enhancing project management skills."
+            ],
             "skills": ["SQL", "Javascript", "User Experience (UX)", "Figma"]
           }
         ]

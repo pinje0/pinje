@@ -2,6 +2,20 @@ import { getDictionary } from "@/lib/i18n";
 import ExperienceItem from "@/components/timeline/ExperienceItem";
 import EducationItem from "@/components/timeline/EducationItem";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getDictionary(locale);
+
+  return {
+    title: t.meta.pages.experience,
+  };
+}
 
 export default async function ExperiencePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
