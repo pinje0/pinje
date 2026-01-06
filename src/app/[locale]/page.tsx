@@ -80,47 +80,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </div>
 
       {/* Social Links */}
-      {/* <div className="mt-4 space-y-2 text-[15px] max-w-[70ch]">
-        {t.homePage.socials.links.map((social) => (
-          <AnimatedLink
-            key={social.name}
-            href={social.url}
-            block
-            mode="text"
-            className="inline-link"
-          >
-            {social.label}
-          </AnimatedLink>
-        ))}
-      </div> */}
-
-      {/* Social Links
-      <div className="mt-4 space-y-2 text-[15px] max-w-[70ch]">
-        {t.homePage.socials.links.map((social) => (
-          <AnimatedLink
-            key={social.name}
-            href={social.url}
-            block
-            mode="text"
-            className="inline-link flex items-center gap-2"
-          >
-            <span className="text-[18px]">{socialIcons[social.name]}</span>
-            {social.label}
-          </AnimatedLink>
-        ))}
-      </div> */}
-      {/* Social Links */}
-      {/* <div className="mt-4 space-y-2 text-[15px] max-w-[70ch]">
-        {t.homePage.socials.links.map((social) => (
-          <div key={social.name} className="flex items-center gap-2">
-            <span className="text-[18px]">{socialIcons[social.name]}</span>
-            <AnimatedLink href={social.url} block mode="text">
-              {social.label}
-            </AnimatedLink>
-          </div>
-        ))}
-      </div> */}
-      {/* Social Links */}
       <div className="mt-4 space-y-2 text-[15px] max-w-[70ch] ">
         {t.homePage.socials.links.map((social) => (
           <AnimatedLink

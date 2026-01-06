@@ -77,14 +77,14 @@ export default function Navbar({ locale, t }: NavbarProps) {
           {/* Center nav (desktop only) */}
           <nav className="hidden md:flex justify-center gap-6 lg:gap-8 text-[13px] md:text-[14px]">
             {navItems.map((item) => (
-              <AnimatedLink
+<AnimatedLink
                 key={item.href}
                 href={item.href}
                 mode="full"
                 aria-current={isActive(item.href) ? "page" : undefined}
                 className={`
-        relative transition-opacity hover:opacity-100 whitespace-nowrap
-        ${isActive(item.href) ? "active-nav" : "text-foreground opacity-100 hover:opacity-60"}
+        relative whitespace-nowrap
+        ${isActive(item.href) ? "active-nav" : "text-foreground"}
       `}
               >
                 {item.label}

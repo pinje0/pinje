@@ -11,6 +11,158 @@
     }
   },
 
+  "projectsPage": {
+    "title": "Projects",
+    "items": [
+      {
+        "id": "toursantara",
+        "title": "Toursantara",
+        "description": "An integrated vacation trip planning app that simplifies travel planning by combining ML recommendations, mobile interface, and cloud backend.",
+        "thumbnail": "/img/projects/toursantara-banner.png",
+        "techStack": ["Javascript", "Node.js", "Docker", "Python", "Google Cloud Platform (GCP)"],
+        "featured": true
+      },
+      {
+        "id": "ica-chatbot-platform",
+        "title": "ICA - AI Chatbot Builder Platform",
+        "description": "Enterprise chatbot platform with real-time STT, document training, and customizable appearance settings.",
+        "thumbnail": "/projects/ica-thumb.png",
+        "techStack": ["Next.js", "React", "Node.js", "MongoDB", "Python"],
+        "featured": true
+      },
+      {
+        "id": "portfolio-site",
+        "title": "Portfolio Website",
+        "description": "Multi-language portfolio site built with modern web technologies and i18n support.",
+        "thumbnail": "/projects/portfolio-thumb.png",
+        "techStack": ["Next.js", "Typescript", "Tailwind CSS"],
+        "featured": false
+      }
+    ]
+  },
+
+  "projectDetailPage": {
+    "details": {
+      "toursantara": {
+        "title": "Toursantara",
+        "subtitle": "Integrated Vacation Trip Planning Application",
+        "description": "Toursantara is a comprehensive vacation planning application developed as a capstone project for Bangkit Academy 2024. The app aims to simplify travel planning by integrating machine learning recommendations, mobile development, and cloud computing technologies. Users can discover destinations, plan itineraries, and receive personalized travel suggestions all in one place.",
+        "images": [
+          "/img/projects/toursantara-banner.png",
+          "/projects/toursantara-2.png",
+          "/projects/toursantara-3.png"
+        ],
+        "projectStart": "February 2024",
+        "projectEnd": "July 2024",
+        "deployedUrl": null,
+        "githubUrl": "https://github.com/yourusername/toursantara",
+        "license": "MIT License",
+        "techStack": {
+          "languages": ["Javascript", "Python"],
+          "frameworks": ["Node.js", "hapi.js"],
+          "tools": ["Docker", "Google Cloud Platform (GCP)"]
+        },
+        "features": [
+          "RESTful API for destination and user management",
+          "Machine learning-based destination recommendations",
+          "Cloud deployment using Docker and GCP Cloud Run",
+          "Comprehensive API documentation for scalability"
+        ],
+        "myRole": "Backend Developer & Cloud Engineer",
+        "teamMembers": [
+          {
+            "name": "Team Member 1",
+            "role": "Machine Learning Engineer",
+            "linkedin": "https://linkedin.com/in/member1"
+          },
+          {
+            "name": "Team Member 2",
+            "role": "Mobile Developer",
+            "linkedin": "https://linkedin.com/in/member2"
+          }
+        ],
+        "demoVideo": null
+      },
+      "ica-chatbot-platform": {
+        "title": "ICA - AI Chatbot Builder Platform",
+        "subtitle": "Enterprise AI Chatbot Solution",
+        "description": "ICA is an enterprise-grade AI chatbot builder platform developed during my internship at Telkom Indonesia. The platform enables users to create, customize, and deploy intelligent chatbots with advanced features including real-time speech-to-text, document training, and comprehensive analytics. The system supports multi-modal interactions and provides detailed insights into chatbot performance and usage.",
+        "images": ["/projects/ica-1.png", "/projects/ica-2.png"],
+        "projectStart": "February 2025",
+        "projectEnd": "July 2025",
+        "deployedUrl": null,
+        "githubUrl": null,
+        "license": "Proprietary",
+        "techStack": {
+          "frontend": ["Next.js", "React", "Tailwind CSS", "Javascript"],
+          "backend": ["Node.js", "Restify", "Python"],
+          "database": ["MongoDB"],
+          "storage": ["MinIO"],
+          "testing": ["Mocha"]
+        },
+        "features": [
+          "Real-time Speech-to-Text with WebSocket integration",
+          "Document training with status tracking",
+          "Customizable chatbot appearance (avatar, colors, messages)",
+          "Analytics dashboard with token usage visualization",
+          "Audio/video transcription service",
+          "RESTful API with comprehensive documentation"
+        ],
+        "myRole": "Full Stack Developer Intern",
+        "teamMembers": null,
+        "demoVideo": null
+      },
+      "portfolio-site": {
+        "title": "Portfolio Website",
+        "subtitle": "Multi-language Personal Portfolio",
+        "description": "A modern, responsive portfolio website built with Next.js 14 and TypeScript. Features multi-language support (English, Indonesian, Japanese) using i18n, animated interactions, and a clean minimalist design. The site showcases my professional experience, projects, and technical skills with a focus on excellent user experience and accessibility.",
+        "images": ["/projects/portfolio-1.png"],
+        "projectStart": "November 2025",
+        "projectEnd": "Present",
+        "deployedUrl": "https://yourportfolio.com",
+        "githubUrl": "https://github.com/pinje0/portfolio",
+        "license": "MIT License",
+        "techStack": {
+          "frontend": ["Next.js", "Typescript", "React"],
+          "styling": ["Tailwind CSS"],
+          "tools": ["i18n"]
+        },
+        "features": [
+          "Multi-language support (EN, ID, JP)",
+          "Responsive design with mobile-first approach",
+          "Custom animated components and interactions",
+          "Dark/Light theme toggle",
+          "Timeline-based experience showcase",
+          "Project portfolio with detailed views"
+        ],
+        "myRole": "Solo Developer",
+        "teamMembers": null,
+        "demoVideo": null
+      }
+    },
+    "labels": {
+      "overview": "Overview",
+      "techStack": "Tech Stack",
+      "features": "Features",
+      "myRole": "My Role",
+      "team": "Team",
+      "timeline": "Timeline",
+      "links": "Links",
+      "viewProject": "View Project",
+      "viewCode": "View Code",
+      "backToProjects": "Back to Projects",
+      "present": "Present",
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "tools": "Tools",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "storage": "Storage",
+      "testing": "Testing"
+    }
+  },
+
   "navbar": {
     "links": {
       "home": "Home",
@@ -37,7 +189,6 @@
       "greeting": "",
       "tagline": ""
     },
-
     "experience": {
       "items": [
         {
@@ -68,11 +219,9 @@
         "at": "@"
       }
     },
-
     "about": {
       "text": "My journey began as a self-taught programmer, and since then, I've been learning and growing through various projects, with a special focus on Frontend Development. Over time, I've expanded into Full-Stack Development and am now deepening my skills in backend technologies and cloud services. Driven by continuous learning and a curiosity for new technologies, I'm always looking for opportunities to take on new challenges and grow as a developer."
     },
-
     "current": {
       "status": "Currently",
       "role": "Web Developer Intern",
@@ -85,7 +234,6 @@
         "dateSeparator": " - "
       }
     },
-
     "socials": {
       "title": "Find me on",
       "links": [
@@ -115,14 +263,12 @@
 
   "experiencePage": {
     "title": "Experience",
-
     "items": [
       {
         "company": "KATADATAcoid",
         "employmentType": "Internship",
         "duration": "3 Month",
         "location": "Jakarta, Indonesia • Hybrid",
-
         "roles": [
           {
             "title": "Web Developer Intern",
@@ -138,160 +284,9 @@
             "skills": ["Next.js", "Node.js", "PostgreSQL", "Typescript", "Tailwind CSS", "Laravel"]
           }
         ]
-      },
-
-      {
-        "company": "Telkom Indonesia",
-        "employmentType": "Internship",
-        "duration": "6 Month",
-        "location": "Jakarta, Indonesia • Hybrid",
-
-        "roles": [
-          {
-            "title": "Frontend Developer Intern",
-            "start": "Mar 2025",
-            "end": "Jul 2025",
-            "duration": "4 Months",
-            "locationType": "Hybrid",
-            "context": "Division Digital Business and Technology (DBT) - Project: AI Chatbot Builder Platform",
-            "description": [
-              "Designed and implemented a real-time Speech-to-Text (STT) feature with Next.js, React, and Tailwind CSS, using WebSocket for live transcription",
-              "Improved the frontend UI by refining the chatbot deletion flow and implementing validation logic for better user experience",
-              "Built and designed a Summary page to visualize chatbot analytics, including token usage and API call outcomes",
-              "Added a document training status indicator UI, allowing users to track the processing status of uploaded documents for topic-specific chatbot training",
-              "Integrated the chatbot appearance settings API into both the frontend dashboard and embeddable iframe, allowing users to easily customize and preview avatar, logo, header color, text color, and welcome message in real time"
-            ],
-            "skills": ["Next.js", "React", "Tailwind CSS", "Javascript"]
-          },
-          {
-            "title": "Backend Developer Intern",
-            "start": "Feb 2025",
-            "end": "Mar 2025",
-            "duration": "2 Months",
-            "locationType": "Hybrid",
-            "context": "Division Digital Business and Technology (DBT) - Project: AI Chatbot Builder Platform",
-            "description": [
-              "Integrated an AI-powered audio/video transcription service by leveraging Python to handle file uploads and retrieve accurate transcriptions via API endpoints",
-              "Built backend services for chatbot appearance customization settings in Node.js, including RESTful APIs using Restify, MongoDB integration, and MinIO for asset management. Wrote unit tests using Mocha for service reliability.",
-              "Created API documentation for the ICA project by converting the Postman collection to Excel, then structured and labeled the data to make backend endpoints easier to reference"
-            ],
-            "skills": [
-              "Python",
-              "Node.js",
-              "Restify",
-              "MongoDB",
-              "MinION Object Storage Suite",
-              "Mocha (JavaScript Framework)",
-              "Javascript"
-            ]
-          }
-        ]
-      },
-      {
-        "company": "Indosat Ooredoo Hutchison Digital Camp",
-        "employmentType": "Scholarship",
-        "duration": "7 Month",
-        "location": "Remote",
-
-        "roles": [
-          {
-            "title": "Back-End Developer - Intermediate Level | Indosat Ooredoo Digital Camp (IDCamp) 2024",
-            "start": "Dec 2024",
-            "end": "Mar 2025",
-            "duration": "4 Months",
-            "locationType": "Remote",
-            "description": "",
-            "skills": ["Node.js", "PostgreSQL", "Javascript", "hapi.js", "REST API"]
-          },
-          {
-            "title": "Back-End Developer - Beginner Level | Indosat Ooredoo Digital Camp (IDCamp) 2024",
-            "start": "Sep 2024",
-            "end": "Dec 2024",
-            "duration": "4 Months",
-            "locationType": "Remote",
-            "description": "",
-            "skills": [
-              "Javascript",
-              "Node.js",
-              "hapi.js",
-              "Amazon Web Service (AWS)",
-              "Artificial Intelligence (AI)"
-            ]
-          }
-        ]
-      },
-      {
-        "company": "Bangkit Academy",
-        "employmentType": "Career Readiness",
-        "duration": "6 Month",
-        "location": "Remote",
-
-        "roles": [
-          {
-            "title": "Cohort at Bangkit Academy 2024 – Cloud Computing Learning Path",
-            "start": "Feb 2024",
-            "end": "Jul 2024",
-            "duration": "6 Months",
-            "locationType": "Remote",
-            "description": [
-              "Developed a capstone project, Toursantara, an integrated vacation trip planning app aimed at simplifying travel planning. Utilized technologies including JavaScript, Node.js, Docker, Python, and Kotlin, merging elements from Machine Learning, Mobile Development, and Cloud Computing.\n",
-              "Built the back-end, including the server and database for managing destination places & users, and integrated it with Google Cloud Platform (GCP).\n▪ Designed and implemented REST APIs using Hapi.js to facilitate seamless communication between app components.\n",
-              "Deployed the application using Docker, setting up containers and utilizing GCP Cloud Run for efficient cloud deployment.\n▪ Assisted in creating comprehensive API documentation to support project maintenance and scalability."
-            ],
-            "skills": [
-              "Google Cloud Platform (GCP)",
-              "Cloud Computing",
-              "Node.js",
-              "Docker",
-              "hapi.js",
-              "Javascript"
-            ]
-          }
-        ]
-      },
-      {
-        "company": "Indosat Ooredoo Hutchison Digital Camp",
-        "employmentType": "Scholarship",
-        "duration": "4 Month",
-        "location": "Remote",
-
-        "roles": [
-          {
-            "title": "React Developer - Beginner Level | Indosat Ooredoo Digital Camp (IDCamp) 2023",
-            "start": "Sep 2023",
-            "end": "Des 2023",
-            "duration": "4 Months",
-            "locationType": "Remote",
-            "description": "",
-            "skills": ["React", "HTML", "CSS"]
-          }
-        ]
-      },
-      {
-        "company": "Dicoding Indonesia",
-        "employmentType": "Scholarship",
-        "duration": "4 Month",
-        "location": "Remote",
-
-        "roles": [
-          {
-            "title": "Dicoding for University 2023",
-            "start": "Aug 2023",
-            "end": "Nov 2023",
-            "duration": "4 Months",
-            "locationType": "Remote",
-            "description": [
-              "Completed a UX case study project, creating user personas and wireframes using Figma, focusing on user-centered design principles.\n",
-              "Learned Agile methodologies, including Scrum and Sprint planning, enhancing project management skills."
-            ],
-            "skills": ["SQL", "Javascript", "User Experience (UX)", "Figma"]
-          }
-        ]
       }
     ],
-
     "educationTitle": "Education",
-
     "education": [
       {
         "school": "Gunadarma University",
@@ -317,6 +312,176 @@
   "footer": {
     "copyright": "© {year} pinje. All rights reserved.",
     "builtWith": "Built with Next.js & Tailwind CSS"
+  },
+
+  "skillsPage": {
+    "title": "Skills",
+    "categories": {
+      "languages": "Languages",
+      "frameworks": "Frameworks", 
+      "tools": "Tools",
+      "databases": "Databases",
+      "cloud": "Cloud & DevOps",
+      "soft Skills": "Soft Skills",
+      "languages": "Languages"
+    },
+    "proficiency": {
+      "native": "Native",
+      "fluent": "Fluent",
+      "advanced": "Advanced",
+      "professional": "Professional",
+      "intermediate": "Intermediate",
+      "beginner": "Beginner",
+      "basic": "Basic"
+    },
+    "languages": {
+      "bahasa_indonesia": {
+        "level": "Native",
+        "level_display": "Penutur Asli (Bilingual)"
+      },
+      "english": {
+        "level": "Limited working proficiency",
+        "level_display": "Limited Working Proficiency"
+      },
+      "japanese": {
+        "level": "Elementary",
+        "level_display": "Elementary (A1)"
+      }
+    },
+    "items": [
+      {
+        "name": "HTML",
+        "category": "languages",
+        "proficiency": "advanced",
+        "icon": "SiHtml5"
+      },
+      {
+        "name": "CSS",
+        "category": "languages",
+        "proficiency": "advanced",
+        "icon": "SiCss3"
+      },
+      {
+        "name": "JavaScript",
+        "category": "languages",
+        "proficiency": "advanced",
+        "icon": "SiJavascript"
+      },
+      {
+        "name": "TypeScript",
+        "category": "languages",
+        "proficiency": "advanced",
+        "icon": "SiTypescript"
+      },
+      {
+        "name": "Python",
+        "category": "languages",
+        "proficiency": "intermediate",
+        "icon": "SiPython"
+      },
+      {
+        "name": "PHP",
+        "category": "languages",
+        "proficiency": "basic",
+        "icon": ""
+      },
+      {
+        "name": "Tailwind CSS",
+        "category": "frameworks",
+        "proficiency": "advanced",
+        "icon": "SiTailwindcss"
+      },
+      {
+        "name": "React.js",
+        "category": "frameworks",
+        "proficiency": "advanced",
+        "icon": "SiReact"
+      },
+      {
+        "name": "Bootstrap",
+        "category": "frameworks",
+        "proficiency": "intermediate",
+        "icon": ""
+      },
+      {
+        "name": "Express.js",
+        "category": "frameworks",
+        "proficiency": "intermediate",
+        "icon": ""
+      },
+      {
+        "name": "Next.js",
+        "category": "frameworks",
+        "proficiency": "advanced",
+        "icon": "SiNextdotjs"
+      },
+      {
+        "name": "Node.js",
+        "category": "frameworks",
+        "proficiency": "intermediate",
+        "icon": "SiNodedotjs"
+      },
+      {
+        "name": "MongoDB",
+        "category": "databases",
+        "proficiency": "intermediate",
+        "icon": "SiMongodb"
+      },
+      {
+        "name": "SQL",
+        "category": "databases",
+        "proficiency": "intermediate",
+        "icon": ""
+      },
+      {
+        "name": "NoSQL",
+        "category": "databases",
+        "proficiency": "basic",
+        "icon": ""
+      },
+      {
+        "name": "Git",
+        "category": "tools",
+        "proficiency": "advanced",
+        "icon": "SiGit"
+      },
+      {
+        "name": "Cloud Computing",
+        "category": "cloud",
+        "proficiency": "basic",
+        "icon": ""
+      },
+      {
+        "name": "Google Cloud Platform",
+        "category": "cloud",
+        "proficiency": "beginner",
+        "icon": "SiGooglecloud"
+      },
+      {
+        "name": "Figma",
+        "category": "tools",
+        "proficiency": "intermediate",
+        "icon": "SiFigma"
+      },
+      {
+        "name": "Postman",
+        "category": "tools",
+        "proficiency": "intermediate",
+        "icon": ""
+      },
+      {
+        "name": "Problem Solving",
+        "category": "soft Skills",
+        "proficiency": "advanced",
+        "icon": "Lightbulb"
+      },
+      {
+        "name": "Team Collaboration",
+        "category": "soft Skills",
+        "proficiency": "advanced",
+        "icon": "Users"
+      }
+    ]
   },
 
   "common": {

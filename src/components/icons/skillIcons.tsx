@@ -16,6 +16,8 @@ import {
   SiHtml5,
   SiCss3,
   SiFigma,
+  SiMinio,
+  SiMocha,
 } from "react-icons/si";
 
 export const skillIcons: Record<string, React.ReactNode> = {
@@ -35,4 +37,9 @@ export const skillIcons: Record<string, React.ReactNode> = {
   "HTML": <SiHtml5 />,
   "CSS": <SiCss3 />,
   "Figma": <SiFigma />,
+  "MinIO": <SiMinio />,
+  "Mocha": <SiMocha />,
+  "hapi.js": <span className="text-xs font-bold">hapi</span>,
+  "Restify": <span className="text-xs font-bold">restify</span>,
+  "i18n": <span className="text-xs font-bold">i18n</span>,
 };
