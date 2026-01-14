@@ -1,237 +1,194 @@
+"use client";
+
 import { getDictionary } from "@/lib/i18n";
 import { notFound } from "next/navigation";
-import { Metadata } from "next";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { skillIcons } from "@/components/icons/skillIcons";
-import { SiTypescript, SiJavascript, SiPython, SiHtml5, SiCss3, SiReact, SiNextdotjs, SiNodedotjs, SiTailwindcss, SiMongodb, SiPostgresql, SiDocker, SiGit, SiAwsamplify, SiGooglecloud, SiFigma } from "react-icons/si";
-import React from "react";
-import { cn } from "@/lib/utils";
+import React, { useState, useEffect } from "react";
 
-interface SkillItem {
-  name: string;
-  category: string;
-  proficiency: string;
-  icon: string;
-  description?: string;
-}
 
 interface Dictionary {
   meta: {
     title: string;
-    description: string;
     pages: {
-      home: string;
-      experience: string;
-      projects: string;
       skills: string;
-      certificates: string;
     };
   };
   skillsPage: {
     title: string;
-    categories: Record<string, string>;
-    proficiency: Record<string, string>;
-    languages: Record<string, { level: string; level_display: string }>;
-    items: {
-      name: string;
-      category: string;
-      proficiency: string;
-      icon: string;
-      description?: string;
-    }[];
   };
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getDictionary(locale) as Dictionary;
+export default function SkillsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const [t, setT] = useState<Dictionary | null>(null);
 
-  return {
-    title: t.meta.pages.skills,
-  };
-}
-
-export default async function SkillsPage({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
-
-  const validLocales = ["en", "id", "jp"];
-  if (!validLocales.includes(locale)) notFound();
-
-  const t = await getDictionary(locale) as Dictionary;
-
-  // Fetch GitHub repository for language detection
-  const fetchGitHubData = async () => {
-    try {
-      const response = await fetch('https://api.github.com/repos/pinje0/languages');
-      if (!response.ok) return null;
-      const data = await response.json();
-      return data;
-    } catch {
-      return null;
-    }
-  };
-
-  const [githubData, setGitHubData] = React.useState<any>(null);
-  
-  React.useEffect(() => {
-    const loadData = async () => {
-      const data = await fetchGitHubData();
-      setGitHubData(data);
+  useEffect(() => {
+    const initializeData = async () => {
+      const resolvedParams = await params;
+      const currentLocale = resolvedParams.locale;
+      
+      const validLocales = ["en", "id", "jp"];
+      if (!validLocales.includes(currentLocale)) {
+        notFound();
+        return;
+      }
+      
+      const dictionary = await getDictionary(currentLocale) as Dictionary;
+      setT(dictionary);
     };
-    loadData();
-  }, []);
 
-  // Get used languages from GitHub or fallback to dictionary
-  const getUsedLanguages = () => {
-    if (githubData) {
-      const languages = githubData.languages || [];
-      return languages.map((lang: any) => ({
-        name: lang.language,
-        proficiency: lang.proficiency || 'intermediate',
-        icon: skillIcons[lang.language] || ''
-      }));
-    }
-    return null;
+    initializeData();
+  }, [params]);
+
+  if (!t) {
+    return <div className="pt-32 pb-20 mx-auto px-10 md:px-20 max-w-6xl w-full">Loading...</div>;
+  }
+
+  // Helper function to safely render icons
+  const renderIcon = (iconKey: string) => {
+    const icon = skillIcons[iconKey];
+    if (!icon) return null;
+    if (typeof icon === 'string' || typeof icon === 'number') return null;
+    return icon;
   };
 
-  const usedLanguages = getUsedLanguages();
+  // Your CV data
+  const languageProficiency = [
+    { name: "Bahasa Indonesia", proficiency: "Native/Bilingual", flag: "🇮🇩" },
+    { name: "English", proficiency: "Limited Working Proficiency", flag: "🇬🇧" },
+    { name: "日本語", proficiency: "Elementary Proficiency", flag: "🇯🇵" }
+  ];
+
+  const hardSkills = [
+    "HTML", "CSS", "Javascript", "Typescript", "Python", "PHP", "Laravel", 
+    "Tailwind CSS", "React.js", "Bootstrap", "Express.js", "Next.js", 
+    "Node.js", "MongoDB", "PostgreSQL", "NoSQL", "Git", "Cloud Computing", 
+    "Google Cloud Platform (GCP)", "Figma", "Postman"
+  ];
+
+  const softSkills = [
+    "Problem Solving", "Team Collaboration", "Critical Thinking", "Adaptability"
+  ];
 
   return (
     <main className="pt-32 pb-20 mx-auto px-10 md:px-20 max-w-6xl w-full">
-      <h1 className="text-xl font-semibold mb-8">{t.skillsPage.title}</h1>
+      <h1 className="text-xl font-semibold mb-12">{t.skillsPage.title}</h1>
 
-      {/* Language Proficiency Section */}
-      <section className="mb-12">
-        <h2 className="text-lg font-medium mb-6 flex items-center gap-2">
+      {/* Language Proficiency - Only section with proficiency levels */}
+      <section className="mb-16">
+        <div className="flex items-center gap-3 mb-8">
           <div className="w-2 h-2 bg-primary rounded-full"></div>
-          Language Proficiency
-        </h2>
+          <h2 className="text-lg font-medium">Language Proficiency</h2>
+        </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {usedLanguages ? usedLanguages.map((lang, index) => (
-            <Card key={lang.name || `lang-${index}`} className="hover:shadow-md transition-all duration-300">
-              <CardContent className="p-4">
-                <div className="flex items-start gap-4">
-                  <div className="flex-1">
-                    <h3 className="font-medium text-sm">{lang.name}</h3>
-                    <p className="text-xs text-muted-foreground capitalize">
-                      {lang.proficiency || t.skillsPage.proficiency.intermediate}
-                    </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl">
+          {languageProficiency.map((lang, index) => (
+            <div key={lang.name} className="group relative">
+              <div className="absolute inset-0 bg-primary/10 rounded-lg scale-95 group-hover:scale-100 transition-all duration-300"></div>
+              <div className="relative bg-background border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-300">
+                <div className="flex items-start justify-between mb-3">
+                  <span className="text-2xl">{lang.flag}</span>
+                  <div className="text-xs text-muted-foreground font-mono bg-muted px-2 py-1 rounded">
+                    {lang.proficiency}
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-          )) : (
-            <div className="col-span-full text-center text-muted-foreground">
-              <p>Language data unavailable</p>
+                <h3 className="font-medium text-sm">{lang.name}</h3>
+              </div>
             </div>
-          )}
+          ))}
         </div>
       </section>
 
-      {/* Hard Skills Section */}
-      <section className="mb-12">
-        <h2 className="text-lg font-medium mb-6">Hard Skills</h2>
+      {/* Hard Skills - Visual skill grid */}
+      <section className="mb-16">
+        <div className="flex items-center gap-3 mb-8">
+          <div className="w-2 h-2 bg-primary rounded-full"></div>
+          <h2 className="text-lg font-medium">Technical Skills</h2>
+        </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {t.skillsPage.items
-            .filter(skill => skill.category === 'soft Skills')
-            .map((skill, index) => {
-              const Icon = skillIcons[skill.icon] || null;
-              
-              return (
-                <Card key={skill.name} className="hover:shadow-md transition-all duration-300">
-                  <CardContent className="p-4">
-                    <div className="flex items-start gap-4">
-                      {Icon && (
-                        <div className="text-2xl text-primary">
-                          <Icon />
-                        </div>
-                      )}
-                      <div className="flex-1">
-                        <h3 className="font-medium text-sm">{skill.name}</h3>
-                        {skill.description && (
-                          <p className="text-sm text-muted-foreground leading-relaxed">
-                            {skill.description}
-                          </p>
-                        )}
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
+          {hardSkills.map((skill) => {
+            const iconElement = renderIcon(skill);
+            
+            return (
+              <div key={skill} className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/0 rounded-lg scale-95 group-hover:scale-100 transition-all duration-300"></div>
+                <div className="relative bg-background border border-border/50 rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all duration-300">
+                  <div className="flex flex-col items-center text-center space-y-2">
+                    {iconElement ? (
+                      <div className="text-2xl text-primary group-hover:scale-110 transition-transform">
+                        {iconElement}
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
-        </div>
-      </section>
-
-      {/* Tools Section */}
-      <section className="mb-12">
-        <h2 className="text-lg font-medium mb-6">Tools</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {t.skillsPage.items
-            .filter(skill => skill.category === 'tools')
-            .map((skill, index) => {
-              const Icon = skillIcons[skill.icon] || null;
-              
-              return (
-                <Card key={skill.name} className="hover:shadow-md transition-all duration-300">
-                  <CardContent className="p-4">
-                    <div className="flex items-start gap-4">
-                      {Icon && (
-                        <div className="text-2xl text-primary">
-                          <Icon />
-                        </div>
-                      )}
-                <div className="flex-1">
-                    <h3 className="font-medium text-sm">{skill.name}</h3>
-                    <p className="text-xs text-muted-foreground capitalize">
-                      {t.skillsPage.languages?.[locale]?.level_display || t.skillsPage.proficiency.intermediate}
-                    </p>
+                    ) : (
+                      <div className="w-8 h-8 bg-muted rounded-md flex items-center justify-center text-xs font-mono text-muted-foreground">
+                        {skill.charAt(0).toUpperCase()}
+                      </div>
+                    )}
+                    <span className="text-xs font-medium truncate w-full">{skill}</span>
                   </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
-      {/* Skills Section for Frameworks & Databases */}
-      <section className="mb-12">
-        <h2 className="text-lg font-medium mb-6">Skills</h2>
+      {/* Soft Skills - Elegant card layout */}
+      <section className="mb-16">
+        <div className="flex items-center gap-3 mb-8">
+          <div className="w-2 h-2 bg-primary rounded-full"></div>
+          <h2 className="text-lg font-medium">Soft Skills</h2>
+        </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {t.skillsPage.items
-            .filter(skill => skill.category === 'frameworks' || skill.category === 'databases')
-            .map((skill, index) => {
-              const Icon = skillIcons[skill.icon] || null;
-              
-              return (
-                <Card key={skill.name} className="hover:shadow-md transition-all duration-300">
-                  <CardContent className="p-4">
-                    <div className="flex items-start gap-4">
-                      {Icon && (
-                        <div className="text-2xl text-primary">
-                          <Icon />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl">
+          {softSkills.map((skill) => {
+            const iconElement = renderIcon(skill);
+            
+            return (
+              <Card key={skill} className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/30">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0">
+                      {iconElement ? (
+                        <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary/20 transition-colors">
+                          <div className="text-xl">{iconElement}</div>
+                        </div>
+                      ) : (
+                        <div className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center text-muted-foreground">
+                          <span className="text-sm font-medium">{skill.charAt(0)}</span>
                         </div>
                       )}
-                      <div className="flex-1">
-                        <h3 className="font-medium text-sm">{skill.name}</h3>
-                        <p className="text-xs text-muted-foreground capitalize">
-                          {skill.proficiency}
-                        </p>
-                      </div>
                     </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+                    <div className="flex-1">
+                      <h3 className="font-medium text-sm">{skill}</h3>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Skills Overview - Visual representation */}
+      <section className="mb-12">
+        <div className="bg-muted/30 rounded-xl p-8 border border-border/50">
+          <h3 className="text-base font-medium mb-6 text-center">Skills Overview</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="space-y-2">
+              <div className="text-2xl font-bold text-primary">{hardSkills.length}+</div>
+              <div className="text-sm text-muted-foreground">Technical Skills</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-2xl font-bold text-primary">{softSkills.length}</div>
+              <div className="text-sm text-muted-foreground">Core Competencies</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-2xl font-bold text-primary">{languageProficiency.length}</div>
+              <div className="text-sm text-muted-foreground">Languages</div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

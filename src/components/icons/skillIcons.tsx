@@ -18,7 +18,17 @@ import {
   SiFigma,
   SiMinio,
   SiMocha,
+  SiPhp,
+  SiBootstrap,
+  SiExpress,
+  SiGit,
+  SiPostman,
+  SiCloudflare,
 } from "react-icons/si";
+import {
+  LuBrain,
+  LuRefreshCw,
+} from "react-icons/lu";
 
 export const skillIcons: Record<string, React.ReactNode> = {
   "Next.js": <SiNextdotjs />,
@@ -39,6 +49,16 @@ export const skillIcons: Record<string, React.ReactNode> = {
   "Figma": <SiFigma />,
   "MinIO": <SiMinio />,
   "Mocha": <SiMocha />,
+  "PHP": <SiPhp />,
+  "Bootstrap": <SiBootstrap />,
+  "Express.js": <SiExpress />,
+  "Git": <SiGit />,
+  "Postman": <SiPostman />,
+  "Cloud Computing": <SiCloudflare />,
+  "NoSQL": <SiMongodb />,
+  "SQL/PostgreSQL": <SiPostgresql />,
+  "Critical Thinking": <LuBrain />,
+  "Adaptability": <LuRefreshCw />,
   "hapi.js": <span className="text-xs font-bold">hapi</span>,
   "Restify": <span className="text-xs font-bold">restify</span>,
   "i18n": <span className="text-xs font-bold">i18n</span>,
