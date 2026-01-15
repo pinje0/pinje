@@ -6,7 +6,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { skillIcons } from "@/components/icons/skillIcons";
 import React, { useState, useEffect } from "react";
 
-
 interface Dictionary {
   meta: {
     title: string;
@@ -20,6 +19,12 @@ interface Dictionary {
   [key: string]: unknown;
 }
 
+const flagIcons: Record<string, string> = {
+  id: "fi fi-id",
+  en: "fi fi-gb",
+  jp: "fi fi-jp",
+};
+
 export default function SkillsPage({ params }: { params: Promise<{ locale: string }> }) {
   const [t, setT] = useState<Dictionary | null>(null);
 
@@ -27,13 +32,13 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
     const initializeData = async () => {
       const resolvedParams = await params;
       const currentLocale = resolvedParams.locale;
-      
+
       const validLocales = ["en", "id", "jp"];
       if (!validLocales.includes(currentLocale)) {
         notFound();
         return;
       }
-      
+
       const dictionary = await getDictionary(currentLocale) as Dictionary;
       setT(dictionary);
     };
@@ -45,106 +50,180 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
     return <div className="pt-32 pb-20 mx-auto px-10 md:px-20 max-w-6xl w-full">Loading...</div>;
   }
 
-  // Helper function to safely render icons
   const renderIcon = (iconKey: string) => {
     const icon = skillIcons[iconKey];
     if (!icon) return null;
-    if (typeof icon === 'string' || typeof icon === 'number') return null;
+    if (typeof icon === "string" || typeof icon === "number") return null;
     return icon;
   };
 
-  // Your CV data
-  const languageProficiency = [
-    { name: "Bahasa Indonesia", proficiency: "Native/Bilingual", flag: "🇮🇩" },
-    { name: "English", proficiency: "Limited Working Proficiency", flag: "🇬🇧" },
-    { name: "日本語", proficiency: "Elementary Proficiency", flag: "🇯🇵" }
+  const renderSkillIcon = (skill: string) => {
+    const iconElement = renderIcon(skill);
+    if (iconElement) {
+      return (
+        <div className="text-2xl text-primary group-hover:scale-110 transition-transform">
+          {iconElement}
+        </div>
+      );
+    }
+    return (
+      <div className="w-8 h-8 bg-muted rounded-md flex items-center justify-center text-xs font-mono text-muted-foreground">
+        {skill.charAt(0).toUpperCase()}
+      </div>
+    );
+  };
+
+  const languages = [
+    { id: "bahasa_indonesia", name: "Bahasa Indonesia", level: "Native", locale: "id" },
+    { id: "english", name: "English", level: "Limited Working", locale: "en" },
+    { id: "japanese", name: "日本語", level: "Elementary", locale: "jp" },
   ];
 
-  const hardSkills = [
-    "HTML", "CSS", "Javascript", "Typescript", "Python", "PHP", "Laravel", 
-    "Tailwind CSS", "React.js", "Bootstrap", "Express.js", "Next.js", 
-    "Node.js", "MongoDB", "PostgreSQL", "NoSQL", "Git", "Cloud Computing", 
-    "Google Cloud Platform (GCP)", "Figma", "Postman"
+  const programmingLanguages = [
+    "HTML", "CSS", "Javascript", "Typescript", "Python", "PHP"
   ];
 
-  const softSkills = [
-    "Problem Solving", "Team Collaboration", "Critical Thinking", "Adaptability"
+  const frameworks = [
+    "Tailwind CSS", "React.js", "Bootstrap", "Express.js", "Next.js", "Node.js", "Laravel"
+  ];
+
+  const databases = [
+    "MongoDB", "PostgreSQL"
+  ];
+
+  const tools = [
+    "Git", "Figma", "Postman", "Docker"
+  ];
+
+  const cloud = [
+    "Google Cloud Platform (GCP)"
   ];
 
   return (
-    <main className="pt-32 pb-20 mx-auto px-10 md:px-20 max-w-6xl w-full">
+    <main className="pt-32 pb-20 mx-auto px-6 md:px-20 max-w-6xl w-full">
       <h1 className="text-xl font-semibold mb-12">{t.skillsPage.title}</h1>
 
-      {/* Language Proficiency - Only section with proficiency levels */}
-      <section className="mb-16">
-        <div className="flex items-center gap-3 mb-8">
+      {/* Programming Languages */}
+      <section className="mb-12">
+        <div className="flex items-center gap-3 mb-6">
           <div className="w-2 h-2 bg-primary rounded-full"></div>
-          <h2 className="text-lg font-medium">Language Proficiency</h2>
+          <h2 className="text-lg font-medium">Programming Languages</h2>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl">
-          {languageProficiency.map((lang, index) => (
-            <div key={lang.name} className="group relative">
-              <div className="absolute inset-0 bg-primary/10 rounded-lg scale-95 group-hover:scale-100 transition-all duration-300"></div>
-              <div className="relative bg-background border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-300">
-                <div className="flex items-start justify-between mb-3">
-                  <span className="text-2xl">{lang.flag}</span>
-                  <div className="text-xs text-muted-foreground font-mono bg-muted px-2 py-1 rounded">
-                    {lang.proficiency}
-                  </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+          {programmingLanguages.map((skill) => (
+            <div key={skill} className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/0 rounded-lg scale-95 group-hover:scale-100 transition-all duration-300"></div>
+              <div className="relative bg-background border border-border/50 rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all duration-300">
+                <div className="flex flex-col items-center text-center space-y-2">
+                  {renderSkillIcon(skill)}
+                  <span className="text-xs font-medium truncate w-full">{skill}</span>
                 </div>
-                <h3 className="font-medium text-sm">{lang.name}</h3>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Hard Skills - Visual skill grid */}
-      <section className="mb-16">
-        <div className="flex items-center gap-3 mb-8">
+      {/* Frameworks & Libraries */}
+      <section className="mb-12">
+        <div className="flex items-center gap-3 mb-6">
           <div className="w-2 h-2 bg-primary rounded-full"></div>
-          <h2 className="text-lg font-medium">Technical Skills</h2>
+          <h2 className="text-lg font-medium">Frameworks & Libraries</h2>
         </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
-          {hardSkills.map((skill) => {
-            const iconElement = renderIcon(skill);
-            
-            return (
-              <div key={skill} className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/0 rounded-lg scale-95 group-hover:scale-100 transition-all duration-300"></div>
-                <div className="relative bg-background border border-border/50 rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all duration-300">
-                  <div className="flex flex-col items-center text-center space-y-2">
-                    {iconElement ? (
-                      <div className="text-2xl text-primary group-hover:scale-110 transition-transform">
-                        {iconElement}
-                      </div>
-                    ) : (
-                      <div className="w-8 h-8 bg-muted rounded-md flex items-center justify-center text-xs font-mono text-muted-foreground">
-                        {skill.charAt(0).toUpperCase()}
-                      </div>
-                    )}
-                    <span className="text-xs font-medium truncate w-full">{skill}</span>
-                  </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+          {frameworks.map((skill) => (
+            <div key={skill} className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/0 rounded-lg scale-95 group-hover:scale-100 transition-all duration-300"></div>
+              <div className="relative bg-background border border-border/50 rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all duration-300">
+                <div className="flex flex-col items-center text-center space-y-2">
+                  {renderSkillIcon(skill)}
+                  <span className="text-xs font-medium truncate w-full">{skill}</span>
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Soft Skills - Elegant card layout */}
-      <section className="mb-16">
-        <div className="flex items-center gap-3 mb-8">
+      {/* Databases */}
+      <section className="mb-12">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-2 h-2 bg-primary rounded-full"></div>
+          <h2 className="text-lg font-medium">Databases</h2>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+          {databases.map((skill) => (
+            <div key={skill} className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/0 rounded-lg scale-95 group-hover:scale-100 transition-all duration-300"></div>
+              <div className="relative bg-background border border-border/50 rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all duration-300">
+                <div className="flex flex-col items-center text-center space-y-2">
+                  {renderSkillIcon(skill)}
+                  <span className="text-xs font-medium truncate w-full">{skill}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Tools */}
+      <section className="mb-12">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-2 h-2 bg-primary rounded-full"></div>
+          <h2 className="text-lg font-medium">Tools</h2>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+          {tools.map((skill) => (
+            <div key={skill} className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/0 rounded-lg scale-95 group-hover:scale-100 transition-all duration-300"></div>
+              <div className="relative bg-background border border-border/50 rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all duration-300">
+                <div className="flex flex-col items-center text-center space-y-2">
+                  {renderSkillIcon(skill)}
+                  <span className="text-xs font-medium truncate w-full">{skill}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Cloud & DevOps */}
+      <section className="mb-12">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-2 h-2 bg-primary rounded-full"></div>
+          <h2 className="text-lg font-medium">Cloud & DevOps</h2>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+          {cloud.map((skill) => (
+            <div key={skill} className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/0 rounded-lg scale-95 group-hover:scale-100 transition-all duration-300"></div>
+              <div className="relative bg-background border border-border/50 rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all duration-300">
+                <div className="flex flex-col items-center text-center space-y-2">
+                  {renderSkillIcon(skill)}
+                  <span className="text-xs font-medium truncate w-full">{skill}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Soft Skills */}
+      <section className="mb-12">
+        <div className="flex items-center gap-3 mb-6">
           <div className="w-2 h-2 bg-primary rounded-full"></div>
           <h2 className="text-lg font-medium">Soft Skills</h2>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl">
-          {softSkills.map((skill) => {
+          {["Problem Solving", "Team Collaboration", "Critical Thinking", "Adaptability"].map((skill) => {
             const iconElement = renderIcon(skill);
-            
+
             return (
               <Card key={skill} className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/30">
                 <CardContent className="p-6">
@@ -171,24 +250,28 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
         </div>
       </section>
 
-      {/* Skills Overview - Visual representation */}
+      {/* Language Proficiency */}
       <section className="mb-12">
-        <div className="bg-muted/30 rounded-xl p-8 border border-border/50">
-          <h3 className="text-base font-medium mb-6 text-center">Skills Overview</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="space-y-2">
-              <div className="text-2xl font-bold text-primary">{hardSkills.length}+</div>
-              <div className="text-sm text-muted-foreground">Technical Skills</div>
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-2 h-2 bg-primary rounded-full"></div>
+          <h2 className="text-lg font-medium">Language Proficiency</h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl">
+          {languages.map((lang) => (
+            <div key={lang.id} className="group relative">
+              <div className="absolute inset-0 bg-primary/10 rounded-lg scale-95 group-hover:scale-100 transition-all duration-300"></div>
+              <div className="relative bg-background border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-300">
+                <div className="flex items-start justify-between mb-3">
+                  <span className={`text-2xl h-6 w-6 ${flagIcons[lang.locale]}`}></span>
+                  <div className="text-xs text-muted-foreground font-mono bg-muted px-2 py-1 rounded">
+                    {lang.level}
+                  </div>
+                </div>
+                <h3 className="font-medium text-sm">{lang.name}</h3>
+              </div>
             </div>
-            <div className="space-y-2">
-              <div className="text-2xl font-bold text-primary">{softSkills.length}</div>
-              <div className="text-sm text-muted-foreground">Core Competencies</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-2xl font-bold text-primary">{languageProficiency.length}</div>
-              <div className="text-sm text-muted-foreground">Languages</div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </main>

@@ -6,6 +6,10 @@ This file contains guidelines and commands for agentic coding agents working in 
 
 This is a Next.js 16 portfolio website with TypeScript, Tailwind CSS v4, and internationalization support (English, Indonesian, Japanese). The project uses Radix UI components and follows a modern React architecture.
 
+# IMPORTANT
+
+Never run npm run dev or build unless explicitly requested
+
 ## Build & Development Commands
 
 ```bash
@@ -23,18 +27,21 @@ npm run lint            # Run ESLint
 ## Testing
 
 This project currently does not have a test framework configured. When adding tests, consider using:
+
 - Jest + React Testing Library for component testing
 - Playwright or Cypress for E2E testing
 
 ## Code Style Guidelines
 
 ### TypeScript Configuration
+
 - Strict mode enabled
 - Path alias: `@/*` maps to `./src/*`
 - JSX: `react-jsx` (no need to import React)
 - Target: ES2017, Module: esnext
 
 ### Import Organization
+
 ```typescript
 // 1. React/Next.js imports
 import { ReactNode } from "react";
@@ -52,6 +59,7 @@ import { Button } from "@/components/ui/button";
 ### Component Patterns
 
 #### Functional Components with TypeScript
+
 ```typescript
 interface ComponentProps {
   children: ReactNode;
@@ -59,24 +67,18 @@ interface ComponentProps {
   className?: string;
 }
 
-export default function Component({ 
-  children, 
-  variant = "default", 
-  className 
-}: ComponentProps) {
-  return (
-    <div className={cn("base-class", className)}>
-      {children}
-    </div>
-  );
+export default function Component({ children, variant = "default", className }: ComponentProps) {
+  return <div className={cn("base-class", className)}>{children}</div>;
 }
 ```
 
 #### Client Components
+
 - Use `"use client";` directive for components with hooks/event handlers
 - Keep server components as default for better performance
 
 #### UI Components (shadcn/ui style)
+
 - Use class-variance-authority (CVA) for component variants
 - Follow the pattern in `src/components/ui/button.tsx`
 - Export both component and variants
@@ -85,12 +87,14 @@ export default function Component({
 ### Styling Guidelines
 
 #### Tailwind CSS v4
+
 - Use utility classes primarily
 - Custom CSS variables defined in `globals.css` for theming
 - Dark mode support with `.dark` class
 - Component-specific styles in CSS layers when needed
 
 #### CSS Variables (Theme)
+
 ```css
 /* Light mode (root) */
 --background: oklch(1 0 0);
@@ -103,6 +107,7 @@ export default function Component({
 ```
 
 #### Custom Utility Classes
+
 - `.link-rise-bg` for animated underline links
 - `.navbar-fixed` for scrolled navbar state
 - `.theme-transition` for smooth theme switching
@@ -128,16 +133,19 @@ src/
 ### Naming Conventions
 
 #### Components
+
 - PascalCase for component names
 - Default export for main component
 - Named exports for utilities/variants
 
 #### Files
+
 - Component files: `ComponentName.tsx`
 - Utility files: `lowercase.ts`
 - Type files: `types.ts` or inline interfaces
 
 #### CSS Classes
+
 - Tailwind: kebab-case utility classes
 - Custom: kebab-case with semantic meaning
 - States: prefix with state (`.active-nav`, `.scrolled`)
@@ -145,12 +153,14 @@ src/
 ### Error Handling
 
 #### TypeScript
+
 - Use strict mode
 - Define proper interfaces for props
 - Use generic types where appropriate
 - Handle optional props with `?` and default values
 
 #### React
+
 - Use error boundaries for route-level errors
 - Implement proper loading states
 - Handle async operations with try/catch
@@ -158,11 +168,13 @@ src/
 ### Internationalization
 
 #### Supported Locales
+
 - `en` - English
-- `id` - Indonesian  
+- `id` - Indonesian
 - `jp` - Japanese
 
 #### Implementation
+
 - Dynamic routes with `[locale]` parameter
 - Dictionary files in `src/lib/i18n.ts`
 - Language switching via URL path changes
@@ -171,12 +183,14 @@ src/
 ### Performance Guidelines
 
 #### Next.js Optimizations
+
 - Use server components by default
 - Client components only when needed (hooks, events)
 - Dynamic imports for heavy components
 - Image optimization with Next.js Image component
 
 #### Bundle Size
+
 - Tree-shake imports from libraries
 - Use specific imports rather than entire libraries
 - Optimize font loading with proper font-display
@@ -184,11 +198,13 @@ src/
 ### Git & Development Workflow
 
 #### Before Committing
+
 1. Run `npm run lint` to check code quality
 2. Test functionality manually
 3. Ensure TypeScript compilation succeeds
 
 #### Next.js Configuration Notes
+
 - Turbopack enabled for development
 - ESLint ignored during builds (configured in next.config.ts)
 - TypeScript errors ignored during builds (for development speed)
@@ -196,6 +212,7 @@ src/
 ### Common Patterns
 
 #### Theme Switching
+
 ```typescript
 const { theme, setTheme } = useTheme();
 const [mounted, setMounted] = useState(false);
@@ -205,6 +222,7 @@ if (!mounted) return null; // Prevent hydration mismatch
 ```
 
 #### Internationalized Routing
+
 ```typescript
 const changeLanguage = (lang: string) => {
   const segments = pathname.split("/");
@@ -214,6 +232,7 @@ const changeLanguage = (lang: string) => {
 ```
 
 #### Utility Function
+
 ```typescript
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -223,6 +242,7 @@ export function cn(...inputs: ClassValue[]) {
 ## Dependencies
 
 ### Key Libraries
+
 - Next.js 16 - React framework
 - TypeScript 5 - Type safety
 - Tailwind CSS v4 - Styling
@@ -232,6 +252,7 @@ export function cn(...inputs: ClassValue[]) {
 - clsx + tailwind-merge - Class utilities
 
 ### UI Components
+
 - Button, Card, Dropdown, Navigation, Switch, Alert, Sheet
 - All follow shadcn/ui patterns with CVA for variants
 

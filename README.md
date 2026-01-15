@@ -1,36 +1,161 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio Website
+
+A modern, responsive personal portfolio website built with Next.js 16, TypeScript, and Tailwind CSS v4. Features multi-language support (English, Indonesian, Japanese), dark/light theme, and a clean minimalist design.
+
+![Portfolio Preview](./preview.png)
+
+## Features
+
+- **Multi-language Support** - Available in English, Indonesian, and Japanese with instant language switching
+- **Dark/Light Mode** - Seamless theme switching with smooth transitions
+- **Responsive Design** - Fully optimized for desktop, tablet, and mobile devices
+- **Modern Tech Stack** - Built with Next.js 16, TypeScript, and Tailwind CSS v4
+- **Accessible Components** - Uses Radix UI primitives for keyboard navigation and screen reader support
+- **Project Showcase** - Interactive project gallery with detailed views
+- **Certificate Gallery** - Album-style certificate viewer with zoom and navigation
+- **Skills Display** - Categorized skills with icons for easy recognition
+- **Experience Timeline** - Professional experience and education history
+
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS v4
+- **Components**: Radix UI, shadcn/ui inspired components
+- **Icons**: Lucide React, React Icons
+- **Theme**: next-themes for dark/light mode
+- **Internationalization**: Custom i18n implementation
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.17 or later
+- npm, yarn, pnpm, or bun
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/pinje0/portfolio.git
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── [locale]/          # Internationalized routes
+│   │   ├── page.tsx       # Home page
+│   │   ├── projects # Projects section/
+│   │   ├── experience/    # Experience page
+│   │   ├── skills/        # Skills page
+│   │   └── certificates/  # Certificates gallery
+│   ├── globals.css        # Global styles
+│   └── layout.tsx         # Root layout
+├── components/
+│   ├── ui/                # Reusable UI components
+│   ├── icons/             # Icon components
+│   ├── Navbar.tsx         # Navigation component
+│   └── CertificateModal.tsx  # Certificate viewer modal
+├── locales/               # Translation files
+│   ├── en.json
+│   ├── id.json
+│   └── jp.json
+└── lib/
+    ├── i18n.ts            # Internationalization utilities
+    └── utils.ts           # Utility functions
+```
 
-## Learn More
+## Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Adding Projects
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Edit `src/locales/en.json` (and other locale files) to add or modify projects:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```json
+"projectsPage": {
+  "items": [
+    {
+      "id": "your-project",
+      "title": "Your Project Name",
+      "description": "Project description...",
+      "thumbnail": "/img/projects/your-thumbnail.png",
+      "techStack": ["React", "Node.js"],
+      "featured": true
+    }
+  ]
+}
+```
 
-## Deploy on Vercel
+### Adding Certificates
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Add certificate images to `public/certificates/` and update the locale files:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```json
+"certificatesPage": {
+  "items": [
+    {
+      "id": "your-certificate",
+      "title": "Certificate Name",
+      "organization": "Issuing Organization",
+      "date": "2024",
+      "thumbnail": "/certificates/your-certificate.png",
+      "credentialUrl": "https://credential-url.com"
+    }
+  ]
+}
+```
+
+### Changing Colors
+
+Modify CSS variables in `src/app/globals.css`:
+
+```css
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.141 0.005 285.823);
+  --primary: oklch(0.21 0.006 285.885);
+}
+
+.dark {
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.985 0 0);
+}
+```
+
+## Deployment
+
+Deploy to Vercel with zero configuration:
+
+1. Push to GitHub
+2. Import in Vercel dashboard
+3. Deploy
+
+Or use any Next.js-supported hosting platform.
+
+## License
+
+MIT License - feel free to use this template for your own portfolio.
+
+## Author
+
+**Melvin Austin**
+
+- GitHub: [@pinje0](https://github.com/pinje0)
+- LinkedIn: [melvin-austin](https://www.linkedin.com/in/melvin-austin/)

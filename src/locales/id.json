@@ -192,5 +192,59 @@
       "label": "Pembaruan Terakhir",
       "date": "November 2025"
     }
+  },
+
+  "certificatesPage": {
+    "title": "Sertifikat",
+    "items": [
+      {
+        "id": "aws-cloud-practitioner",
+        "title": "AWS Certified Cloud Practitioner",
+        "organization": "Amazon Web Services",
+        "date": "2024",
+        "thumbnail": "/certificates/aws-cloud-practitioner.png",
+        "credentialUrl": "https://aws.amazon.com/verification"
+      },
+      {
+        "id": "bangkit-capstone",
+        "title": "Sertifikat Kelulusan Bangkit Academy 2024",
+        "organization": "Bangkit Academy by Google, Gojek, Tokopedia & Traveloka",
+        "date": "2024",
+        "thumbnail": "/certificates/bangkit-capstone.png",
+        "credentialUrl": "https://bangkit.academy"
+      },
+      {
+        "id": "google-cloud-essentials",
+        "title": "Google Cloud Essentials",
+        "organization": "Google Cloud",
+        "date": "2024",
+        "thumbnail": "/certificates/google-cloud-essentials.png",
+        "credentialUrl": "https://cloud.google.com"
+      },
+      {
+        "id": "google-cloud-compute",
+        "title": "Perform Foundational Infrastructure Tasks in Google Cloud",
+        "organization": "Google Cloud",
+        "date": "2024",
+        "thumbnail": "/certificates/google-cloud-compute.png",
+        "credentialUrl": "https://cloud.google.com"
+      },
+      {
+        "id": "google-cloud-hybrid",
+        "title": "Set Up a Google Cloud Notebook Environment",
+        "organization": "Google Cloud",
+        "date": "2024",
+        "thumbnail": "/certificates/google-cloud-hybrid.png",
+        "credentialUrl": "https://cloud.google.com"
+      },
+      {
+        "id": "intermediate-python",
+        "title": "Intermediate Python",
+        "organization": "Sololearn",
+        "date": "2023",
+        "thumbnail": "/certificates/intermediate-python.png",
+        "credentialUrl": "https://sololearn.com"
+      }
+    ]
   }
 }
