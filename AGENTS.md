@@ -263,6 +263,56 @@ export function cn(...inputs: ClassValue[]) {
 3. **Use the `cn()` utility** for combining classes
 4. **Follow the existing component patterns** in `/src/components/ui/`
 5. **Test in both light and dark themes** when making UI changes
-6. **Check all three locales** when modifying text/navigation
-7. **Use path aliases** (`@/`) for internal imports
-8. **Run lint command** before completing tasks
+6. **Focus on English (en.json) first** - Complete all content and features in English before working on translations
+7. **Indonesian (id) and Japanese (jp) translations can be added later** - Only translate after English is complete
+8. **Use path aliases** (`@/`) for internal imports
+9. **Run lint command** before completing tasks
+
+## Future Work: Data Population & Localization
+
+When adding actual portfolio data, follow this workflow:
+
+### Step 1: Populate English Data (en.json)
+Add all actual content to en.json first:
+- Experience items (roles, companies, descriptions)
+- Project details (titles, descriptions, tech stack, features)
+- Skills data
+- Certificates data
+- Any other text content
+
+### Step 2: Implement Locale-Specific Patterns
+Each language has different grammatical structures:
+
+**English (en.json):**
+- Default pattern: `prefix + role + @ + organization`
+- Example: `ex-Full Stack Developer Intern @ Telkom Indonesia`
+
+**Indonesian (id.json):**
+- Pattern: `prefix + role + di + organization`
+- Example: `ex Intern Full Stack Developer di Telkom Indonesia`
+- Update `labels.at` to `"di"`
+
+**Japanese (jp.json):**
+- Pattern: `organization + で + role` (org comes first)
+- Example: `Telkom Indonesiaでフルスタック開発インターン`
+- Update `labels.at` to `"で"`
+- Remove prefix or set to empty string
+
+### Step 3: Translate to Indonesian (id.json)
+Translate en.json content to Indonesian:
+- Keep same data structure
+- Natural Bahasa Indonesia phrasing
+- Adjust labels/patterns as needed
+
+### Step 4: Translate to Japanese (jp.json)
+Translate en.json content to Japanese:
+- Keep same data structure
+- Natural Japanese phrasing
+- May need different word order (org before role)
+- Adjust labels/patterns as needed
+
+### Key Principles
+- **Accuracy over automation** - Manual translation quality > machine translation
+- **Natural phrasing** - Content should sound native in each language
+- **Clickable links preserved** - AnimatedLink components should wrap organization/company names
+- **Component logic handles order** - Use locale checks in components to render correct order (e.g., `locale === "jp"` check)

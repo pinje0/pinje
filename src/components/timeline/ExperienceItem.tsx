@@ -1,6 +1,13 @@
 import { skillIcons } from "@/components/icons/skillIcons";
 import TimelineItem from "./TimelineItem";
 
+export interface CategorizedDescription {
+  frontend?: string[];
+  backend?: string[];
+}
+
+export type DescriptionContent = string | string[] | CategorizedDescription;
+
 export interface Role {
   title: string;
   start: string;
@@ -8,7 +15,7 @@ export interface Role {
   duration?: string;
   locationType: string;
   context?: string;
-  description: string | string[]; // Support both string and array
+  description: DescriptionContent;
   skills?: string[];
 }
 
@@ -47,7 +54,38 @@ export default function ExperienceItem({
     );
   };
 
-  const renderDescription = (description: string | string[], context?: string) => {
+  const renderList = (items: string[], label?: string) => (
+    <div className={label ? "mt-3 first:mt-0" : ""}>
+      {label && <p className="font-semibold text-[14px] text-foreground mb-1">{label}</p>}
+      <ul className="list-disc list-outside ml-5 space-y-1.5 text-[14px]">
+        {items.map((item, idx) => (
+          <li key={idx} className="leading-relaxed">
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+
+  const renderCategorizedDescription = (desc: CategorizedDescription) => {
+    return (
+      <div className="space-y-2">
+        {desc.frontend && renderList(desc.frontend, "Frontend:")}
+        {desc.backend && renderList(desc.backend, "Backend:")}
+      </div>
+    );
+  };
+
+  const renderDescription = (description: DescriptionContent, context?: string) => {
+    if (description && typeof description === "object" && !Array.isArray(description)) {
+      return (
+        <div className="space-y-2">
+          {context && <p className="text-[14px] text-muted-foreground italic">{context}</p>}
+          {renderCategorizedDescription(description)}
+        </div>
+      );
+    }
+
     return (
       <div className="space-y-2">
         {context && <p className="text-[14px] text-muted-foreground italic">{context}</p>}

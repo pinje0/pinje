@@ -13,6 +13,10 @@
 
   "projectsPage": {
     "title": "Projects",
+    "labels": {
+      "viewDetails": "View Details",
+      "noProjects": "No projects to display yet."
+    },
     "items": [
       {
         "id": "toursantara",
@@ -152,6 +156,10 @@
       "viewCode": "View Code",
       "backToProjects": "Back to Projects",
       "present": "Present",
+      "screenshots": "Screenshots",
+      "projectInfo": "Project Info",
+      "quickLinks": "Quick Links",
+      "demo": "Demo",
       "languages": "Languages",
       "frameworks": "Frameworks",
       "tools": "Tools",
@@ -224,12 +232,12 @@
     },
     "current": {
       "status": "Currently",
-      "role": "Web Developer Intern",
-      "preposition": "at",
-      "company": "Katadata",
-      "companyUrl": "https://linkedin.com/company/katadata",
-      "startDate": "October 2025",
-      "endDate": "Present",
+      "role": "Unemployed",
+      "preposition": "",
+      "company": "",
+      "companyUrl": "",
+      "startDate": "",
+      "endDate": "",
       "labels": {
         "dateSeparator": " - "
       }
@@ -265,23 +273,38 @@
     "title": "Experience",
     "items": [
       {
-        "company": "KATADATAcoid",
+        "company": "Katadata Indonesia",
         "employmentType": "Internship",
         "duration": "3 Month",
         "location": "Jakarta, Indonesia • Hybrid",
         "roles": [
           {
-            "title": "Web Developer Intern",
+            "title": "Full Stack Developer Intern",
             "start": "Oct 2025",
-            "end": "Present",
+            "end": "Jan 2026",
             "locationType": "Hybrid",
-            "description": [
-              "Developed a user dashboard for an internal product platform using Next.js, TypeScript, Tailwind CSS, and Zustand. Implemented features such as product creation, product management, and revenue visualization.",
-              "Built the COP30 microsite using Next.js (TypeScript) and Tailwind CSS for Katadata's coverage of the 30th UN climate conference (COP30).",
-              "Refactored and migrated asset dependencies for several Shorthand-based longform microsites, including 'Data Center Batam' and 'Hutan Hilang, Sumatra Tenggelam'.",
-              "Developed backend payment functionality using Node.js (TypeScript), PostgreSQL, and Midtrans, and integrated the payment API with the frontend."
-            ],
-            "skills": ["Next.js", "Node.js", "PostgreSQL", "Typescript", "Tailwind CSS", "Laravel"]
+            "description": {
+              "frontend": [
+                "Developed a user dashboard for an internal product platform using Next.js, TypeScript, Tailwind CSS, and Zustand. Implemented features such as product creation, product management, and revenue visualization.",
+                "Built the COP30 microsite using Next.js (TypeScript) and Tailwind CSS for Katadata's coverage of the 30th UN climate conference (COP30).",
+                "Refactored and migrated asset dependencies for several Shorthand-based longform microsites, including 'Data Center Batang' and 'Hutan Hilang, Sumatra Tenggelam'."
+              ],
+              "backend": [
+                "Developed backend payment functionality using Node.js (TypeScript), PostgreSQL, and Midtrans, and integrated the payment API with the frontend.",
+                "Implemented a registration system for various events using Laravel and MySQL."
+              ]
+            },
+            "skills": [
+              "Next.js",
+              "TypeScript",
+              "Tailwind CSS",
+              "Zustand",
+              "Node.js",
+              "PostgreSQL",
+              "Midtrans",
+              "Laravel",
+              "MySQL"
+            ]
           }
         ]
       }
@@ -316,9 +339,18 @@
 
   "skillsPage": {
     "title": "Skills",
+    "sections": {
+      "programmingLanguages": "Programming Languages",
+      "frameworks": "Frameworks & Libraries",
+      "databases": "Databases",
+      "tools": "Tools",
+      "cloud": "Cloud & DevOps",
+      "softSkills": "Soft Skills",
+      "languageProficiency": "Language Proficiency"
+    },
     "categories": {
       "languages": "Languages",
-      "frameworks": "Frameworks", 
+      "frameworks": "Frameworks",
       "tools": "Tools",
       "databases": "Databases",
       "cloud": "Cloud & DevOps",
@@ -492,12 +524,15 @@
     "lastUpdate": {
       "message": "Site is still under reconstruction",
       "label": "Last Update",
-      "date": "November 2025"
+      "date": "January 2026"
     }
   },
 
   "certificatesPage": {
     "title": "Certificates",
+    "labels": {
+      "noCertificates": "No certificates to display yet."
+    },
     "items": [
       {
         "id": "aws-cloud-practitioner",

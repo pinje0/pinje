@@ -63,9 +63,9 @@
         }
       ],
       "labels": {
-        "prefix": "元",
+        "prefix": "",
         "separator": " | ",
-        "at": "@"
+        "at": "で"
       }
     },
 
@@ -113,68 +113,140 @@
     }
   },
 
+  "projectsPage": {
+    "title": "プロジェクト",
+    "labels": {
+      "viewDetails": "詳細を見る",
+      "noProjects": "表示するプロジェクトがありません。"
+    },
+    "items": []
+  },
+
+  "projectDetailPage": {
+    "details": {},
+    "labels": {
+      "overview": "概要",
+      "techStack": "技術スタック",
+      "features": "機能",
+      "myRole": "担当役割",
+      "team": "チーム",
+      "timeline": "タイムライン",
+      "links": "リンク",
+      "viewProject": "プロジェクトを見る",
+      "viewCode": "コードを見る",
+      "backToProjects": "プロジェクトに戻る",
+      "present": "現在",
+      "screenshots": "スクリーンショット",
+      "projectInfo": "プロジェクト情報",
+      "quickLinks": "クイックリンク",
+      "demo": "デモ",
+      "languages": "言語",
+      "frameworks": "フレームワーク",
+      "tools": "ツール",
+      "frontend": "フロントエンド",
+      "backend": "バックエンド",
+      "database": "データベース",
+      "storage": "ストレージ",
+      "testing": "テスト"
+    }
+  },
+
   "experiencePage": {
     "title": "Experience",
-
     "items": [
       {
-        "company": "Tokopedia",
-        "employmentType": "Full-Time",
-        "duration": "2022 – Present",
-        "location": "Jakarta • Remote",
-
+        "company": "Katadata Indonesia",
+        "employmentType": "インターンシップ",
+        "duration": "3ヶ月",
+        "location": "インドネシア・ジャカルタ Hybrid",
         "roles": [
           {
-            "title": "Frontend Developer",
-            "start": "Jan 2023",
-            "end": "Present",
-            "locationType": "Remote",
-            "description": "Built UI components using Next.js and TypeScript."
-          },
-          {
-            "title": "Junior Frontend Developer",
-            "start": "2022",
-            "end": "Jan 2023",
-            "locationType": "Hybrid",
-            "description": "Maintained and improved internal dashboards."
+            "title": "フルスタック開発インターン",
+            "start": "2025年10月",
+            "end": "2026年1月",
+            "locationType": "ハイブリッド",
+            "description": {
+              "frontend": [
+                "Next.js、TypeScript、Tailwind CSS、Zustandを使用して社内製品プラットフォームのユーザーダッシュボードを開発。製品作成、製品管理、収益可視化などの機能を実装。",
+                "第30回国連気候変動会議（COP30）のカタデータ報道向けに、Next.js（TypeScript）とTailwind CSSを使用してCOP30マイクロサイトを構築。",
+                "'Data Center Batang'や'Hutan Hilang, Sumatra Tenggelam'など、複数のShorthandベースのロンフォームマイクロサイトのアセット依存関係のリファクタリングと移行を実施。"
+              ],
+              "backend": [
+                "Node.js（TypeScript）、PostgreSQL、Midtransを使用してバックエンド決済機能を開発し、フロントエンドと決済APIを統合。",
+                "LaravelとMySQLを使用して各種イベントの登録システムを実装。"
+              ]
+            },
+            "skills": [
+              "Next.js",
+              "TypeScript",
+              "Tailwind CSS",
+              "Zustand",
+              "Node.js",
+              "PostgreSQL",
+              "Midtrans",
+              "Laravel",
+              "MySQL"
+            ]
           }
-        ],
-
-        "skills": ["Next.js", "Tailwind", "TypeScript"]
-      },
-
-      {
-        "company": "Telkom Indonesia",
-        "employmentType": "Internship",
-        "duration": "2021",
-        "location": "Jakarta • On-site",
-
-        "roles": [
-          {
-            "title": "Full Stack Developer Intern",
-            "start": "Jan 2021",
-            "end": "Jun 2021",
-            "locationType": "On-site",
-            "description": "Developed internal platforms using Node.js and React."
-          }
-        ],
-
-        "skills": ["React", "Node.js", "REST API"]
+        ]
       }
     ],
-
     "educationTitle": "Education",
-
     "education": [
       {
-        "school": "Binus University",
-        "degree": "Bachelor",
-        "major": "Computer Science",
-        "gpa": "3.78",
-        "start": "2019",
-        "end": "2023"
+        "school": "Gunadarma University",
+        "degree": "学士号",
+        "major": "情報システム",
+        "gpa": "3.73/4.00",
+        "start": "2021",
+        "end": "2025"
       }
     ]
+  },
+
+  "skillsPage": {
+    "title": "スキル",
+    "sections": {
+      "programmingLanguages": "プログラミング言語",
+      "frameworks": "フレームワーク & ライブラリ",
+      "databases": "データベース",
+      "tools": "ツール",
+      "cloud": "クラウド & DevOps",
+      "softSkills": "ソフトスキル",
+      "languageProficiency": "言語能力"
+    },
+    "categories": {
+      "languages": "言語",
+      "frameworks": "フレームワーク",
+      "tools": "ツール",
+      "databases": "データベース",
+      "cloud": "クラウド & DevOps",
+      "soft Skills": "ソフトスキル"
+    },
+    "proficiency": {
+      "native": "ネイティブ",
+      "fluent": "流暢",
+      "advanced": "上級",
+      "professional": "専門的",
+      "intermediate": "中級",
+      "beginner": "初級",
+      "basic": "基礎"
+    },
+    "languages": {
+      "bahasa_indonesia": {
+        "level": "Native",
+        "level_display": "Penutur Asli (バイリンガル)"
+      },
+      "english": {
+        "level": "Limited working proficiency",
+        "level_display": "限定的working習熟度"
+      },
+      "japanese": {
+        "level": "Elementary",
+        "level_display": "基礎レベル (A1)"
+      }
+    },
+    "items": []
   },
 
   "footer": {
@@ -190,12 +262,15 @@
     "lastUpdate": {
       "message": "サイトは現在改修中です",
       "label": "最終更新",
-      "date": "2025年11月"
+      "date": "2026年1月"
     }
   },
 
   "certificatesPage": {
     "title": "資格",
+    "labels": {
+      "noCertificates": "表示する資格がありません。"
+    },
     "items": [
       {
         "id": "aws-cloud-practitioner",

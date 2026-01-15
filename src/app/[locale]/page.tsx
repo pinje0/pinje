@@ -48,11 +48,23 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             {t.homePage.experience.items.map((item, index) => (
               <span key={index}>
                 {index > 0 && t.homePage.experience.labels.separator}
-                {item.status === "past" && t.homePage.experience.labels.prefix}
-                {item.role} {t.homePage.experience.labels.at}{" "}
-                <AnimatedLink href={item.orgUrl} mode="text">
-                  {item.organization}
-                </AnimatedLink>
+                {locale === "jp" ? (
+                  <>
+                    <AnimatedLink href={item.orgUrl} mode="text">
+                      {item.organization}
+                    </AnimatedLink>
+                    {t.homePage.experience.labels.at}
+                    {item.role}
+                  </>
+                ) : (
+                  <>
+                    {item.status === "past" && t.homePage.experience.labels.prefix}
+                    {item.role} {t.homePage.experience.labels.at}{" "}
+                    <AnimatedLink href={item.orgUrl} mode="text">
+                      {item.organization}
+                    </AnimatedLink>
+                  </>
+                )}
               </span>
             ))}
           </p>

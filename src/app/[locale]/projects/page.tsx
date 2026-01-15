@@ -112,7 +112,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
                   href={`/${locale}/projects/${project.id}`}
                   className="transition-colors duration-200 hover:bg-primary/90"
                 >
-                  View Details
+                  {t.projectsPage.labels.viewDetails}
                 </a>
               </Button>
 
@@ -153,7 +153,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
       {/* Empty State */}
       {t.projectsPage.items.length === 0 && (
         <div className="text-center py-20">
-          <p className="text-muted-foreground">No projects to display yet.</p>
+          <p className="text-muted-foreground">{t.projectsPage.labels.noProjects}</p>
         </div>
       )}
     </main>

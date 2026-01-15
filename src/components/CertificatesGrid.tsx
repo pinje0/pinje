@@ -17,9 +17,12 @@ interface CertificateItem {
 interface CertificatesGridProps {
   certificates: CertificateItem[];
   title: string;
+  labels?: {
+    noCertificates?: string;
+  };
 }
 
-export default function CertificatesGrid({ certificates, title }: CertificatesGridProps) {
+export default function CertificatesGrid({ certificates, title, labels }: CertificatesGridProps) {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -64,7 +67,7 @@ export default function CertificatesGrid({ certificates, title }: CertificatesGr
 
         {certificates.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-muted-foreground">No certificates to display yet.</p>
+            <p className="text-muted-foreground">{labels?.noCertificates || "No certificates to display yet."}</p>
           </div>
         )}
       </main>

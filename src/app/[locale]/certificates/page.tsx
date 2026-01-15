@@ -37,6 +37,7 @@ export default async function CertificatesPage({
 
   const t = (await getDictionary(locale)) as any;
   const certificates = t.certificatesPage.items as CertificateItem[];
+  const labels = t.certificatesPage?.labels || {};
 
-  return <CertificatesGrid certificates={certificates} title={t.certificatesPage.title} />;
+  return <CertificatesGrid certificates={certificates} title={t.certificatesPage.title} labels={labels} />;
 }

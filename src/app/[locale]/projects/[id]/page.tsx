@@ -212,7 +212,7 @@ export default async function ProjectDetailPage({
           {/* Additional Images */}
           {project.images && project.images.length > 1 && (
             <section>
-              <h2 className="text-[17px] font-medium mb-3">Screenshots</h2>
+              <h2 className="text-[17px] font-medium mb-3">{labels.screenshots}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {project.images.slice(1).map((image: string, index: number) => (
                   <div
@@ -236,7 +236,7 @@ export default async function ProjectDetailPage({
             <section>
               <h2 className="text-[17px] font-medium mb-3 flex items-center gap-2">
                 <Play className="h-4 w-4" />
-                Demo
+                {labels.demo}
               </h2>
               <div className="relative aspect-video overflow-hidden rounded-lg border border-foreground/10">
                 <video src={project.demoVideo} controls className="w-full h-full">
@@ -252,7 +252,7 @@ export default async function ProjectDetailPage({
           {/* Project Info Card */}
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">Project Info</CardTitle>
+              <CardTitle className="text-lg">{labels.projectInfo}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               {/* Timeline */}
@@ -290,7 +290,7 @@ export default async function ProjectDetailPage({
           {/* Quick Links */}
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">Quick Links</CardTitle>
+              <CardTitle className="text-lg">{labels.quickLinks}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2">
               {project.deployedUrl && (

@@ -65,7 +65,7 @@
       "labels": {
         "prefix": "ex ",
         "separator": " | ",
-        "at": "@"
+        "at": "di"
       }
     },
 
@@ -113,68 +113,140 @@
     }
   },
 
+  "projectsPage": {
+    "title": "Proyek",
+    "labels": {
+      "viewDetails": "Lihat Detail",
+      "noProjects": "Belum ada proyek untuk ditampilkan."
+    },
+    "items": []
+  },
+
+  "projectDetailPage": {
+    "details": {},
+    "labels": {
+      "overview": "Ringkasan",
+      "techStack": "Tech Stack",
+      "features": "Fitur",
+      "myRole": "Peran Saya",
+      "team": "Tim",
+      "timeline": "Timeline",
+      "links": "Tautan",
+      "viewProject": "Lihat Proyek",
+      "viewCode": "Lihat Kode",
+      "backToProjects": "Kembali ke Proyek",
+      "present": "Sekarang",
+      "screenshots": "Tangkapan Layar",
+      "projectInfo": "Info Proyek",
+      "quickLinks": "Tautan Cepat",
+      "demo": "Demo",
+      "languages": "Bahasa",
+      "frameworks": "Framework",
+      "tools": "Alat",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "storage": "Penyimpanan",
+      "testing": "Pengujian"
+    }
+  },
+
   "experiencePage": {
     "title": "Experience",
-
     "items": [
       {
-        "company": "Tokopedia",
-        "employmentType": "Full-Time",
-        "duration": "2022 – Present",
-        "location": "Jakarta • Remote",
-
-        "roles": [
-          {
-            "title": "Frontend Developer",
-            "start": "Jan 2023",
-            "end": "Present",
-            "locationType": "Remote",
-            "description": "Built UI components using Next.js and TypeScript."
-          },
-          {
-            "title": "Junior Frontend Developer",
-            "start": "2022",
-            "end": "Jan 2023",
-            "locationType": "Hybrid",
-            "description": "Maintained and improved internal dashboards."
-          }
-        ],
-
-        "skills": ["Next.js", "Tailwind", "TypeScript"]
-      },
-
-      {
-        "company": "Telkom Indonesia",
+        "company": "Katadata Indonesia",
         "employmentType": "Internship",
-        "duration": "2021",
-        "location": "Jakarta • On-site",
-
+        "duration": "3 Bulan",
+        "location": "Jakarta, Indonesia • Hybrid",
         "roles": [
           {
-            "title": "Full Stack Developer Intern",
-            "start": "Jan 2021",
-            "end": "Jun 2021",
-            "locationType": "On-site",
-            "description": "Developed internal platforms using Node.js and React."
+            "title": "Internship Full Stack Developer",
+            "start": "Okt 2025",
+            "end": "Jan 2026",
+            "locationType": "Hybrid",
+            "description": {
+              "frontend": [
+                "Mengembangkan dashboard pengguna untuk platform produk internal menggunakan Next.js, TypeScript, Tailwind CSS, dan Zustand. Mengimplementasikan fitur seperti pembuatan produk, manajemen produk, dan visualisasi pendapatan.",
+                "Membangun microsite COP30 menggunakan Next.js (TypeScript) dan Tailwind CSS untuk liputan Katadata tentang konferensi iklim PBB ke-30 (COP30).",
+                "Melakukan refactoring dan migrasi dependensi aset untuk beberapa microsite longform berbasis Shorthand, termasuk 'Data Center Batang' dan 'Hutan Hilang, Sumatra Tenggelam'."
+              ],
+              "backend": [
+                "Mengembangkan fungsionalitas pembayaran backend menggunakan Node.js (TypeScript), PostgreSQL, dan Midtrans, serta mengintegrasikan API pembayaran dengan frontend.",
+                "Mengimplementasikan sistem pendaftaran untuk berbagai acara menggunakan Laravel dan MySQL."
+              ]
+            },
+            "skills": [
+              "Next.js",
+              "TypeScript",
+              "Tailwind CSS",
+              "Zustand",
+              "Node.js",
+              "PostgreSQL",
+              "Midtrans",
+              "Laravel",
+              "MySQL"
+            ]
           }
-        ],
-
-        "skills": ["React", "Node.js", "REST API"]
+        ]
       }
     ],
-
     "educationTitle": "Education",
-
     "education": [
       {
-        "school": "Binus University",
-        "degree": "Bachelor",
-        "major": "Computer Science",
-        "gpa": "3.78",
-        "start": "2019",
-        "end": "2023"
+        "school": "Universitas Gunadarma",
+        "degree": "Sarjana",
+        "major": "Sistem Informasi",
+        "gpa": "3.73/4.00",
+        "start": "2021",
+        "end": "2025"
       }
     ]
+  },
+
+  "skillsPage": {
+    "title": "Keahlian",
+    "sections": {
+      "programmingLanguages": "Bahasa Pemrograman",
+      "frameworks": "Framework & Pustaka",
+      "databases": "Database",
+      "tools": "Alat",
+      "cloud": "Cloud & DevOps",
+      "softSkills": "Soft Skills",
+      "languageProficiency": "Kemampuan Bahasa"
+    },
+    "categories": {
+      "languages": "Bahasa",
+      "frameworks": "Framework",
+      "tools": "Alat",
+      "databases": "Database",
+      "cloud": "Cloud & DevOps",
+      "soft Skills": "Soft Skills"
+    },
+    "proficiency": {
+      "native": "Bahasa Ibu",
+      "fluent": "Fasih",
+      "advanced": "Lanjutan",
+      "professional": "Profesional",
+      "intermediate": "Menengah",
+      "beginner": "Pemula",
+      "basic": "Dasar"
+    },
+    "languages": {
+      "bahasa_indonesia": {
+        "level": "Native",
+        "level_display": "Penutur Asli (Bilingual)"
+      },
+      "english": {
+        "level": "Limited working proficiency",
+        "level_display": "Limited Working Proficiency"
+      },
+      "japanese": {
+        "level": "Elementary",
+        "level_display": "Elementary (A1)"
+      }
+    },
+    "items": []
   },
 
   "footer": {
@@ -190,12 +262,15 @@
     "lastUpdate": {
       "message": "Situs masih dalam rekonstruksi",
       "label": "Pembaruan Terakhir",
-      "date": "November 2025"
+      "date": "Januari 2026"
     }
   },
 
   "certificatesPage": {
     "title": "Sertifikat",
+    "labels": {
+      "noCertificates": "Belum ada sertifikat untuk ditampilkan."
+    },
     "items": [
       {
         "id": "aws-cloud-practitioner",

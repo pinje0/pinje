@@ -50,6 +50,10 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
     return <div className="pt-32 pb-20 mx-auto px-10 md:px-20 max-w-6xl w-full">Loading...</div>;
   }
 
+  const sections = t.skillsPage?.sections || {};
+  const languagesData = t.skillsPage?.languages || {};
+  const proficiency = t.skillsPage?.proficiency || {};
+
   const renderIcon = (iconKey: string) => {
     const icon = skillIcons[iconKey];
     if (!icon) return null;
@@ -107,7 +111,7 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
       <section className="mb-12">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-2 h-2 bg-primary rounded-full"></div>
-          <h2 className="text-lg font-medium">Programming Languages</h2>
+          <h2 className="text-lg font-medium">{sections.programmingLanguages || "Programming Languages"}</h2>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
@@ -129,7 +133,7 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
       <section className="mb-12">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-2 h-2 bg-primary rounded-full"></div>
-          <h2 className="text-lg font-medium">Frameworks & Libraries</h2>
+          <h2 className="text-lg font-medium">{sections.frameworks || "Frameworks & Libraries"}</h2>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
@@ -151,7 +155,7 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
       <section className="mb-12">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-2 h-2 bg-primary rounded-full"></div>
-          <h2 className="text-lg font-medium">Databases</h2>
+          <h2 className="text-lg font-medium">{sections.databases || "Databases"}</h2>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
@@ -173,7 +177,7 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
       <section className="mb-12">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-2 h-2 bg-primary rounded-full"></div>
-          <h2 className="text-lg font-medium">Tools</h2>
+          <h2 className="text-lg font-medium">{sections.tools || "Tools"}</h2>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
@@ -195,7 +199,7 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
       <section className="mb-12">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-2 h-2 bg-primary rounded-full"></div>
-          <h2 className="text-lg font-medium">Cloud & DevOps</h2>
+          <h2 className="text-lg font-medium">{sections.cloud || "Cloud & DevOps"}</h2>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
@@ -217,7 +221,7 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
       <section className="mb-12">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-2 h-2 bg-primary rounded-full"></div>
-          <h2 className="text-lg font-medium">Soft Skills</h2>
+          <h2 className="text-lg font-medium">{sections.softSkills || "Soft Skills"}</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl">
@@ -254,7 +258,7 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
       <section className="mb-12">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-2 h-2 bg-primary rounded-full"></div>
-          <h2 className="text-lg font-medium">Language Proficiency</h2>
+          <h2 className="text-lg font-medium">{sections.languageProficiency || "Language Proficiency"}</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl">
