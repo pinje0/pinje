@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "pinje — ポートフォリオ",
-    "description": "Melvin Austinの個人ポートフォリオサイト。",
+    "description": "Melvin Austinの個人ポートフォリオサイト - フルスタックデベロッパー & クラウド愛好家",
     "pages": {
-      "home": "Home",
-      "experience": "Experience",
-      "projects": "Projects",
-      "skills": "Skills",
-      "certificates": "Certificates"
+      "home": "ホーム",
+      "experience": "経験",
+      "projects": "プロジェクト",
+      "skills": "スキル",
+      "certificates": "資格"
     }
   },
 
@@ -35,31 +35,38 @@
   "homePage": {
     "hero": {
       "greeting": "こんにちは、Melvin Austinです",
-      "tagline": "Web Developer & Cloud Enthusiast"
+      "tagline": "フルスタックデベロッパー | クラウド愛好家"
     },
 
     "experience": {
       "items": [
         {
+          "role": "フルスタックWeb開発インターン",
+          "status": "past",
+          "organization": "Katadata Indonesia",
+          "orgUrl": "https://www.linkedin.com/company/katadata",
+          "period": "2025年10月 - 2026年1月"
+        },
+        {
           "role": "フルスタック開発インターン",
           "status": "past",
           "organization": "Telkom Indonesia",
           "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia",
-          "period": null
+          "period": "2025年2月 - 2025年7月"
         },
         {
           "role": "クラウドコンピューティング修了生",
           "status": "past",
           "organization": "Bangkit Academy 2024",
           "orgUrl": "https://linkedin.com/company/bangkit-academy",
-          "period": null
+          "period": "2024年2月 - 2024年7月"
         },
         {
-          "role": "情報システム学科学生",
+          "role": "情報工学卒業生",
           "status": "graduated",
           "organization": "Gunadarma University",
           "orgUrl": "https://www.linkedin.com/school/universitas-gunadarma/",
-          "period": null
+          "period": "2021年 - 2025年"
         }
       ],
       "labels": {
@@ -74,13 +81,13 @@
     },
 
     "current": {
-      "status": "現在",
-      "role": "ウェブ開発インターン",
-      "preposition": "で",
-      "company": "Katadata",
-      "companyUrl": "https://linkedin.com/company/katadata",
-      "startDate": "2025年10月",
-      "endDate": "現在",
+      "status": "就職活動中",
+      "role": "フルスタックデベロッパー",
+      "preposition": "",
+      "company": "",
+      "companyUrl": "",
+      "startDate": "",
+      "endDate": "",
       "labels": {
         "dateSeparator": " - "
       }
@@ -152,51 +159,232 @@
   },
 
   "experiencePage": {
-    "title": "Experience",
+    "title": "経験",
     "items": [
       {
         "company": "Katadata Indonesia",
         "employmentType": "インターンシップ",
-        "duration": "3ヶ月",
-        "location": "インドネシア・ジャカルタ Hybrid",
+        "duration": "4ヶ月",
+        "location": "インドネシア・ジャカルタ ハイブリッド",
         "roles": [
           {
-            "title": "フルスタック開発インターン",
+            "title": "フルスタックWeb開発インターン",
             "start": "2025年10月",
             "end": "2026年1月",
             "locationType": "ハイブリッド",
             "description": {
               "frontend": [
-                "Next.js、TypeScript、Tailwind CSS、Zustandを使用して社内製品プラットフォームのユーザーダッシュボードを開発。製品作成、製品管理、収益可視化などの機能を実装。",
+                "Next.js、TypeScript、Tailwind CSSを使用して社内製品プラットフォームのユーザーダッシュボードを開発。製品作成、製品管理、収益可視化などの機能を実装。",
                 "第30回国連気候変動会議（COP30）のカタデータ報道向けに、Next.js（TypeScript）とTailwind CSSを使用してCOP30マイクロサイトを構築。",
-                "'Data Center Batang'や'Hutan Hilang, Sumatra Tenggelam'など、複数のShorthandベースのロンフォームマイクロサイトのアセット依存関係のリファクタリングと移行を実施。"
+                "'Data Center Batang'や'Hutan Hilang, Sumatra Tenggelam'など、複数のShorthandベースのロンフォームマイクロサイトのアセット依存関係のリファクタリングと移行を実施。",
+                "HTML、CSS、JavaScriptとLaravel統合を使用して、イベント用の登録システムを実装。"
               ],
               "backend": [
                 "Node.js（TypeScript）、PostgreSQL、Midtransを使用してバックエンド決済機能を開発し、フロントエンドと決済APIを統合。",
-                "LaravelとMySQLを使用して各種イベントの登録システムを実装。"
+                "LaravelとMySQLを使用してイベント登録システムを実装。"
               ]
             },
             "skills": [
               "Next.js",
               "TypeScript",
               "Tailwind CSS",
-              "Zustand",
               "Node.js",
               "PostgreSQL",
               "Midtrans",
               "Laravel",
-              "MySQL"
+              "MySQL",
+              "HTML",
+              "CSS",
+              "JavaScript"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Telkom Indonesia",
+        "employmentType": "インターンシップ",
+        "duration": "6ヶ月",
+        "location": "インドネシア・ジャカルタ ハイブリッド",
+        "roles": [
+          {
+            "title": "フルスタック開発インターン",
+            "start": "2025年2月",
+            "end": "2025年7月",
+            "locationType": "ハイブリッド",
+            "description": {
+              "division": "Digital Business and Technology (DBT) - プロジェクト：AIチャットボットビルダープラットフォーム",
+              "frontend": [
+                "Next.js、React、Tailwind CSSを使用してWebSocketによるライブ TranscriptionでリアルタイムSpeech-to-Text（STT）機能を設計・実装。",
+                "チャットボット削除フローの洗練と検証ロジックを実装してフロントエンドUIを改善。",
+                "トークン使用量やAPIコール結果を含むチャットボット分析を可視化するサマリーページを構築・設計。",
+                "アップロードされたドキュメントの処理状況を追跡できるドキュメントトレーニングステータスインジケーターUIを追加。",
+                "チャットボット外観設定APIをフロントエンドダッシュボードと埋め込み可能なiframeの両方に統合し、ユーザーがアバター、ロゴ、ヘッダー色、テキスト色、ウェルカムメッセージをリアルタイムで簡単にカスタマイズ・プレビューできるようにする。"
+              ],
+              "backend": [
+                "Pythonを活用してファイルアップロードを処理し、APIエンドポイントを通じて正確な Transcriptionを取得することで、AI駆動の音声/映像 Transcriptionサービスを統合。",
+                "Node.jsでチャットボット外観カスタマイズ設定のバックエンドサービスを構築。Restifyを使用したRESTful API、 MongoDB統合、アセット管理のためのMinIOを含む。Mochaを使用してサービス信頼性のユニットテストを作成。",
+                "PostmanコレクションをExcelに変換し、データを構造化してラベル付けすることで、ICAプロジェクトのAPIドキュメントを作成し、バックエンドエンドポイントの参照を容易にした。"
+              ]
+            },
+            "skills": [
+              "Next.js",
+              "React",
+              "Tailwind CSS",
+              "TypeScript",
+              "WebSocket",
+              "Node.js",
+              "Restify",
+              "MongoDB",
+              "MinIO",
+              "Python",
+              "Mocha",
+              "Postman"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
+        "employmentType": "学習パス",
+        "duration": "7ヶ月",
+        "location": "オンライン",
+        "roles": [
+          {
+            "title": "バックエンドデベロッパー - 中級レベル",
+            "start": "2024年12月",
+            "end": "2025年3月",
+            "locationType": "リモート",
+            "description": {
+              "frontend": [],
+              "backend": [
+                "サーバーサイドプログラミング、データベース管理、API開発に関する高度な概念をカバーする中級レベルのバックエンド開発学習パスを完了。"
+              ]
+            },
+            "skills": [
+              "Node.js",
+              "RESTful API",
+              "データベース管理",
+              "サーバープログラミング"
+            ]
+          },
+          {
+            "title": "バックエンドデベロッパー - 初級レベル",
+            "start": "2024年9月",
+            "end": "2024年12月",
+            "locationType": "リモート",
+            "description": {
+              "frontend": [],
+              "backend": [
+                "サーバーサイドプログラミングの基礎概念、HTTPプロトコル、基本的なデータベース操作をカバーする初級レベルのバックエンド開発学習パスを完了。"
+              ]
+            },
+            "skills": [
+              "JavaScript",
+              "Node.jsの基礎",
+              "HTTP",
+              "データベースの基礎"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Bangkit Academy 2024",
+        "employmentType": "コホートプログラム",
+        "duration": "6ヶ月",
+        "location": "オンライン",
+        "roles": [
+          {
+            "title": "クラウドコンピューティングコホート",
+            "start": "2024年2月",
+            "end": "2024年7月",
+            "locationType": "リモート",
+            "description": {
+              "frontend": [],
+              "backend": [
+                "Bangkit Academy 2024のキャップストーンプロジェクトとして、旅行計画Simplifyを目的とした統合バケーションプランニングアプリケーション「Toursantara」を開発。JavaScript、Node.js、Docker、Python、Kotlinを使用し、Machine Learning、Mobile Development、Cloud Computingの要素を統合。",
+                "目的地とユーザーの管理のためのサーバーとデータベースを含むバックエンドを構築し、Google Cloud Platform（GCP）と統合。",
+                "Hapi.jsを使用してアプリケーションコンポーネント間のシームレスなコミュニケーションを促進するRESTful APIを設計・実装。",
+                "Dockerを使用してアプリケーションをデプロイし、コンテナを設定し、効率的なクラウドデプロイのためにGCP Cloud Runを活用。",
+                "プロジェクトのメンテナンスとスケーラビリティをサポートするための包括的なAPIドキュメントの作成を支援。"
+              ]
+            },
+            "skills": [
+              "JavaScript",
+              "Node.js",
+              "Docker",
+              "Python",
+              "Google Cloud Platform (GCP)",
+              "Hapi.js",
+              "GCP Cloud Run"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
+        "employmentType": "学習パス",
+        "duration": "4ヶ月",
+        "location": "オンライン",
+        "roles": [
+          {
+            "title": "React - 初級レベル",
+            "start": "2023年9月",
+            "end": "2023年12月",
+            "locationType": "リモート",
+            "description": {
+              "frontend": [
+                "HTML、CSS、JavaScriptを使用したレスポンシブWebアプリケーションを開発。",
+                "最終プロジェクトとしてブックシェルフアプリケーションを作成し、Reactを使用したメモ作成アプリを構築。"
+              ],
+              "backend": []
+            },
+            "skills": [
+              "React.js",
+              "HTML",
+              "CSS",
+              "JavaScript"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Dicoding Indonesia",
+        "employmentType": "トレーニングプログラム",
+        "duration": "4ヶ月",
+        "location": "オンライン",
+        "roles": [
+          {
+            "title": "Dicoding for University 2023",
+            "start": "2023年8月",
+            "end": "2023年11月",
+            "locationType": "リモート",
+            "description": {
+              "frontend": [
+                "Figmaを使用したユーザーペルソナとワイヤーフレームを作成し、ユーザー中心設計の原則に焦点を当てたUXケーススタディプロジェクトを完了。",
+                "Scrumやスプリントプランニングを含むアジャイル手法を学び、プロジェクト管理スキルを向上。"
+              ],
+              "backend": [
+                "データベース管理のためのSQLの基礎スキルを習得。"
+              ]
+            },
+            "skills": [
+              "Figma",
+              "UXデザイン",
+              "アジャイル",
+              "Scrum",
+              "SQL",
+              "プロジェクト管理"
             ]
           }
         ]
       }
     ],
-    "educationTitle": "Education",
+    "educationTitle": "学歴",
     "education": [
       {
         "school": "Gunadarma University",
         "degree": "学士号",
-        "major": "情報システム",
+        "major": "情報工学",
         "gpa": "3.73/4.00",
         "start": "2021",
         "end": "2025"
@@ -235,11 +423,11 @@
     "languages": {
       "bahasa_indonesia": {
         "level": "Native",
-        "level_display": "Penutur Asli (バイリンガル)"
+        "level_display": "ネイティブまたはバイリンガル"
       },
       "english": {
         "level": "Limited working proficiency",
-        "level_display": "限定的working習熟度"
+        "level_display": "限定的な業務遂行能力"
       },
       "japanese": {
         "level": "Elementary",
@@ -262,7 +450,8 @@
     "lastUpdate": {
       "message": "サイトは現在改修中です",
       "label": "最終更新",
-      "date": "2026年1月"
+      "date": "2026年1月",
+      "translationWarning": "翻訳が100%正確であることが保証されていません"
     }
   },
 
@@ -273,52 +462,164 @@
     },
     "items": [
       {
+        "id": "google-it-support",
+        "title": "Google IT Support Specialization",
+        "organization": "Google",
+        "date": "2024",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "google-cloud-foundations",
+        "title": "Google Cloud Computing Foundations",
+        "organization": "Google Cloud",
+        "date": "2024",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "belajar-dasar-web",
+        "title": "Belajar Dasar Pemrograman Web",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
         "id": "aws-cloud-practitioner",
-        "title": "AWS Certified Cloud Practitioner",
+        "title": "Cloud Practitioner Essentials (AWS Cloud)",
         "organization": "Amazon Web Services",
         "date": "2024",
-        "thumbnail": "/certificates/aws-cloud-practitioner.png",
-        "credentialUrl": "https://aws.amazon.com/verification"
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "google-cloud-engineer",
+        "title": "Menjadi Google Cloud Engineer",
+        "organization": "Google Cloud",
+        "date": "2024",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "react-web-app",
+        "title": "Belajar Membuat Aplikasi Web dengan React",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "react-frontend-pemula",
+        "title": "Belajar Membuat Front-End Web untuk Pemula",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "manajemen-proyek",
+        "title": "Belajar Dasar Manajemen Proyek",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "belajar-sql",
+        "title": "Belajar Dasar Structured Query Language (SQL)",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "ux-design-dasar",
+        "title": "Belajar Dasar UX Design",
+        "organization": "Dicoding Indonesia",
+        "date": "2023",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "javascript-dasar",
+        "title": "Belajar Dasar Pemrograman JavaScript",
+        "organization": "Dicoding Indonesia",
+        "date": "2023",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "dasar-pemrograman",
+        "title": "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
+        "organization": "Dicoding Indonesia",
+        "date": "2023",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "python-prosedural",
+        "title": "Belajar Pemrograman Prosedural dengan Python",
+        "organization": "Dicoding Indonesia",
+        "date": "2023",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "backend-pemula-js",
+        "title": "Belajar Back-End Pemula dengan JavaScript",
+        "organization": "Dicoding Indonesia",
+        "date": "2023",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "english-business",
+        "title": "English for Business Communication",
+        "organization": "The British Institute",
+        "date": "2024",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
       },
       {
         "id": "bangkit-capstone",
         "title": "Bangkit Academy 2024 修了証明書",
         "organization": "Bangkit Academy by Google, Gojek, Tokopedia & Traveloka",
         "date": "2024",
-        "thumbnail": "/certificates/bangkit-capstone.png",
-        "credentialUrl": "https://bangkit.academy"
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
       },
       {
         "id": "google-cloud-essentials",
         "title": "Google Cloud Essentials",
         "organization": "Google Cloud",
         "date": "2024",
-        "thumbnail": "/certificates/google-cloud-essentials.png",
-        "credentialUrl": "https://cloud.google.com"
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
       },
       {
         "id": "google-cloud-compute",
         "title": "Perform Foundational Infrastructure Tasks in Google Cloud",
         "organization": "Google Cloud",
         "date": "2024",
-        "thumbnail": "/certificates/google-cloud-compute.png",
-        "credentialUrl": "https://cloud.google.com"
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
       },
       {
         "id": "google-cloud-hybrid",
         "title": "Set Up a Google Cloud Notebook Environment",
         "organization": "Google Cloud",
         "date": "2024",
-        "thumbnail": "/certificates/google-cloud-hybrid.png",
-        "credentialUrl": "https://cloud.google.com"
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
       },
       {
         "id": "intermediate-python",
         "title": "Intermediate Python",
         "organization": "Sololearn",
         "date": "2023",
-        "thumbnail": "/certificates/intermediate-python.png",
-        "credentialUrl": "https://sololearn.com"
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
       }
     ]
   }

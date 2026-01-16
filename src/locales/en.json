@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "pinje",
-    "description": "",
+    "description": "Personal portfolio of Melvin Austin - Full Stack Developer & Cloud Enthusiast",
     "pages": {
       "home": "Home",
       "experience": "Experience",
@@ -194,31 +194,38 @@
 
   "homePage": {
     "hero": {
-      "greeting": "",
-      "tagline": ""
+      "greeting": "Hi, I'm Melvin Austin",
+      "tagline": "Full Stack Developer | Cloud Enthusiast"
     },
     "experience": {
       "items": [
+        {
+          "role": "Full Stack Web Developer Intern",
+          "status": "past",
+          "organization": "Katadata Indonesia",
+          "orgUrl": "https://www.linkedin.com/company/katadata",
+          "period": "Oct 2025 - Jan 2026"
+        },
         {
           "role": "Full Stack Developer Intern",
           "status": "past",
           "organization": "Telkom Indonesia",
           "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia",
-          "period": null
+          "period": "Feb 2025 - Jul 2025"
         },
         {
           "role": "Cloud Computing Graduate",
           "status": "past",
           "organization": "Bangkit Academy 2024",
           "orgUrl": "https://linkedin.com/company/bangkit-academy",
-          "period": null
+          "period": "Feb 2024 - Jul 2024"
         },
         {
-          "role": "Information System Student",
+          "role": "Information Technology Graduate",
           "status": "graduated",
-          "organization": "Gunadarma University",
+          "organization": "Universitas Gunadarma",
           "orgUrl": "https://www.linkedin.com/school/universitas-gunadarma/",
-          "period": null
+          "period": "2021 - 2025"
         }
       ],
       "labels": {
@@ -231,8 +238,8 @@
       "text": "My journey began as a self-taught programmer, and since then, I've been learning and growing through various projects, with a special focus on Frontend Development. Over time, I've expanded into Full-Stack Development and am now deepening my skills in backend technologies and cloud services. Driven by continuous learning and a curiosity for new technologies, I'm always looking for opportunities to take on new challenges and grow as a developer."
     },
     "current": {
-      "status": "Currently",
-      "role": "Unemployed",
+      "status": "Currently Unemployed",
+      "role": "| Open to work",
       "preposition": "",
       "company": "",
       "companyUrl": "",
@@ -275,19 +282,20 @@
       {
         "company": "Katadata Indonesia",
         "employmentType": "Internship",
-        "duration": "3 Month",
+        "duration": "4 Months",
         "location": "Jakarta, Indonesia • Hybrid",
         "roles": [
           {
-            "title": "Full Stack Developer Intern",
+            "title": "Full Stack Web Developer Intern",
             "start": "Oct 2025",
             "end": "Jan 2026",
             "locationType": "Hybrid",
             "description": {
               "frontend": [
-                "Developed a user dashboard for an internal product platform using Next.js, TypeScript, Tailwind CSS, and Zustand. Implemented features such as product creation, product management, and revenue visualization.",
+                "Developed a user dashboard for an internal product platform using Next.js, TypeScript, and Tailwind CSS. Implemented features such as product creation, product management, and revenue visualization.",
                 "Built the COP30 microsite using Next.js (TypeScript) and Tailwind CSS for Katadata's coverage of the 30th UN climate conference (COP30).",
-                "Refactored and migrated asset dependencies for several Shorthand-based longform microsites, including 'Data Center Batang' and 'Hutan Hilang, Sumatra Tenggelam'."
+                "Refactored and migrated asset dependencies for several Shorthand-based longform microsites, including 'Data Center Batang' and 'Hutan Hilang, Sumatra Tenggelam'.",
+                "Implemented a registration system for various events using HTML, CSS, and JavaScript with Laravel integration."
               ],
               "backend": [
                 "Developed backend payment functionality using Node.js (TypeScript), PostgreSQL, and Midtrans, and integrated the payment API with the frontend.",
@@ -298,13 +306,169 @@
               "Next.js",
               "TypeScript",
               "Tailwind CSS",
-              "Zustand",
               "Node.js",
               "PostgreSQL",
               "Midtrans",
               "Laravel",
-              "MySQL"
+              "MySQL",
+              "HTML",
+              "CSS",
+              "JavaScript"
             ]
+          }
+        ]
+      },
+      {
+        "company": "Telkom Indonesia",
+        "employmentType": "Internship",
+        "duration": "6 Months",
+        "location": "Jakarta, Indonesia • Hybrid",
+        "roles": [
+          {
+            "title": "Full Stack Developer Intern",
+            "start": "Feb 2025",
+            "end": "Jul 2025",
+            "locationType": "Hybrid",
+            "description": {
+              "division": "Digital Business and Technology (DBT) - Project: AI Chatbot Builder Platform",
+              "frontend": [
+                "Designed and implemented a real-time Speech-to-Text (STT) feature with Next.js, React, and Tailwind CSS, using WebSocket for live transcription.",
+                "Improved the frontend UI by refining the chatbot deletion flow and implementing validation logic for better user experience.",
+                "Built and designed a Summary page to visualize chatbot analytics, including token usage and API call outcomes.",
+                "Added a document training status indicator UI, allowing users to track the processing status of uploaded documents for topic-specific chatbot training.",
+                "Integrated the chatbot appearance settings API into both the frontend dashboard and embeddable iframe, allowing users to easily customize and preview avatar, logo, header color, text color, and welcome message in real time."
+              ],
+              "backend": [
+                "Integrated an AI-powered audio/video transcription service by leveraging Python to handle file uploads and retrieve accurate transcriptions via API endpoints.",
+                "Built backend services for chatbot appearance customization settings in Node.js, including RESTful APIs using Restify, MongoDB integration, and MinIO for asset management. Wrote unit tests using Mocha for service reliability.",
+                "Created API documentation for the ICA project by converting the Postman collection to Excel, then structured and labeled the data to make backend endpoints easier to reference."
+              ]
+            },
+            "skills": [
+              "Next.js",
+              "React",
+              "Tailwind CSS",
+              "TypeScript",
+              "WebSocket",
+              "Node.js",
+              "Restify",
+              "MongoDB",
+              "MinIO",
+              "Python",
+              "Mocha",
+              "Postman"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
+        "employmentType": "Learning Path",
+        "duration": "7 Months",
+        "location": "Online",
+        "roles": [
+          {
+            "title": "Back-End Developer - Intermediate Level",
+            "start": "Dec 2024",
+            "end": "Mar 2025",
+            "locationType": "Remote",
+            "description": {
+              "frontend": [],
+              "backend": [
+                "Completed intermediate level back-end development learning path covering advanced concepts in server-side programming, database management, and API development."
+              ]
+            },
+            "skills": ["Node.js", "RESTful APIs", "Database Management", "Server Programming"]
+          },
+          {
+            "title": "Back-End Developer - Beginner Level",
+            "start": "Sep 2024",
+            "end": "Dec 2024",
+            "locationType": "Remote",
+            "description": {
+              "frontend": [],
+              "backend": [
+                "Completed beginner level back-end development learning path covering fundamental concepts of server-side programming, HTTP protocols, and basic database operations."
+              ]
+            },
+            "skills": ["JavaScript", "Node.js Basics", "HTTP", "Database Fundamentals"]
+          }
+        ]
+      },
+      {
+        "company": "Bangkit Academy 2024",
+        "employmentType": "Cohort Program",
+        "duration": "6 Months",
+        "location": "Online",
+        "roles": [
+          {
+            "title": "Cloud Computing Cohort",
+            "start": "Feb 2024",
+            "end": "Jul 2024",
+            "locationType": "Remote",
+            "description": {
+              "frontend": [],
+              "backend": [
+                "Developed a capstone project, Toursantara, an integrated vacation trip planning app aimed at simplifying travel planning. Utilized technologies including JavaScript, Node.js, Docker, Python, and Kotlin, merging elements from Machine Learning, Mobile Development, and Cloud Computing.",
+                "Built the back-end, including the server and database for managing destination places & users, and integrated it with Google Cloud Platform (GCP).",
+                "Designed and implemented REST APIs using Hapi.js to facilitate seamless communication between app components.",
+                "Deployed the application using Docker, setting up containers and utilizing GCP Cloud Run for efficient cloud deployment.",
+                "Assisted in creating comprehensive API documentation to support project maintenance and scalability."
+              ]
+            },
+            "skills": [
+              "JavaScript",
+              "Node.js",
+              "Docker",
+              "Python",
+              "Google Cloud Platform (GCP)",
+              "Hapi.js",
+              "GCP Cloud Run"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
+        "employmentType": "Learning Path",
+        "duration": "4 Months",
+        "location": "Online",
+        "roles": [
+          {
+            "title": "React - Beginner Level",
+            "start": "Sep 2023",
+            "end": "Dec 2023",
+            "locationType": "Remote",
+            "description": {
+              "frontend": [
+                "Developed a responsive web application using HTML, CSS, and JavaScript.",
+                "Created a bookshelf application as a final project, and built a note-taking app using React."
+              ],
+              "backend": []
+            },
+            "skills": ["React.js", "HTML", "CSS", "JavaScript"]
+          }
+        ]
+      },
+      {
+        "company": "Dicoding Indonesia",
+        "employmentType": "Training Program",
+        "duration": "4 Months",
+        "location": "Online",
+        "roles": [
+          {
+            "title": "Dicoding for University 2023",
+            "start": "Aug 2023",
+            "end": "Nov 2023",
+            "locationType": "Remote",
+            "description": {
+              "frontend": [
+                "Completed a UX case study project, creating user personas and wireframes using Figma, focusing on user-centered design principles.",
+                "Learned Agile methodologies, including Scrum and Sprint planning, enhancing project management skills."
+              ],
+              "backend": ["Gained foundational skills in SQL for database management."]
+            },
+            "skills": ["Figma", "UX Design", "Agile", "Scrum", "SQL", "Project Management"]
           }
         ]
       }
@@ -312,9 +476,9 @@
     "educationTitle": "Education",
     "education": [
       {
-        "school": "Gunadarma University",
+        "school": "Universitas Gunadarma",
         "degree": "Bachelor's degree",
-        "major": "Information System",
+        "major": "Information Technology",
         "gpa": "3.73/4.00",
         "start": "2021",
         "end": "2025"
@@ -369,7 +533,7 @@
     "languages": {
       "bahasa_indonesia": {
         "level": "Native",
-        "level_display": "Penutur Asli (Bilingual)"
+        "level_display": "Native or Bilingual"
       },
       "english": {
         "level": "Limited working proficiency",
@@ -415,7 +579,13 @@
         "name": "PHP",
         "category": "languages",
         "proficiency": "basic",
-        "icon": ""
+        "icon": "SiPhp"
+      },
+      {
+        "name": "Laravel",
+        "category": "frameworks",
+        "proficiency": "intermediate",
+        "icon": "SiLaravel"
       },
       {
         "name": "Tailwind CSS",
@@ -433,13 +603,13 @@
         "name": "Bootstrap",
         "category": "frameworks",
         "proficiency": "intermediate",
-        "icon": ""
+        "icon": "SiBootstrap"
       },
       {
         "name": "Express.js",
         "category": "frameworks",
         "proficiency": "intermediate",
-        "icon": ""
+        "icon": "SiExpress"
       },
       {
         "name": "Next.js",
@@ -454,22 +624,46 @@
         "icon": "SiNodedotjs"
       },
       {
+        "name": "Hapi.js",
+        "category": "frameworks",
+        "proficiency": "basic",
+        "icon": "SiHapi"
+      },
+      {
+        "name": "Restify",
+        "category": "frameworks",
+        "proficiency": "basic",
+        "icon": "Server"
+      },
+      {
         "name": "MongoDB",
         "category": "databases",
         "proficiency": "intermediate",
         "icon": "SiMongodb"
       },
       {
+        "name": "PostgreSQL",
+        "category": "databases",
+        "proficiency": "intermediate",
+        "icon": "SiPostgresql"
+      },
+      {
         "name": "SQL",
         "category": "databases",
         "proficiency": "intermediate",
-        "icon": ""
+        "icon": "SiMysql"
       },
       {
         "name": "NoSQL",
         "category": "databases",
         "proficiency": "basic",
-        "icon": ""
+        "icon": "Database"
+      },
+      {
+        "name": "MySQL",
+        "category": "databases",
+        "proficiency": "intermediate",
+        "icon": "SiMysql"
       },
       {
         "name": "Git",
@@ -478,16 +672,10 @@
         "icon": "SiGit"
       },
       {
-        "name": "Cloud Computing",
-        "category": "cloud",
-        "proficiency": "basic",
-        "icon": ""
-      },
-      {
-        "name": "Google Cloud Platform",
-        "category": "cloud",
-        "proficiency": "beginner",
-        "icon": "SiGooglecloud"
+        "name": "Docker",
+        "category": "tools",
+        "proficiency": "intermediate",
+        "icon": "SiDocker"
       },
       {
         "name": "Figma",
@@ -499,7 +687,37 @@
         "name": "Postman",
         "category": "tools",
         "proficiency": "intermediate",
-        "icon": ""
+        "icon": "SiPostman"
+      },
+      {
+        "name": "MinIO",
+        "category": "tools",
+        "proficiency": "basic",
+        "icon": "Cloud"
+      },
+      {
+        "name": "Midtrans",
+        "category": "tools",
+        "proficiency": "basic",
+        "icon": "CreditCard"
+      },
+      {
+        "name": "Zustand",
+        "category": "tools",
+        "proficiency": "intermediate",
+        "icon": "SiZustand"
+      },
+      {
+        "name": "Cloud Computing",
+        "category": "cloud",
+        "proficiency": "basic",
+        "icon": "SiCloudflare"
+      },
+      {
+        "name": "Google Cloud Platform",
+        "category": "cloud",
+        "proficiency": "beginner",
+        "icon": "SiGooglecloud"
       },
       {
         "name": "Problem Solving",
@@ -512,6 +730,18 @@
         "category": "soft Skills",
         "proficiency": "advanced",
         "icon": "Users"
+      },
+      {
+        "name": "Critical Thinking",
+        "category": "soft Skills",
+        "proficiency": "advanced",
+        "icon": "Brain"
+      },
+      {
+        "name": "Adaptability",
+        "category": "soft Skills",
+        "proficiency": "advanced",
+        "icon": "RefreshCw"
       }
     ]
   },
@@ -524,7 +754,8 @@
     "lastUpdate": {
       "message": "Site is still under reconstruction",
       "label": "Last Update",
-      "date": "January 2026"
+      "date": "January 2026",
+      "translationWarning": "Translation not guaranteed to be 100% accurate"
     }
   },
 
@@ -535,52 +766,164 @@
     },
     "items": [
       {
+        "id": "google-it-support",
+        "title": "Google IT Support Specialization",
+        "organization": "Google",
+        "date": "2024",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "google-cloud-foundations",
+        "title": "Google Cloud Computing Foundations",
+        "organization": "Google Cloud",
+        "date": "2024",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "belajar-dasar-web",
+        "title": "Belajar Dasar Pemrograman Web",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
         "id": "aws-cloud-practitioner",
-        "title": "AWS Certified Cloud Practitioner",
+        "title": "Cloud Practitioner Essentials (AWS Cloud)",
         "organization": "Amazon Web Services",
         "date": "2024",
-        "thumbnail": "/certificates/aws-cloud-practitioner.png",
-        "credentialUrl": "https://aws.amazon.com/verification"
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "google-cloud-engineer",
+        "title": "Menjadi Google Cloud Engineer",
+        "organization": "Google Cloud",
+        "date": "2024",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "react-web-app",
+        "title": "Belajar Membuat Aplikasi Web dengan React",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "react-frontend-pemula",
+        "title": "Belajar Membuat Front-End Web untuk Pemula",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "manajemen-proyek",
+        "title": "Belajar Dasar Manajemen Proyek",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "belajar-sql",
+        "title": "Belajar Dasar Structured Query Language (SQL)",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "ux-design-dasar",
+        "title": "Belajar Dasar UX Design",
+        "organization": "Dicoding Indonesia",
+        "date": "2023",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "javascript-dasar",
+        "title": "Belajar Dasar Pemrograman JavaScript",
+        "organization": "Dicoding Indonesia",
+        "date": "2023",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "dasar-pemrograman",
+        "title": "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
+        "organization": "Dicoding Indonesia",
+        "date": "2023",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "python-prosedural",
+        "title": "Belajar Pemrograman Prosedural dengan Python",
+        "organization": "Dicoding Indonesia",
+        "date": "2023",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "backend-pemula-js",
+        "title": "Belajar Back-End Pemula dengan JavaScript",
+        "organization": "Dicoding Indonesia",
+        "date": "2023",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
+      },
+      {
+        "id": "english-business",
+        "title": "English for Business Communication",
+        "organization": "The British Institute",
+        "date": "2024",
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
       },
       {
         "id": "bangkit-capstone",
         "title": "Bangkit Academy 2024 Certificate of Completion",
         "organization": "Bangkit Academy by Google, Gojek, Tokopedia & Traveloka",
         "date": "2024",
-        "thumbnail": "/certificates/bangkit-capstone.png",
-        "credentialUrl": "https://bangkit.academy"
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
       },
       {
         "id": "google-cloud-essentials",
         "title": "Google Cloud Essentials",
         "organization": "Google Cloud",
         "date": "2024",
-        "thumbnail": "/certificates/google-cloud-essentials.png",
-        "credentialUrl": "https://cloud.google.com"
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
       },
       {
         "id": "google-cloud-compute",
         "title": "Perform Foundational Infrastructure Tasks in Google Cloud",
         "organization": "Google Cloud",
         "date": "2024",
-        "thumbnail": "/certificates/google-cloud-compute.png",
-        "credentialUrl": "https://cloud.google.com"
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
       },
       {
         "id": "google-cloud-hybrid",
         "title": "Set Up a Google Cloud Notebook Environment",
         "organization": "Google Cloud",
         "date": "2024",
-        "thumbnail": "/certificates/google-cloud-hybrid.png",
-        "credentialUrl": "https://cloud.google.com"
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
       },
       {
         "id": "intermediate-python",
         "title": "Intermediate Python",
         "organization": "Sololearn",
         "date": "2023",
-        "thumbnail": "/certificates/intermediate-python.png",
-        "credentialUrl": "https://sololearn.com"
+        "thumbnail": "/certificates/placeholder.png",
+        "credentialUrl": "#"
       }
     ]
   }

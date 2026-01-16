@@ -34,6 +34,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         message={t.common.lastUpdate.message}
         label={t.common.lastUpdate.label}
         date={t.common.lastUpdate.date}
+        translationWarning={t.common.lastUpdate.translationWarning}
       />
       {/* Logo */}
       <div className="mb-8 mt-8">
