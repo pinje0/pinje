@@ -4,6 +4,15 @@ const nextConfig: NextConfig = {
   /* config options here */
   turbopack: {},
 
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "github-readme-stats-pinje0.vercel.app",
+      },
+    ],
+  },
+
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.devtool = "eval-cheap-module-source-map";

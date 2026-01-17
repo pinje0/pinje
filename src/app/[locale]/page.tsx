@@ -6,6 +6,10 @@ import { notFound } from "next/navigation";
 import { socialIcons } from "@/components/icons/socialIcons";
 import { Metadata } from "next";
 
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "id" }, { locale: "jp" }];
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -106,11 +110,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <span>{social.label}</span>
           </AnimatedLink>
         ))}
-      </div>
-
-      {/* Footer */}
-      <div className="footer mt-24 text-sm">
-        {t.footer.copyright.replace("{year}", new Date().getFullYear().toString())}
       </div>
     </main>
   );

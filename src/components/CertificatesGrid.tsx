@@ -3,7 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import CertificateModal from "@/components/CertificateModal";
+import dynamic from "next/dynamic";
+
+const CertificateModal = dynamic(() => import("@/components/CertificateModal"), {
+  loading: () => null,
+});
 
 interface CertificateItem {
   id: string;

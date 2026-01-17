@@ -28,10 +28,6 @@ body {
 :root,
 html {
   transition: background-color 800ms ease, color 800ms ease;
-  -webkit-transition: background-color 800ms ease, color 800ms ease;
-  -moz-transition: background-color 800ms ease, color 800ms ease;
-  -ms-transition: background-color 800ms ease, color 800ms ease;
-  -o-transition: background-color 800ms ease, color 800ms ease;
 }
 
 /* kelas sementara yang ditambahkan client pada pergantian theme */
@@ -39,35 +35,12 @@ html {
 .theme-transition {
   transition: background-color 800ms ease, color 800ms ease, fill 800ms ease, stroke 800ms ease,
     border-color 800ms ease;
-  -webkit-transition: background-color 800ms ease, color 800ms ease, fill 800ms ease,
-    stroke 800ms ease, border-color 800ms ease;
-  -moz-transition: background-color 800ms ease, color 800ms ease, fill 800ms ease, stroke 800ms ease,
-    border-color 800ms ease;
-  -ms-transition: background-color 800ms ease, color 800ms ease, fill 800ms ease, stroke 800ms ease,
-    border-color 800ms ease;
-  -o-transition: background-color 800ms ease, color 800ms ease, fill 800ms ease, stroke 800ms ease,
-    border-color 800ms ease;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-dark: oklch(0.21 0.006 285.885);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -91,20 +64,19 @@ html {
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.141 0.005 285.823);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.141 0.005 285.823);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.141 0.005 285.823);
+  --background: oklch(0.97 0 0);
+  --foreground: oklch(0.15 0.005 285.823);
+  --card: oklch(0.97 0 0);
+  --card-foreground: oklch(0.15 0.005 285.823);
+  --popover: oklch(0.97 0 0);
+  --popover-foreground: oklch(0.15 0.005 285.823);
   --primary: oklch(0.21 0.006 285.885);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.967 0.001 286.375);
+  --secondary: oklch(0.94 0.002 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
+  --muted: oklch(0.94 0.002 286.375);
+  --muted-foreground: oklch(0.5 0.015 286.067);
+  --accent: oklch(0.94 0.002 286.375);
   --accent-foreground: oklch(0.21 0.006 285.885);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.92 0.004 286.32);
@@ -115,13 +87,13 @@ html {
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.141 0.005 285.823);
+  --sidebar: oklch(0.95 0 0);
+  --sidebar-foreground: oklch(0.15 0.005 285.823);
   --sidebar-primary: oklch(0.21 0.006 285.885);
   --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
+  --sidebar-accent: oklch(0.94 0.002 286.375);
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
-  --sidebar-border: oklch(0.92 0.004 286.32);
+  --sidebar-border: oklch(0.9 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
   --logo-color: #000;
 }
@@ -204,28 +176,13 @@ html.dark ::selection {
   color: #000;
 }
 
-/* highlight text */
-::selection {
-  @apply bg-black text-white;
-}
-
 /* smooth global color animations - only for theme changes */
-/* body *:not([data-radix-popper-content-wrapper] *, [data-slot*="dropdown"] *) {
-  transition: background-color 800ms ease, color 800ms ease, border-color 800ms ease,    fill 800ms ease, stroke 800ms ease;
-  -webkit-transition: background-color 800ms ease, color 800ms ease, border-color 800ms ease,;
-  -moz-transition: background-color 800ms ease, color 800ms ease, border-color 800ms ease,;
-  -ms-transition: background-color 800ms ease, color 800ms ease, border-color 800ms ease,;
-  -o-transition: background-color 800ms ease, color 800ms ease, border-color 800ms ease,;
-} */
-
-/* FIX GLOBAL NO FLICKER */
+/* Only animate specific elements that need theme transitions */
 body *:not([data-radix-popper-content-wrapper] *, [data-slot*="dropdown"] *, .link-rise-bg) {
-  transition: background-color 800ms ease, border-color 800ms ease, fill 800ms ease,
-    stroke 800ms ease;
-  -webkit-transition: background-color 800ms ease, border-color 800ms ease, fill 800ms ease;
-  -moz-transition: background-color 800ms ease, border-color 800ms ease, fill 800ms ease;
-  -ms-transition: background-color 800ms ease, border-color 800ms ease, fill 800ms ease;
-  -o-transition: background-color 800ms ease, border-color 800ms ease, fill 800ms ease;
+  transition-property: background-color, border-color, fill, stroke;
+  transition-duration: 800ms;
+  transition-timing-function: ease;
+  transition-behavior: allow-consecutive;
 }
 
 /* Keep dropdown animations fast */

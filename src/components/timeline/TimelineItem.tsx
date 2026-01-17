@@ -1,6 +1,6 @@
-import React from "react";
+import { ReactNode } from "react";
 
-export default function TimelineItem({ children }: { children: React.ReactNode }) {
+export default function TimelineItem({ children }: { children: ReactNode }) {
   return (
     <div className="relative pl-8 md:pl-12 py-4">
       {/* line */}

@@ -12,6 +12,10 @@ interface CertificateItem {
   credentialUrl?: string;
 }
 
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "id" }, { locale: "jp" }];
+}
+
 export async function generateMetadata({
   params,
 }: {

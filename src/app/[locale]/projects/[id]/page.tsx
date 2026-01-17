@@ -40,6 +40,23 @@ interface ProjectDetail {
   demoVideo?: string | null;
 }
 
+export async function generateStaticParams() {
+  const locales = ["en", "id", "jp"];
+  const params: { locale: string; id: string }[] = [];
+
+  for (const locale of locales) {
+    const t = await getDictionary(locale) as any;
+    const projects = t.projectDetailPage?.details;
+    if (projects) {
+      Object.keys(projects).forEach((id) => {
+        params.push({ locale, id });
+      });
+    }
+  }
+
+  return params;
+}
+
 export async function generateMetadata({
   params,
 }: {

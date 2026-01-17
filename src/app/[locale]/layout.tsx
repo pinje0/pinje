@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import "../globals.css";
 import ClientThemeProvider from "@/components/ClientThemeProvider";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { getDictionary } from "@/lib/i18n";
 import { Metadata } from "next";
 
@@ -42,10 +43,11 @@ export default async function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body>
+      <body className="min-h-screen flex flex-col">
         <ClientThemeProvider>
           <Navbar locale={locale} t={t} />
-          {children}
+          <main className="flex-1">{children}</main>
+          <Footer t={t} />
         </ClientThemeProvider>
       </body>
     </html>

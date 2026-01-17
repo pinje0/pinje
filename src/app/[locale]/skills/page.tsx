@@ -1,10 +1,7 @@
-"use client";
-
 import { getDictionary } from "@/lib/i18n";
 import { notFound } from "next/navigation";
-import { Card, CardContent } from "@/components/ui/card";
 import { skillIcons } from "@/components/icons/skillIcons";
-import React, { useState, useEffect } from "react";
+import { Metadata } from "next";
 
 interface Dictionary {
   meta: {
@@ -15,6 +12,9 @@ interface Dictionary {
   };
   skillsPage: {
     title: string;
+    sections: Record<string, string>;
+    languages: Record<string, { name: string; level: string; locale: string }>;
+    proficiency: Record<string, string>;
   };
   [key: string]: unknown;
 }
@@ -25,34 +25,56 @@ const flagIcons: Record<string, string> = {
   jp: "fi fi-jp",
 };
 
-export default function SkillsPage({ params }: { params: Promise<{ locale: string }> }) {
-  const [t, setT] = useState<Dictionary | null>(null);
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "id" }, { locale: "jp" }];
+}
 
-  useEffect(() => {
-    const initializeData = async () => {
-      const resolvedParams = await params;
-      const currentLocale = resolvedParams.locale;
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = (await getDictionary(locale)) as Dictionary;
 
-      const validLocales = ["en", "id", "jp"];
-      if (!validLocales.includes(currentLocale)) {
-        notFound();
-        return;
-      }
+  return {
+    title: t.skillsPage?.title || "Skills",
+  };
+}
 
-      const dictionary = await getDictionary(currentLocale) as Dictionary;
-      setT(dictionary);
-    };
+export default async function SkillsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
 
-    initializeData();
-  }, [params]);
+  const validLocales = ["en", "id", "jp"];
+  if (!validLocales.includes(locale)) notFound();
 
-  if (!t) {
-    return <div className="pt-32 pb-20 mx-auto px-10 md:px-20 max-w-6xl w-full">Loading...</div>;
-  }
+  const t = (await getDictionary(locale)) as Dictionary;
 
   const sections = t.skillsPage?.sections || {};
   const languagesData = t.skillsPage?.languages || {};
-  const proficiency = t.skillsPage?.proficiency || {};
+  const languages = [
+    { id: "bahasa_indonesia", level: languagesData.bahasa_indonesia?.level || "Native", locale: "id" },
+    { id: "english", level: languagesData.english?.level || "Limited Working", locale: "en" },
+    { id: "japanese", level: languagesData.japanese?.level || "Elementary", locale: "jp" },
+  ];
+
+  const programmingLanguages = ["HTML", "CSS", "Javascript", "Typescript", "Python", "PHP"];
+
+  const frameworks = [
+    "Tailwind CSS",
+    "React.js",
+    "Bootstrap",
+    "Express.js",
+    "Next.js",
+    "Node.js",
+    "Laravel",
+  ];
+
+  const databases = ["MongoDB", "PostgreSQL"];
+
+  const tools = ["Git", "Figma", "Postman", "Docker"];
+
+  const cloud = ["Google Cloud Platform (GCP)"];
 
   const renderIcon = (iconKey: string) => {
     const icon = skillIcons[iconKey];
@@ -77,41 +99,17 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
     );
   };
 
-  const languages = [
-    { id: "bahasa_indonesia", name: "Bahasa Indonesia", level: "Native", locale: "id" },
-    { id: "english", name: "English", level: "Limited Working", locale: "en" },
-    { id: "japanese", name: "日本語", level: "Elementary", locale: "jp" },
-  ];
-
-  const programmingLanguages = [
-    "HTML", "CSS", "Javascript", "Typescript", "Python", "PHP"
-  ];
-
-  const frameworks = [
-    "Tailwind CSS", "React.js", "Bootstrap", "Express.js", "Next.js", "Node.js", "Laravel"
-  ];
-
-  const databases = [
-    "MongoDB", "PostgreSQL"
-  ];
-
-  const tools = [
-    "Git", "Figma", "Postman", "Docker"
-  ];
-
-  const cloud = [
-    "Google Cloud Platform (GCP)"
-  ];
-
   return (
     <main className="pt-32 pb-20 mx-auto px-6 md:px-20 max-w-6xl w-full">
-      <h1 className="text-xl font-semibold mb-12">{t.skillsPage.title}</h1>
+      <h1 className="text-xl font-semibold mb-12">{t.skillsPage?.title || "Skills"}</h1>
 
       {/* Programming Languages */}
       <section className="mb-12">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-2 h-2 bg-primary rounded-full"></div>
-          <h2 className="text-lg font-medium">{sections.programmingLanguages || "Programming Languages"}</h2>
+          <h2 className="text-lg font-medium">
+            {sections.programmingLanguages || "Programming Languages"}
+          </h2>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
@@ -121,7 +119,7 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
               <div className="relative bg-background border border-border/50 rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all duration-300">
                 <div className="flex flex-col items-center text-center space-y-2">
                   {renderSkillIcon(skill)}
-                  <span className="text-xs font-medium truncate w-full">{skill}</span>
+                  <span className="text-xs font-medium break-words">{skill}</span>
                 </div>
               </div>
             </div>
@@ -143,7 +141,7 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
               <div className="relative bg-background border border-border/50 rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all duration-300">
                 <div className="flex flex-col items-center text-center space-y-2">
                   {renderSkillIcon(skill)}
-                  <span className="text-xs font-medium truncate w-full">{skill}</span>
+                  <span className="text-xs font-medium break-words">{skill}</span>
                 </div>
               </div>
             </div>
@@ -165,7 +163,7 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
               <div className="relative bg-background border border-border/50 rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all duration-300">
                 <div className="flex flex-col items-center text-center space-y-2">
                   {renderSkillIcon(skill)}
-                  <span className="text-xs font-medium truncate w-full">{skill}</span>
+                  <span className="text-xs font-medium break-words">{skill}</span>
                 </div>
               </div>
             </div>
@@ -187,7 +185,7 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
               <div className="relative bg-background border border-border/50 rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all duration-300">
                 <div className="flex flex-col items-center text-center space-y-2">
                   {renderSkillIcon(skill)}
-                  <span className="text-xs font-medium truncate w-full">{skill}</span>
+                  <span className="text-xs font-medium break-words">{skill}</span>
                 </div>
               </div>
             </div>
@@ -209,7 +207,7 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
               <div className="relative bg-background border border-border/50 rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all duration-300">
                 <div className="flex flex-col items-center text-center space-y-2">
                   {renderSkillIcon(skill)}
-                  <span className="text-xs font-medium truncate w-full">{skill}</span>
+                  <span className="text-xs font-medium break-words">{skill}</span>
                 </div>
               </div>
             </div>
@@ -217,48 +215,13 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
         </div>
       </section>
 
-      {/* Soft Skills */}
-      <section className="mb-12">
-        <div className="flex items-center gap-3 mb-6">
-          <div className="w-2 h-2 bg-primary rounded-full"></div>
-          <h2 className="text-lg font-medium">{sections.softSkills || "Soft Skills"}</h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl">
-          {["Problem Solving", "Team Collaboration", "Critical Thinking", "Adaptability"].map((skill) => {
-            const iconElement = renderIcon(skill);
-
-            return (
-              <Card key={skill} className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/30">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0">
-                      {iconElement ? (
-                        <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary/20 transition-colors">
-                          <div className="text-xl">{iconElement}</div>
-                        </div>
-                      ) : (
-                        <div className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center text-muted-foreground">
-                          <span className="text-sm font-medium">{skill.charAt(0)}</span>
-                        </div>
-                      )}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-medium text-sm">{skill}</h3>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
-      </section>
-
       {/* Language Proficiency */}
       <section className="mb-12">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-2 h-2 bg-primary rounded-full"></div>
-          <h2 className="text-lg font-medium">{sections.languageProficiency || "Language Proficiency"}</h2>
+          <h2 className="text-lg font-medium">
+            {sections.languageProficiency || "Language Proficiency"}
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl">
@@ -272,7 +235,7 @@ export default function SkillsPage({ params }: { params: Promise<{ locale: strin
                     {lang.level}
                   </div>
                 </div>
-                <h3 className="font-medium text-sm">{lang.name}</h3>
+                <h3 className="font-medium text-sm">{languagesData[lang.id]?.name || lang.id}</h3>
               </div>
             </div>
           ))}

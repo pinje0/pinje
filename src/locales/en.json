@@ -187,8 +187,8 @@
     "language": {
       "label": "Language",
       "en": "English",
-      "id": "Indonesian",
-      "jp": "Japanese"
+      "id": "Bahasa Indonesia",
+      "jp": "Japanese (日本語)"
     }
   },
 
@@ -200,7 +200,7 @@
     "experience": {
       "items": [
         {
-          "role": "Full Stack Web Developer Intern",
+          "role": "Full Stack  Developer Intern",
           "status": "past",
           "organization": "Katadata Indonesia",
           "orgUrl": "https://www.linkedin.com/company/katadata",
@@ -281,6 +281,7 @@
     "items": [
       {
         "company": "Katadata Indonesia",
+        "orgUrl": "https://www.linkedin.com/company/katadata",
         "employmentType": "Internship",
         "duration": "4 Months",
         "location": "Jakarta, Indonesia • Hybrid",
@@ -320,6 +321,7 @@
       },
       {
         "company": "Telkom Indonesia",
+        "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia",
         "employmentType": "Internship",
         "duration": "6 Months",
         "location": "Jakarta, Indonesia • Hybrid",
@@ -363,6 +365,7 @@
       },
       {
         "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
+        "orgUrl": "https://www.linkedin.com/company/indosat",
         "employmentType": "Learning Path",
         "duration": "7 Months",
         "location": "Online",
@@ -372,12 +375,9 @@
             "start": "Dec 2024",
             "end": "Mar 2025",
             "locationType": "Remote",
-            "description": {
-              "frontend": [],
-              "backend": [
-                "Completed intermediate level back-end development learning path covering advanced concepts in server-side programming, database management, and API development."
-              ]
-            },
+            "description": [
+              "Completed intermediate level back-end development learning path covering advanced concepts in server-side programming, database management, and API development."
+            ],
             "skills": ["Node.js", "RESTful APIs", "Database Management", "Server Programming"]
           },
           {
@@ -385,18 +385,16 @@
             "start": "Sep 2024",
             "end": "Dec 2024",
             "locationType": "Remote",
-            "description": {
-              "frontend": [],
-              "backend": [
-                "Completed beginner level back-end development learning path covering fundamental concepts of server-side programming, HTTP protocols, and basic database operations."
-              ]
-            },
+            "description": [
+              "Completed beginner level back-end development learning path covering fundamental concepts of server-side programming, HTTP protocols, and basic database operations."
+            ],
             "skills": ["JavaScript", "Node.js Basics", "HTTP", "Database Fundamentals"]
           }
         ]
       },
       {
         "company": "Bangkit Academy 2024",
+        "orgUrl": "https://linkedin.com/company/bangkit-academy",
         "employmentType": "Cohort Program",
         "duration": "6 Months",
         "location": "Online",
@@ -406,16 +404,13 @@
             "start": "Feb 2024",
             "end": "Jul 2024",
             "locationType": "Remote",
-            "description": {
-              "frontend": [],
-              "backend": [
-                "Developed a capstone project, Toursantara, an integrated vacation trip planning app aimed at simplifying travel planning. Utilized technologies including JavaScript, Node.js, Docker, Python, and Kotlin, merging elements from Machine Learning, Mobile Development, and Cloud Computing.",
-                "Built the back-end, including the server and database for managing destination places & users, and integrated it with Google Cloud Platform (GCP).",
-                "Designed and implemented REST APIs using Hapi.js to facilitate seamless communication between app components.",
-                "Deployed the application using Docker, setting up containers and utilizing GCP Cloud Run for efficient cloud deployment.",
-                "Assisted in creating comprehensive API documentation to support project maintenance and scalability."
-              ]
-            },
+            "description": [
+              "Developed a capstone project, Toursantara, an integrated vacation trip planning app aimed at simplifying travel planning. Utilized technologies including JavaScript, Node.js, Docker, Python, and Kotlin, merging elements from Machine Learning, Mobile Development, and Cloud Computing.",
+              "Built the back-end, including the server and database for managing destination places & users, and integrated it with Google Cloud Platform (GCP).",
+              "Designed and implemented REST APIs using Hapi.js to facilitate seamless communication between app components.",
+              "Deployed the application using Docker, setting up containers and utilizing GCP Cloud Run for efficient cloud deployment.",
+              "Assisted in creating comprehensive API documentation to support project maintenance and scalability."
+            ],
             "skills": [
               "JavaScript",
               "Node.js",
@@ -430,6 +425,7 @@
       },
       {
         "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
+        "orgUrl": "https://www.linkedin.com/company/indosat",
         "employmentType": "Learning Path",
         "duration": "4 Months",
         "location": "Online",
@@ -439,19 +435,17 @@
             "start": "Sep 2023",
             "end": "Dec 2023",
             "locationType": "Remote",
-            "description": {
-              "frontend": [
-                "Developed a responsive web application using HTML, CSS, and JavaScript.",
-                "Created a bookshelf application as a final project, and built a note-taking app using React."
-              ],
-              "backend": []
-            },
+            "description": [
+              "Developed a responsive web application using HTML, CSS, and JavaScript.",
+              "Created a bookshelf application as a final project, and built a note-taking app using React."
+            ],
             "skills": ["React.js", "HTML", "CSS", "JavaScript"]
           }
         ]
       },
       {
         "company": "Dicoding Indonesia",
+        "orgUrl": "https://www.linkedin.com/company/dicoding",
         "employmentType": "Training Program",
         "duration": "4 Months",
         "location": "Online",
@@ -461,13 +455,11 @@
             "start": "Aug 2023",
             "end": "Nov 2023",
             "locationType": "Remote",
-            "description": {
-              "frontend": [
-                "Completed a UX case study project, creating user personas and wireframes using Figma, focusing on user-centered design principles.",
-                "Learned Agile methodologies, including Scrum and Sprint planning, enhancing project management skills."
-              ],
-              "backend": ["Gained foundational skills in SQL for database management."]
-            },
+            "description": [
+              "Completed a UX case study project, creating user personas and wireframes using Figma, focusing on user-centered design principles.",
+              "Learned Agile methodologies, including Scrum and Sprint planning, enhancing project management skills.",
+              "Gained foundational skills in SQL for database management."
+            ],
             "skills": ["Figma", "UX Design", "Agile", "Scrum", "SQL", "Project Management"]
           }
         ]
@@ -497,8 +489,7 @@
   },
 
   "footer": {
-    "copyright": "© {year} pinje. All rights reserved.",
-    "builtWith": "Built with Next.js & Tailwind CSS"
+    "copyright": "© {year} pinje. All rights reserved."
   },
 
   "skillsPage": {
@@ -532,14 +523,17 @@
     },
     "languages": {
       "bahasa_indonesia": {
+        "name": "Bahasa Indonesia",
         "level": "Native",
         "level_display": "Native or Bilingual"
       },
       "english": {
+        "name": "English",
         "level": "Limited working proficiency",
         "level_display": "Limited Working Proficiency"
       },
       "japanese": {
+        "name": "Japanese (日本語)",
         "level": "Elementary",
         "level_display": "Elementary (A1)"
       }

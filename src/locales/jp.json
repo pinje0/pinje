@@ -26,8 +26,8 @@
     },
     "language": {
       "label": "言語",
-      "en": "英語",
-      "id": "インドネシア語",
+      "en": "English (英語)",
+      "id": "Bahasa Indonesia",
       "jp": "日本語"
     }
   },
@@ -163,6 +163,7 @@
     "items": [
       {
         "company": "Katadata Indonesia",
+        "orgUrl": "https://www.linkedin.com/company/katadata",
         "employmentType": "インターンシップ",
         "duration": "4ヶ月",
         "location": "インドネシア・ジャカルタ ハイブリッド",
@@ -202,6 +203,7 @@
       },
       {
         "company": "Telkom Indonesia",
+        "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia",
         "employmentType": "インターンシップ",
         "duration": "6ヶ月",
         "location": "インドネシア・ジャカルタ ハイブリッド",
@@ -245,6 +247,7 @@
       },
       {
         "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
+        "orgUrl": "https://www.linkedin.com/company/indosat",
         "employmentType": "学習パス",
         "duration": "7ヶ月",
         "location": "オンライン",
@@ -254,12 +257,9 @@
             "start": "2024年12月",
             "end": "2025年3月",
             "locationType": "リモート",
-            "description": {
-              "frontend": [],
-              "backend": [
-                "サーバーサイドプログラミング、データベース管理、API開発に関する高度な概念をカバーする中級レベルのバックエンド開発学習パスを完了。"
-              ]
-            },
+            "description": [
+              "サーバーサイドプログラミング、データベース管理、API開発に関する高度な概念をカバーする中級レベルのバックエンド開発学習パスを完了。"
+            ],
             "skills": [
               "Node.js",
               "RESTful API",
@@ -272,12 +272,9 @@
             "start": "2024年9月",
             "end": "2024年12月",
             "locationType": "リモート",
-            "description": {
-              "frontend": [],
-              "backend": [
-                "サーバーサイドプログラミングの基礎概念、HTTPプロトコル、基本的なデータベース操作をカバーする初級レベルのバックエンド開発学習パスを完了。"
-              ]
-            },
+            "description": [
+              "サーバーサイドプログラミングの基礎概念、HTTPプロトコル、基本的なデータベース操作をカバーする初級レベルのバックエンド開発学習パスを完了。"
+            ],
             "skills": [
               "JavaScript",
               "Node.jsの基礎",
@@ -289,6 +286,7 @@
       },
       {
         "company": "Bangkit Academy 2024",
+        "orgUrl": "https://linkedin.com/company/bangkit-academy",
         "employmentType": "コホートプログラム",
         "duration": "6ヶ月",
         "location": "オンライン",
@@ -298,16 +296,13 @@
             "start": "2024年2月",
             "end": "2024年7月",
             "locationType": "リモート",
-            "description": {
-              "frontend": [],
-              "backend": [
-                "Bangkit Academy 2024のキャップストーンプロジェクトとして、旅行計画Simplifyを目的とした統合バケーションプランニングアプリケーション「Toursantara」を開発。JavaScript、Node.js、Docker、Python、Kotlinを使用し、Machine Learning、Mobile Development、Cloud Computingの要素を統合。",
-                "目的地とユーザーの管理のためのサーバーとデータベースを含むバックエンドを構築し、Google Cloud Platform（GCP）と統合。",
-                "Hapi.jsを使用してアプリケーションコンポーネント間のシームレスなコミュニケーションを促進するRESTful APIを設計・実装。",
-                "Dockerを使用してアプリケーションをデプロイし、コンテナを設定し、効率的なクラウドデプロイのためにGCP Cloud Runを活用。",
-                "プロジェクトのメンテナンスとスケーラビリティをサポートするための包括的なAPIドキュメントの作成を支援。"
-              ]
-            },
+            "description": [
+              "Bangkit Academy 2024のキャップストーンプロジェクトとして、旅行計画Simplifyを目的とした統合バケーションプランニングアプリケーション「Toursantara」を開発。JavaScript、Node.js、Docker、Python、Kotlinを使用し、Machine Learning、Mobile Development、Cloud Computingの要素を統合。",
+              "目的地とユーザーの管理のためのサーバーとデータベースを含むバックエンドを構築し、Google Cloud Platform（GCP）と統合。",
+              "Hapi.jsを使用してアプリケーションコンポーネント間のシームレスなコミュニケーションを促進するRESTful APIを設計・実装。",
+              "Dockerを使用してアプリケーションをデプロイし、コンテナを設定し、効率的なクラウドデプロイのためにGCP Cloud Runを活用。",
+              "プロジェクトのメンテナンスとスケーラビリティをサポートするための包括的なAPIドキュメントの作成を支援。"
+            ],
             "skills": [
               "JavaScript",
               "Node.js",
@@ -322,6 +317,7 @@
       },
       {
         "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
+        "orgUrl": "https://www.linkedin.com/company/indosat",
         "employmentType": "学習パス",
         "duration": "4ヶ月",
         "location": "オンライン",
@@ -331,13 +327,10 @@
             "start": "2023年9月",
             "end": "2023年12月",
             "locationType": "リモート",
-            "description": {
-              "frontend": [
-                "HTML、CSS、JavaScriptを使用したレスポンシブWebアプリケーションを開発。",
-                "最終プロジェクトとしてブックシェルフアプリケーションを作成し、Reactを使用したメモ作成アプリを構築。"
-              ],
-              "backend": []
-            },
+            "description": [
+              "HTML、CSS、JavaScriptを使用したレスポンシブWebアプリケーションを開発。",
+              "最終プロジェクトとしてブックシェルフアプリケーションを作成し、Reactを使用したメモ作成アプリを構築。"
+            ],
             "skills": [
               "React.js",
               "HTML",
@@ -349,6 +342,7 @@
       },
       {
         "company": "Dicoding Indonesia",
+        "orgUrl": "https://www.linkedin.com/company/dicoding",
         "employmentType": "トレーニングプログラム",
         "duration": "4ヶ月",
         "location": "オンライン",
@@ -358,15 +352,11 @@
             "start": "2023年8月",
             "end": "2023年11月",
             "locationType": "リモート",
-            "description": {
-              "frontend": [
-                "Figmaを使用したユーザーペルソナとワイヤーフレームを作成し、ユーザー中心設計の原則に焦点を当てたUXケーススタディプロジェクトを完了。",
-                "Scrumやスプリントプランニングを含むアジャイル手法を学び、プロジェクト管理スキルを向上。"
-              ],
-              "backend": [
-                "データベース管理のためのSQLの基礎スキルを習得。"
-              ]
-            },
+            "description": [
+              "Figmaを使用したユーザーペルソナとワイヤーフレームを作成し、ユーザー中心設計の原則に焦点を当てたUXケーススタディプロジェクトを完了。",
+              "Scrumやスプリントプランニングを含むアジャイル手法を学び、プロジェクト管理スキルを向上。",
+              "データベース管理のためのSQLの基礎スキルを習得。"
+            ],
             "skills": [
               "Figma",
               "UXデザイン",
@@ -422,14 +412,17 @@
     },
     "languages": {
       "bahasa_indonesia": {
+        "name": "Bahasa Indonesia",
         "level": "Native",
         "level_display": "ネイティブまたはバイリンガル"
       },
       "english": {
+        "name": "English",
         "level": "Limited working proficiency",
         "level_display": "限定的な業務遂行能力"
       },
       "japanese": {
+        "name": "日本語",
         "level": "Elementary",
         "level_display": "基礎レベル (A1)"
       }
@@ -438,8 +431,7 @@
   },
 
   "footer": {
-    "copyright": "© {year} pinje. 無断転載禁止。",
-    "builtWith": "Next.js & Tailwind CSSで構築"
+    "copyright": "© {year} pinje. 無断転載禁止。"
   },
 
   "common": {

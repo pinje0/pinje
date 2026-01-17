@@ -26,9 +26,9 @@
     },
     "language": {
       "label": "Bahasa",
-      "en": "Inggris",
-      "id": "Indonesia",
-      "jp": "Jepang"
+      "en": "English (Inggris)",
+      "id": "Bahasa Indonesia",
+      "jp": "Japanese (日本語)"
     }
   },
 
@@ -163,6 +163,7 @@
     "items": [
       {
         "company": "Katadata Indonesia",
+        "orgUrl": "https://www.linkedin.com/company/katadata",
         "employmentType": "Magang",
         "duration": "4 Bulan",
         "location": "Jakarta, Indonesia • Hybrid",
@@ -202,6 +203,7 @@
       },
       {
         "company": "Telkom Indonesia",
+        "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia",
         "employmentType": "Magang",
         "duration": "6 Bulan",
         "location": "Jakarta, Indonesia • Hybrid",
@@ -245,6 +247,7 @@
       },
       {
         "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
+        "orgUrl": "https://www.linkedin.com/company/indosat",
         "employmentType": "Jalur Pembelajaran",
         "duration": "7 Bulan",
         "location": "Online",
@@ -254,12 +257,9 @@
             "start": "Des 2024",
             "end": "Mar 2025",
             "locationType": "Remote",
-            "description": {
-              "frontend": [],
-              "backend": [
-                "Menyelesaikan jalur pembelajaran pengembangan back-end tingkat menengah yang mencakup konsep lanjutan dalam pemrograman sisi server, manajemen database, dan pengembangan API."
-              ]
-            },
+            "description": [
+              "Menyelesaikan jalur pembelajaran pengembangan back-end tingkat menengah yang mencakup konsep lanjutan dalam pemrograman sisi server, manajemen database, dan pengembangan API."
+            ],
             "skills": [
               "Node.js",
               "RESTful APIs",
@@ -272,12 +272,9 @@
             "start": "Sep 2024",
             "end": "Des 2024",
             "locationType": "Remote",
-            "description": {
-              "frontend": [],
-              "backend": [
-                "Menyelesaikan jalur pembelajaran pengembangan back-end tingkat pemula yang mencakup konsep dasar pemrograman sisi server, protokol HTTP, dan operasi database dasar."
-              ]
-            },
+            "description": [
+              "Menyelesaikan jalur pembelajaran pengembangan back-end tingkat pemula yang mencakup konsep dasar pemrograman sisi server, protokol HTTP, dan operasi database dasar."
+            ],
             "skills": [
               "JavaScript",
               "Dasar Node.js",
@@ -289,6 +286,7 @@
       },
       {
         "company": "Bangkit Academy 2024",
+        "orgUrl": "https://linkedin.com/company/bangkit-academy",
         "employmentType": "Program Cohort",
         "duration": "6 Bulan",
         "location": "Online",
@@ -298,16 +296,13 @@
             "start": "Feb 2024",
             "end": "Jul 2024",
             "locationType": "Remote",
-            "description": {
-              "frontend": [],
-              "backend": [
-                "Mengembangkan proyek capstone, Toursantara, aplikasi perencanaan perjalanan terintegrasi yang bertujuan untuk menyederhanakan perencanaan perjalanan. Memanfaatkan teknologi termasuk JavaScript, Node.js, Docker, Python, dan Kotlin, menggabungkan elemen Machine Learning, Mobile Development, dan Cloud Computing.",
-                "Membangun backend, termasuk server dan database untuk mengelola tempat tujuan & pengguna, dan mengintegrasikannya dengan Google Cloud Platform (GCP).",
-                "Merancang dan mengimplementasikan REST API menggunakan Hapi.js untuk memfasilitasi komunikasi tanpa hambatan antar komponen aplikasi.",
-                "Mendeploy aplikasi menggunakan Docker, menyiapkan kontainer, dan memanfaatkan GCP Cloud Run untuk deployment cloud yang efisien.",
-                "Membantu membuat dokumentasi API yang komprehensif untuk mendukung pemeliharaan dan skalabilitas proyek."
-              ]
-            },
+            "description": [
+              "Mengembangkan proyek capstone, Toursantara, aplikasi perencanaan perjalanan terintegrasi yang bertujuan untuk menyederhanakan perencanaan perjalanan. Memanfaatkan teknologi termasuk JavaScript, Node.js, Docker, Python, dan Kotlin, menggabungkan elemen Machine Learning, Mobile Development, dan Cloud Computing.",
+              "Membangun backend, termasuk server dan database untuk mengelola tempat tujuan & pengguna, dan mengintegrasikannya dengan Google Cloud Platform (GCP).",
+              "Merancang dan mengimplementasikan REST API menggunakan Hapi.js untuk memfasilitasi komunikasi tanpa hambatan antar komponen aplikasi.",
+              "Mendeploy aplikasi menggunakan Docker, menyiapkan kontainer, dan memanfaatkan GCP Cloud Run untuk deployment cloud yang efisien.",
+              "Membantu membuat dokumentasi API yang komprehensif untuk mendukung pemeliharaan dan skalabilitas proyek."
+            ],
             "skills": [
               "JavaScript",
               "Node.js",
@@ -322,6 +317,7 @@
       },
       {
         "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
+        "orgUrl": "https://www.linkedin.com/company/indosat",
         "employmentType": "Jalur Pembelajaran",
         "duration": "4 Bulan",
         "location": "Online",
@@ -331,13 +327,10 @@
             "start": "Sep 2023",
             "end": "Des 2023",
             "locationType": "Remote",
-            "description": {
-              "frontend": [
-                "Mengembangkan aplikasi web responsif menggunakan HTML, CSS, dan JavaScript.",
-                "Membuat aplikasi rak buku sebagai proyek akhir, dan membangun aplikasi pencatatan menggunakan React."
-              ],
-              "backend": []
-            },
+            "description": [
+              "Mengembangkan aplikasi web responsif menggunakan HTML, CSS, dan JavaScript.",
+              "Membuat aplikasi rak buku sebagai proyek akhir, dan membangun aplikasi pencatatan menggunakan React."
+            ],
             "skills": [
               "React.js",
               "HTML",
@@ -349,6 +342,7 @@
       },
       {
         "company": "Dicoding Indonesia",
+        "orgUrl": "https://www.linkedin.com/company/dicoding",
         "employmentType": "Program Pelatihan",
         "duration": "4 Bulan",
         "location": "Online",
@@ -358,15 +352,11 @@
             "start": "Agu 2023",
             "end": "Nov 2023",
             "locationType": "Remote",
-            "description": {
-              "frontend": [
-                "Menyelesaikan proyek studi kasus UX, membuat user persona dan wireframe menggunakan Figma, dengan fokus pada prinsip desain berpusat pada pengguna.",
-                "Mempelajari metodologi Agile, termasuk Scrum dan Sprint planning, meningkatkan keterampilan manajemen proyek."
-              ],
-              "backend": [
-                "Memperoleh keterampilan dasar dalam SQL untuk manajemen database."
-              ]
-            },
+            "description": [
+              "Menyelesaikan proyek studi kasus UX, membuat user persona dan wireframe menggunakan Figma, dengan fokus pada prinsip desain berpusat pada pengguna.",
+              "Mempelajari metodologi Agile, termasuk Scrum dan Sprint planning, meningkatkan keterampilan manajemen proyek.",
+              "Memperoleh keterampilan dasar dalam SQL untuk manajemen database."
+            ],
             "skills": [
               "Figma",
               "UX Design",
@@ -422,14 +412,17 @@
     },
     "languages": {
       "bahasa_indonesia": {
+        "name": "Bahasa Indonesia",
         "level": "Native",
         "level_display": "Penutur Asli (Bilingual)"
       },
       "english": {
+        "name": "English",
         "level": "Limited working proficiency",
         "level_display": "Limited Working Proficiency"
       },
       "japanese": {
+        "name": "日本語",
         "level": "Elementary",
         "level_display": "Elementary (A1)"
       }
@@ -438,8 +431,7 @@
   },
 
   "footer": {
-    "copyright": "© {year} pinje. Hak cipta dilindungi.",
-    "builtWith": "Dibuat dengan Next.js & Tailwind CSS"
+    "copyright": "© {year} pinje. Hak cipta dilindungi."
   },
 
   "common": {

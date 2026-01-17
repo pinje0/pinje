@@ -4,6 +4,10 @@ import EducationItem from "@/components/timeline/EducationItem";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "id" }, { locale: "jp" }];
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -35,11 +39,11 @@ export default async function ExperiencePage({ params }: { params: Promise<{ loc
         <ExperienceItem
           key={idx}
           company={item.company}
+          orgUrl={item.orgUrl}
           employmentType={item.employmentType}
           duration={item.duration}
           location={item.location}
           roles={item.roles}
-          // skills={item.skills}
         />
       ))}
 

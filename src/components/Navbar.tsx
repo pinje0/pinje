@@ -34,9 +34,25 @@ export default function Navbar({ locale, t }: NavbarProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const savedScrollY = sessionStorage.getItem("scrollY");
+    const savedScrollX = sessionStorage.getItem("scrollX");
+    if (savedScrollY && savedScrollX) {
+      setTimeout(() => {
+        window.scrollTo(parseInt(savedScrollX), parseInt(savedScrollY));
+        sessionStorage.removeItem("scrollX");
+        sessionStorage.removeItem("scrollY");
+      }, 100);
+    }
+  }, [pathname]);
+
   if (!mounted) return null;
 
   const changeLanguage = (lang: string) => {
+    const scrollY = window.scrollY;
+    const scrollX = window.scrollX;
+    sessionStorage.setItem("scrollX", scrollX.toString());
+    sessionStorage.setItem("scrollY", scrollY.toString());
     const segments = pathname.split("/");
     segments[1] = lang;
     router.push(segments.join("/"));
@@ -61,6 +77,14 @@ export default function Navbar({ locale, t }: NavbarProps) {
       return pathname === href;
     }
     return pathname.startsWith(href);
+  };
+
+  const handleThemeToggle = () => {
+    document.documentElement.classList.add("theme-transition");
+    setTheme(theme === "light" ? "dark" : "light");
+    setTimeout(() => {
+      document.documentElement.classList.remove("theme-transition");
+    }, 800);
   };
 
   return (
@@ -91,7 +115,7 @@ export default function Navbar({ locale, t }: NavbarProps) {
 
           <div className="flex justify-end items-center gap-2 md:gap-4 text-sm">
             <button
-              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+              onClick={handleThemeToggle}
               className="theme-toggle p-2 rounded-md hover:bg-primary/20 dark:hover:bg-primary/30 cursor-pointer"
               aria-label={t.navbar.theme.label}
             >

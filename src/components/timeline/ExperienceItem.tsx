@@ -1,5 +1,6 @@
 import { skillIcons } from "@/components/icons/skillIcons";
 import TimelineItem from "./TimelineItem";
+import AnimatedLink from "@/components/AnimatedLink";
 
 export interface CategorizedDescription {
   frontend?: string[];
@@ -21,6 +22,7 @@ export interface Role {
 
 export interface ExperienceItemProps {
   company: string;
+  orgUrl?: string;
   employmentType: string;
   duration: string;
   location: string;
@@ -29,6 +31,7 @@ export interface ExperienceItemProps {
 
 export default function ExperienceItem({
   company,
+  orgUrl,
   employmentType,
   duration,
   location,
@@ -68,10 +71,15 @@ export default function ExperienceItem({
   );
 
   const renderCategorizedDescription = (desc: CategorizedDescription) => {
+    const hasFrontend = desc.frontend && desc.frontend.length > 0;
+    const hasBackend = desc.backend && desc.backend.length > 0;
+
+    if (!hasFrontend && !hasBackend) return null;
+
     return (
       <div className="space-y-2">
-        {desc.frontend && renderList(desc.frontend, "Frontend:")}
-        {desc.backend && renderList(desc.backend, "Backend:")}
+        {hasFrontend && renderList(desc.frontend, "Frontend:")}
+        {hasBackend && renderList(desc.backend, "Backend:")}
       </div>
     );
   };
@@ -108,7 +116,13 @@ export default function ExperienceItem({
     <TimelineItem>
       {/* Header */}
       <div>
-        <h3 className="font-semibold text-[16px]">{company}</h3>
+        {orgUrl ? (
+          <AnimatedLink href={orgUrl} mode="text">
+            <h3 className="font-semibold text-[16px]">{company}</h3>
+          </AnimatedLink>
+        ) : (
+          <h3 className="font-semibold text-[16px]">{company}</h3>
+        )}
         <p className="text-[14px] text-muted-foreground">
           {employmentType} • {duration}
         </p>
