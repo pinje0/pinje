@@ -15,6 +15,13 @@ interface Dictionary {
     sections: Record<string, string>;
     languages: Record<string, { name: string; level: string; locale: string }>;
     proficiency: Record<string, string>;
+    skills: {
+      programmingLanguages: string[];
+      frameworks: string[];
+      databases: string[];
+      tools: string[];
+      cloud: string[];
+    };
   };
   [key: string]: unknown;
 }
@@ -52,29 +59,28 @@ export default async function SkillsPage({ params }: { params: Promise<{ locale:
 
   const sections = t.skillsPage?.sections || {};
   const languagesData = t.skillsPage?.languages || {};
+  const skillsData = t.skillsPage?.skills || {
+    programmingLanguages: ["HTML", "CSS", "Javascript", "Typescript", "Python", "PHP"],
+    frameworks: ["Tailwind CSS", "React", "Bootstrap", "Express.js", "Next.js", "Node.js", "Laravel"],
+    databases: ["MongoDB", "PostgreSQL"],
+    tools: ["Git", "Figma", "Postman", "Docker"],
+    cloud: ["Google Cloud Platform (GCP)"],
+  };
   const languages = [
-    { id: "bahasa_indonesia", level: languagesData.bahasa_indonesia?.level || "Native", locale: "id" },
+    {
+      id: "bahasa_indonesia",
+      level: languagesData.bahasa_indonesia?.level || "Native",
+      locale: "id",
+    },
     { id: "english", level: languagesData.english?.level || "Limited Working", locale: "en" },
     { id: "japanese", level: languagesData.japanese?.level || "Elementary", locale: "jp" },
   ];
 
-  const programmingLanguages = ["HTML", "CSS", "Javascript", "Typescript", "Python", "PHP"];
-
-  const frameworks = [
-    "Tailwind CSS",
-    "React.js",
-    "Bootstrap",
-    "Express.js",
-    "Next.js",
-    "Node.js",
-    "Laravel",
-  ];
-
-  const databases = ["MongoDB", "PostgreSQL"];
-
-  const tools = ["Git", "Figma", "Postman", "Docker"];
-
-  const cloud = ["Google Cloud Platform (GCP)"];
+  const programmingLanguages = skillsData.programmingLanguages;
+  const frameworks = skillsData.frameworks;
+  const databases = skillsData.databases;
+  const tools = skillsData.tools;
+  const cloud = skillsData.cloud;
 
   const renderIcon = (iconKey: string) => {
     const icon = skillIcons[iconKey];

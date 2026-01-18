@@ -4,7 +4,7 @@
     "description": "Melvin Austinの個人ポートフォリオサイト - フルスタックデベロッパー & クラウド愛好家",
     "pages": {
       "home": "ホーム",
-      "experience": "経験",
+      "experience": "経歴",
       "projects": "プロジェクト",
       "skills": "スキル",
       "certificates": "資格"
@@ -14,7 +14,7 @@
   "navbar": {
     "links": {
       "home": "ホーム",
-      "experience": "経験",
+      "experience": "経歴",
       "projects": "プロジェクト",
       "skills": "スキル",
       "certificates": "資格"
@@ -33,11 +33,6 @@
   },
 
   "homePage": {
-    "hero": {
-      "greeting": "こんにちは、Melvin Austinです",
-      "tagline": "フルスタックデベロッパー | クラウド愛好家"
-    },
-
     "experience": {
       "items": [
         {
@@ -75,11 +70,9 @@
         "at": "で"
       }
     },
-
     "about": {
       "text": "私の旅は独学のプログラマーとして始まり、それ以来、様々なプロジェクトを通じて学び、成長してきました。特にフロントエンド開発に重点を置いています。時間が経つにつれて、フルスタック開発に拡大し、現在はバックエンド技術とクラウドサービスのスキルを深めています。継続的な学習と新しい技術への好奇心に駆られ、常に新しい課題に取り組み、開発者として成長する機会を探しています。"
     },
-
     "current": {
       "status": "就職活動中",
       "role": "フルスタックデベロッパー",
@@ -92,28 +85,26 @@
         "dateSeparator": " - "
       }
     },
-
     "socials": {
-      "title": "SNS",
       "links": [
         {
           "name": "LinkedIn",
-          "label": "リンクトイン",
+          "label": "LinkedIn",
           "url": "https://www.linkedin.com/in/melvin-austin/"
         },
         {
           "name": "GitHub",
-          "label": "ギットハブ",
+          "label": "GitHub",
           "url": "https://github.com/pinje0"
         },
         {
           "name": "Steam",
-          "label": "スチーム",
+          "label": "Steam",
           "url": "https://steamcommunity.com/id/kyotorainn"
         },
         {
           "name": "Spotify",
-          "label": "スポティファイ",
+          "label": "Spotify",
           "url": "https://open.spotify.com/user/21mxjp3gplpyos5ef7ung3iwq"
         }
       ]
@@ -124,13 +115,408 @@
     "title": "プロジェクト",
     "labels": {
       "viewDetails": "詳細を見る",
-      "noProjects": "表示するプロジェクトがありません。"
+      "noProjects": "表示するプロジェクトがありません。",
+      "search": "プロジェクトを検索...",
+      "filterBy": "フィルター",
+      "sortBy": "並べ替え",
+      "allTech": "すべての技術",
+      "newestFirst": "新しい順",
+      "oldestFirst": "古い順",
+      "pinned": "固定"
     },
-    "items": []
+    "items": [
+      {
+        "id": "pinje-portofolio",
+        "title": "ポートフォリオ",
+        "description": "Next.js 16、TypeScript、Tailwind CSS v4で作られた現代的でレスポンシブな個人ポートフォリオウェブサイト。",
+        "thumbnail": "/img/projects/portofolio-banner.png",
+        "techStack": ["Next.js", "Typescript", "Tailwind CSS", "CSS"],
+        "pinned": true
+      },
+      {
+        "id": "blogspot-archive-scrapper",
+        "title": "Blogspot Archive Scrapper",
+        "description": "",
+        "thumbnail": "/img/projects/blogspot-scrapper-banner.png",
+        "techStack": ["Python"],
+        "pinned": false
+      },
+      {
+        "id": "nt-sims-ppob",
+        "title": "Nutech FEテスト: SIMS PPOB",
+        "description": "Nutechフロントエンドデベロッパー（React）テイクホームテスト用ダッシュボードウェブサイト",
+        "thumbnail": "/img/projects/sims-banner.png",
+        "techStack": ["Next.js", "Javascript", "Tailwind CSS", "Redux"],
+        "pinned": false
+      },
+      {
+        "id": "what-to-cook",
+        "title": "What to Cook",
+        "description": "'What to Cook'は、手持ち材料に基づいてレシピを見つけるよう設計されたウェブベースのアプリケーションです。",
+        "thumbnail": "/img/projects/what-to-cook-banner.png",
+        "techStack": ["React", "Javascript", "Tailwind CSS", "Vite"],
+        "pinned": false
+      },
+      {
+        "id": "lock-screen-app",
+        "title": "Fake Screen Off",
+        "description": "電源ボタンが壊れたので作った、偽の画面オフをシミュレートするシンプルなAndroidアプリ。",
+        "thumbnail": "/img/projects/lockscreen-banner.jfif",
+        "techStack": ["Kotlin"],
+        "pinned": false
+      },
+      {
+        "id": "webgis-assignment-s8",
+        "title": "ボゴール市の病院WebGIS",
+        "description": "ボゴール市の病院位置を表示するシンプルなLeaflet.jsベースのWebGIS。表示されているデータはダミー/ハードコードであり、公式データを表すものではありません。",
+        "thumbnail": "/img/projects/webgis-banner.png",
+        "techStack": ["HTML", "CSS", "Javascript", "Leaflet.js"],
+        "pinned": false
+      },
+      {
+        "id": "easysell",
+        "title": "Easy Sell",
+        "description": "テクノロジー新手でも自信を持ってオンラインビジネスを開始するためのステップバイステップガイド。",
+        "thumbnail": "/img/projects/easysell-banner.png",
+        "techStack": ["React", "Tailwind CSS", "Javascript", "Vite"],
+        "pinned": false
+      },
+      {
+        "id": "discord-bot",
+        "title": "Discord Bot (Crab Rave)",
+        "description": "誰かが退出/参加した時候を通知するシンプルなBot。",
+        "thumbnail": "/img/projects/discord-bot-banner.png",
+        "techStack": ["Node.js", "Javascript"],
+        "pinned": false
+      },
+      {
+        "id": "linktree-clone",
+        "title": "Linktree Clone",
+        "description": "シンプルなことを複雑にしているだけ、私はバナナのLinktreeをReact + Typescriptに変換しただけです。まだコンポーネントに分解していません。",
+        "thumbnail": "/img/projects/linktree-clone-banner.png",
+        "techStack": ["React", "Typescript", "CSS"],
+        "pinned": false
+      },
+      {
+        "id": "spk-weighted-product",
+        "title": "JavaScriptでの意思決定支援システム",
+        "description": "優秀学生を選定するための意思決定支援システム（SPK）は、加重積（WP）手法を使用します。このアプリケーションでは、ユーザーが基準、代替案、それぞれのスコアを入力でき、ユーザー定義の重みに基づいて各代替案の最終スコアを計算できます。",
+        "thumbnail": "/img/projects/spk-banner.png",
+        "techStack": ["React", "Javascript", "Tailwind CSS"],
+        "pinned": false
+      },
+      {
+        "id": "porto-web-html-tailwind",
+        "title": "ポートフォリオWeb（HTML + Tailwind）",
+        "description": "HTMLでTailwindcssを学びながらポートフォリオウェブサイトを作成",
+        "thumbnail": "/img/projects/web-porto-tailwind-banner.png",
+        "techStack": ["HTML", "CSS", "Tailwind CSS", "Javascript"],
+        "pinned": false
+      },
+      {
+        "id": "toursantara",
+        "title": "Toursantara",
+        "description": "旅行計画simplifyを目的とした統合バケーションプランニングアプリケーション。JavaScript、Node.js、Docker、Python、Kotlinを使用し、機械学習、モバイル開発、クラウドコンピューティングの要素を統合。",
+        "thumbnail": "/img/projects/toursantara-banner.png",
+        "techStack": [
+          "Google Cloud Platform (GCP)",
+          "Cloud Computing",
+          "Node.js",
+          "Docker",
+          "Hapi.js",
+          "Javascript"
+        ],
+        "pinned": true
+      },
+      {
+        "id": "personal-website-bootstrap",
+        "title": "個人ウェブサイト [Bootstrap]",
+        "description": "HTMLでBootstrapを学びながら作成したポートフォリオウェブサイト",
+        "thumbnail": "/img/projects/web-bootstrap-banner.png",
+        "techStack": ["HTML", "CSS", "Bootstrap"],
+        "pinned": false
+      },
+      {
+        "id": "personal-website-vanilla",
+        "title": "個人ウェブサイト Vanilla",
+        "description": "2つ目のウェブサイト、バ尼亚個人ウェブサイト（HTML & CSS）",
+        "thumbnail": "/img/projects/web-second-banner.png",
+        "techStack": ["HTML", "CSS"],
+        "pinned": false
+      }
+    ]
   },
 
   "projectDetailPage": {
-    "details": {},
+    "details": {
+      "pinje-portofolio": {
+        "title": "ポートフォリオ",
+        "subtitle": "Next.js 16、TypeScript、Tailwind CSS v4で作られた現代的でレスポンシブな個人ポートフォリオウェブサイト。",
+        "description": "Next.js 16、TypeScript、Tailwind CSS v4で作られた現代的でレスポンシブな個人ポートフォリオウェブサイト。多言語対応（英語、インドネシア語、日本語）、ダーク/ライトテーマ、シンプルでミニマルなデザインが特徴です。",
+        "images": ["/img/projects/portofolio-banner.png"],
+        "projectStart": "2025",
+        "deployedUrl": "https://pinje.vercel.app/",
+        "githubUrl": "https://github.com/pinje0/pinje",
+        "license": "MIT License",
+        "techStack": {
+          "languages": ["Typescript", "Javascript", "CSS"],
+          "frameworks": ["Next.js"],
+          "library": ["Tailwind CSS"],
+          "tools": ["Visual Studio Code"]
+        },
+        "features": [
+          "多言語対応 - 英語、インドネシア語、日本語に対応し、即座に言語切り替え可能",
+          "ダーク/ライトモード - スムーズなテーマ切り替えとトランジション",
+          "レスポンシブデザイン - デスクトップ、タブレット、モバイルに完全最適化",
+          "モダンなテクノロジースタック - Next.js 16、TypeScript、Tailwind CSS v4で構築",
+          "アクセシブルなコンポーネント - Radix UIプリミティブを使用してキーボードナビゲーションとスクリーンリーダーサポートを提供",
+          "プロジェクトショーケース - 詳細なビューを備えたインタラクティブなプロジェクトギャラリー",
+          "資格ギャラリー - ズームとナビゲーションを備えたアルバムスタイルの資格ビューア",
+          "スキル表示 - アイコン付きで構成されたスキルで簡単な認識",
+          "経歴タイムライン - 専門的な経歴と教育履歴"
+        ],
+        "myRole": null,
+        "teamMembers": null
+      },
+      "blogspot-archive-scrapper": {
+        "title": "Blogspot Archive Scrapper",
+        "subtitle": "",
+        "description": "",
+        "images": ["/img/projects/blogspot-scrapper-banner.png"],
+        "projectStart": "2025",
+        "deployedUrl": null,
+        "githubUrl": "https://github.com/pinje0/blogspot-archive-scrapper",
+        "license": "MIT License",
+        "techStack": {
+          "languages": ["Python"],
+          "tools": ["Visual Studio Code"]
+        },
+        "features": [],
+        "myRole": null,
+        "teamMembers": null
+      },
+      "nt-sims-ppob": {
+        "title": "Nutechフロントエンド開発者（React）テスト: SIMS PPOB",
+        "subtitle": "Nutechフロントエンドデベロッパー（React）テイクホームテスト用ダッシュボードウェブサイト",
+        "description": "Nutechフロントエンドデベロッパー（React）テイクホームテスト用ダッシュボードウェブサイト",
+        "images": ["/img/projects/sims-banner.png"],
+        "projectStart": "2025",
+        "deployedUrl": "https://nt-sims-ppob-melvin-austin.vercel.app/",
+        "githubUrl": "https://github.com/pinje0/nt-sims-ppob-melvin-austin",
+        "license": "MIT License",
+        "techStack": {
+          "frontend": ["Next.js", "Javascript"],
+          "library": ["Tailwind CSS", "Redux"],
+          "tools": ["Visual Studio Code"]
+        },
+        "features": [
+          "登録",
+          "ログイン",
+          "プロフィール表示",
+          "プロフィールデータ更新",
+          "プロフィール写真更新",
+          "トップアップ",
+          "支払い",
+          "取引履歴"
+        ],
+        "myRole": null,
+        "teamMembers": null
+      },
+      "what-to-cook": {
+        "title": "What to Cook",
+        "subtitle": "'What to Cook'は、手持ち材料に基づいてレシピを見つけるよう設計されたウェブベースのアプリケーションです。",
+        "description": "'What to Cook'は、既に持っている材料に基づいてレシピの推奨を提供することでmeal planningを簡素化するよう設計されたウェブベースのアプリケーションです。食品廃棄を削減し、調理体験を高め、みんなにとってmeal preparationを mühelos にすることを目的としています。",
+        "images": ["/img/projects/what-to-cook-banner.png"],
+        "projectStart": "2025",
+        "deployedUrl": "https://what-to-cook-nu.vercel.app/",
+        "githubUrl": "https://github.com/pinje0/what-to-cook",
+        "license": "MIT License",
+        "techStack": {
+          "frontend": ["React", "Javascript"],
+          "styling": ["Tailwind CSS"],
+          "tools": ["Vite"]
+        },
+        "features": [
+          "材料ベースのレシピ検索：持っている材料を入力してパーソナライズされたレシピの推奨を受けられます。",
+          "お気に入り保存：レシピをマークして後からクイックアクセスするために保存します。",
+          "レシピ詳細：ステップバイステップの指示、調理時間、必要な材料を表示します。",
+          "ダイナミックページネーション：一度に最大5つのレシピにアクセスでき、スムーズなナビゲーション。",
+          "レスポンシブデザイン：モバイルとデスクトップの両方で最適化。"
+        ],
+        "myRole": null,
+        "teamMembers": null
+      },
+      "lock-screen-app": {
+        "title": "Fake Screen Off",
+        "subtitle": "電源ボタンが壊れたので作った、偽の画面オフをシミュレートするシンプルなAndroidアプリ。",
+        "description": "電源ボタンが壊れたので作った、偽の画面オフをシミュレートするシンプルなAndroidアプリ。",
+        "images": ["/img/projects/lockscreen-banner.jfif"],
+        "projectStart": "2025",
+        "githubUrl": "https://github.com/pinje0/lock-screen-app",
+        "license": "MIT License",
+        "techStack": {
+          "languages": ["Kotlin"],
+          "tools": ["Visual Studio Code"]
+        },
+        "myRole": null,
+        "teamMembers": null
+      },
+      "webgis-assignment-s8": {
+        "title": "ボゴール市の病院WebGIS",
+        "subtitle": "PLACEHOLDER_SUBTITLEこのプロジェクトは、ボゴール市の病院位置を表示するシンプルなLeaflet.jsベースのWebGISです。表示されているデータはダミー/ハードコードであり、公式データを表すものではありません。",
+        "description": "このプロジェクトは、ボゴール市の病院位置を表示するシンプルなLeaflet.jsベースのWebGISです。表示されているデータはダミー/ハードコードであり、公式データを表すものではありません。",
+        "images": ["/img/projects/webgis-banner.png"],
+        "projectStart": "2025",
+        "deployedUrl": "https://webgis-assignment-s8.vercel.app/",
+        "githubUrl": "https://github.com/pinje0/webgis-assignment-s8",
+        "license": "MIT License",
+        "techStack": {
+          "frontend": ["HTML", "CSS", "Javascript"],
+          "library": ["Leaflet.js"]
+        },
+        "features": [
+          "ボゴール市の地図と病院位置を表示。",
+          "マーカー（病院アイコン）をクリックして詳細な病院情報を表示。",
+          "より良い視覚化のためにカスタム病院アイコンを使用。",
+          "Bootstrap 5を使用したモダンでレスポンシブなインターフェース。",
+          "地図上の病院の総数を表示。",
+          "データがシミュレートものであることを説明する警告。"
+        ],
+        "myRole": null,
+        "teamMembers": null
+      },
+      "easysell": {
+        "title": "Easy Sell",
+        "subtitle": "テクノロジー新手でも自信を持ってオンラインビジネスを開始するためのステップバイステップガイド。",
+        "description": "テクノロジー新手でも自信を持ってオンラインビジネスを開始するためのステップバイステップガイド。",
+        "images": ["/img/projects/easysell-banner.png"],
+        "projectStart": "2025",
+        "deployedUrl": "https://easysell-puce.vercel.app/",
+        "githubUrl": "https://github.com/pinje0/easysell",
+        "license": "MIT License",
+        "techStack": {
+          "frontend": ["React"],
+          "styling": ["Tailwind CSS"],
+          "tools": ["Vite"]
+        },
+        "myRole": null,
+        "teamMembers": null
+      },
+      "discord-bot": {
+        "title": "Discord Bot (Crab Rave)",
+        "description": "誰かが退出/参加した時候を通知するシンプルなBot。",
+        "images": ["/img/projects/discord-bot-banner.png"],
+        "projectStart": "2025",
+        "githubUrl": "https://github.com/pinje0/discord-bot",
+        "license": "MIT License",
+        "techStack": {
+          "languages": ["Javascript"],
+          "tools": ["Node.js"]
+        },
+        "myRole": null,
+        "teamMembers": null
+      },
+      "linktree-clone": {
+        "title": "Linktree Clone",
+        "description": "このプロジェクト只是把简单的事情搞得更复杂，我只是把香草的linktree转换成React + Typescript。我甚至还没有把代码分解成组件。",
+        "images": ["/img/projects/linktree-clone-banner.png"],
+        "projectStart": "2025",
+        "deployedUrl": "https://pinje0.github.io/linktree/",
+        "githubUrl": "https://github.com/pinje0/linktree",
+        "license": "MIT License",
+        "techStack": {
+          "frontend": ["React", "Typescript"],
+          "styling": ["Tailwind CSS", "CSS"]
+        },
+        "myRole": null,
+        "teamMembers": null
+      },
+      "spk-weighted-product": {
+        "title": "JavaScriptでの意思決定支援システム",
+        "subtitle": "JavaScriptでの意思決定支援システム 加重積",
+        "description": "優秀学生を選定するための意思決定支援システム（SPK）は、加重積（WP）手法を使用します。このアプリケーションでは、ユーザーが基準、代替案、それぞれのスコアを入力でき、ユーザー定義の重みに基づいて各代替案の最終スコアを計算できます。",
+        "images": ["/img/projects/spk-banner.png"],
+        "projectStart": "2024",
+        "deployedUrl": "https://10121709-spk-weighted-product.vercel.app/",
+        "githubUrl": "https://github.com/pinje0/spk-weighted-product",
+        "license": "MIT License",
+        "techStack": {
+          "frontend": ["React", "Javascript"],
+          "styling": ["CSS", "Tailwind CSS"],
+          "tools": ["Visual Studio Code"]
+        },
+        "myRole": null,
+        "teamMembers": null
+      },
+      "porto-web-html-tailwind": {
+        "title": "ポートフォリオWeb（HTML + Tailwind）",
+        "description": "HTMLでTailwindcssを学びながらポートフォリオウェブサイトを作成",
+        "images": ["/img/projects/web-porto-tailwind-banner.png"],
+        "projectStart": "2024",
+        "deployedUrl": "https://yurak-twcss.vercel.app/",
+        "githubUrl": "https://github.com/pinje0/personal-website-tailwindcss",
+        "license": "MIT License",
+        "techStack": {
+          "frontend": ["HTML", "Javascript"],
+          "styling": ["CSS", "Tailwind CSS"]
+        },
+        "myRole": null,
+        "teamMembers": null
+      },
+      "toursantara": {
+        "title": "Toursantara",
+        "subtitle": "旅行計画simplifyを目的とした統合バケーションプランニングアプリケーション。",
+        "description": "旅行計画simplifyを目的とした統合バケーションプランニングアプリケーション。JavaScript、Node.js、Docker、Python、Kotlinを使用し、機械学習、モバイル開発、クラウドコンピューティングの要素を統合。",
+        "images": ["/img/projects/toursantara-banner.png"],
+        "projectStart": "2024",
+        "githubUrl": "https://github.com/Toursantara",
+        "license": "MIT License",
+        "techStack": {
+          "languages": ["Javascript", "Python"],
+          "frameworks": ["Node.js", "Hapi.js"],
+          "tools": ["Docker", "Google Cloud Platform (GCP)"]
+        },
+        "myRole": "バックエンドエンジニア & クラウドエンジニア",
+        "teamMembers": [
+          "Fabiansyah Rinanto Suryadi",
+          "Mirza Avisena Djohan",
+          "Favian Naufal",
+          "Melvin Austin Korwa",
+          "Muhammad Zidan Hafidz",
+          "Muhammad Aditya Raytama",
+          "Muhammad Haikal Musyaffa"
+        ]
+      },
+      "personal-website-bootstrap": {
+        "title": "個人ウェブサイト [Bootstrap]",
+        "description": "HTMLでBootstrapを学びながら作成したポートフォリオウェブサイト",
+        "images": ["/img/projects/web-bootstrap-banner.png"],
+        "projectStart": "2023",
+        "githubUrl": "https://github.com/pinje0/personal-website-bootstrap",
+        "license": "MIT License",
+        "techStack": {
+          "frontend": ["HTML"],
+          "styling": ["CSS", "Bootstrap"]
+        },
+        "myRole": null,
+        "teamMembers": null
+      },
+      "personal-website-vanilla": {
+        "title": "個人ウェブサイト Vanilla",
+        "description": "2つ目のウェブサイト、バ尼亚個人ウェブサイト（HTML & CSS）",
+        "images": ["/img/projects/web-second-banner.png"],
+        "projectStart": "2023",
+        "deployedUrl": "https://pinje-website.vercel.app/",
+        "githubUrl": "https://github.com/pinje0/vanilla-website",
+        "license": "MIT License",
+        "techStack": {
+          "frontend": ["HTML"],
+          "styling": ["CSS"]
+        },
+        "myRole": null,
+        "teamMembers": null
+      }
+    },
     "labels": {
       "overview": "概要",
       "techStack": "技術スタック",
@@ -159,13 +545,13 @@
   },
 
   "experiencePage": {
-    "title": "経験",
+    "title": "経歴",
     "items": [
       {
         "company": "Katadata Indonesia",
         "orgUrl": "https://www.linkedin.com/company/katadata",
         "employmentType": "インターンシップ",
-        "duration": "4ヶ月",
+        "duration": "3ヶ月",
         "location": "インドネシア・ジャカルタ ハイブリッド",
         "roles": [
           {
@@ -178,11 +564,10 @@
                 "Next.js、TypeScript、Tailwind CSSを使用して社内製品プラットフォームのユーザーダッシュボードを開発。製品作成、製品管理、収益可視化などの機能を実装。",
                 "第30回国連気候変動会議（COP30）のカタデータ報道向けに、Next.js（TypeScript）とTailwind CSSを使用してCOP30マイクロサイトを構築。",
                 "'Data Center Batang'や'Hutan Hilang, Sumatra Tenggelam'など、複数のShorthandベースのロンフォームマイクロサイトのアセット依存関係のリファクタリングと移行を実施。",
-                "HTML、CSS、JavaScriptとLaravel統合を使用して、イベント用の登録システムを実装。"
+                "LaravelとMySQLを使用してイベント登録システムを実装。"
               ],
               "backend": [
-                "Node.js（TypeScript）、PostgreSQL、Midtransを使用してバックエンド決済機能を開発し、フロントエンドと決済APIを統合。",
-                "LaravelとMySQLを使用してイベント登録システムを実装。"
+                "Node.js（TypeScript）、PostgreSQL、Midtransを使用してバックエンド決済機能を開発し、フロントエンドと決済APIを統合。"
               ]
             },
             "skills": [
@@ -196,7 +581,7 @@
               "MySQL",
               "HTML",
               "CSS",
-              "JavaScript"
+              "Javascript"
             ]
           }
         ]
@@ -247,8 +632,8 @@
       },
       {
         "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
-        "orgUrl": "https://www.linkedin.com/company/indosat",
-        "employmentType": "学習パス",
+        "orgUrl": "https://www.linkedin.com/company/idcamp/",
+        "employmentType": "コーディング奨学金プログラム",
         "duration": "7ヶ月",
         "location": "オンライン",
         "roles": [
@@ -257,37 +642,29 @@
             "start": "2024年12月",
             "end": "2025年3月",
             "locationType": "リモート",
-            "description": [
-              "サーバーサイドプログラミング、データベース管理、API開発に関する高度な概念をカバーする中級レベルのバックエンド開発学習パスを完了。"
-            ],
-            "skills": [
-              "Node.js",
-              "RESTful API",
-              "データベース管理",
-              "サーバープログラミング"
-            ]
+            "description": [],
+            "skills": ["Node.js", "PostgreSQL", "Javascript", "Hapi.js", "REST APIs", "Postman"]
           },
           {
             "title": "バックエンドデベロッパー - 初級レベル",
             "start": "2024年9月",
             "end": "2024年12月",
             "locationType": "リモート",
-            "description": [
-              "サーバーサイドプログラミングの基礎概念、HTTPプロトコル、基本的なデータベース操作をカバーする初級レベルのバックエンド開発学習パスを完了。"
-            ],
+            "description": [],
             "skills": [
-              "JavaScript",
-              "Node.jsの基礎",
-              "HTTP",
-              "データベースの基礎"
+              "Javascript",
+              "Node.js",
+              "Hapi.js",
+              "Amazon Web Service (AWS)",
+              "Artificial Intelligence (AI)"
             ]
           }
         ]
       },
       {
         "company": "Bangkit Academy 2024",
-        "orgUrl": "https://linkedin.com/company/bangkit-academy",
-        "employmentType": "コホートプログラム",
+        "orgUrl": "https://www.linkedin.com/company/bangkit-academy/",
+        "employmentType": "キャリア準備プログラム",
         "duration": "6ヶ月",
         "location": "オンライン",
         "roles": [
@@ -297,28 +674,28 @@
             "end": "2024年7月",
             "locationType": "リモート",
             "description": [
-              "Bangkit Academy 2024のキャップストーンプロジェクトとして、旅行計画Simplifyを目的とした統合バケーションプランニングアプリケーション「Toursantara」を開発。JavaScript、Node.js、Docker、Python、Kotlinを使用し、Machine Learning、Mobile Development、Cloud Computingの要素を統合。",
+              "Bangkit Academy 2024のキャップストーンプロジェクトとして、旅行計画simplifyを目的とした統合バケーションプランニングアプリケーション「Toursantara」を開発。JavaScript、Node.js、Docker、Python、Kotlinを使用し、機械学習、モバイル開発、クラウドコンピューティングの要素を統合。",
               "目的地とユーザーの管理のためのサーバーとデータベースを含むバックエンドを構築し、Google Cloud Platform（GCP）と統合。",
               "Hapi.jsを使用してアプリケーションコンポーネント間のシームレスなコミュニケーションを促進するRESTful APIを設計・実装。",
               "Dockerを使用してアプリケーションをデプロイし、コンテナを設定し、効率的なクラウドデプロイのためにGCP Cloud Runを活用。",
               "プロジェクトのメンテナンスとスケーラビリティをサポートするための包括的なAPIドキュメントの作成を支援。"
             ],
             "skills": [
-              "JavaScript",
+              "Google Cloud Platform (GCP)",
+              "Cloud Computing",
+              "Javascript",
               "Node.js",
               "Docker",
               "Python",
-              "Google Cloud Platform (GCP)",
-              "Hapi.js",
-              "GCP Cloud Run"
+              "Hapi.js"
             ]
           }
         ]
       },
       {
         "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
-        "orgUrl": "https://www.linkedin.com/company/indosat",
-        "employmentType": "学習パス",
+        "orgUrl": "https://www.linkedin.com/company/idcamp/",
+        "employmentType": "コーディング奨学金プログラム",
         "duration": "4ヶ月",
         "location": "オンライン",
         "roles": [
@@ -331,12 +708,7 @@
               "HTML、CSS、JavaScriptを使用したレスポンシブWebアプリケーションを開発。",
               "最終プロジェクトとしてブックシェルフアプリケーションを作成し、Reactを使用したメモ作成アプリを構築。"
             ],
-            "skills": [
-              "React.js",
-              "HTML",
-              "CSS",
-              "JavaScript"
-            ]
+            "skills": ["React", "HTML", "CSS", "Javascript"]
           }
         ]
       },
@@ -357,14 +729,7 @@
               "Scrumやスプリントプランニングを含むアジャイル手法を学び、プロジェクト管理スキルを向上。",
               "データベース管理のためのSQLの基礎スキルを習得。"
             ],
-            "skills": [
-              "Figma",
-              "UXデザイン",
-              "アジャイル",
-              "Scrum",
-              "SQL",
-              "プロジェクト管理"
-            ]
+            "skills": ["SQL", "Javascript", "User Experience (UX)", "Figma"]
           }
         ]
       }
@@ -382,6 +747,10 @@
     ]
   },
 
+  "footer": {
+    "copyright": "© {year} pinje. 無断転載禁止。"
+  },
+
   "skillsPage": {
     "title": "スキル",
     "sections": {
@@ -393,52 +762,45 @@
       "softSkills": "ソフトスキル",
       "languageProficiency": "言語能力"
     },
-    "categories": {
-      "languages": "言語",
-      "frameworks": "フレームワーク",
-      "tools": "ツール",
-      "databases": "データベース",
-      "cloud": "クラウド & DevOps",
-      "soft Skills": "ソフトスキル"
-    },
     "proficiency": {
-      "native": "ネイティブ",
-      "fluent": "流暢",
-      "advanced": "上級",
-      "professional": "専門的",
-      "intermediate": "中級",
-      "beginner": "初級",
-      "basic": "基礎"
+      "native": "Native",
+      "fluent": "Fluent",
+      "advanced": "Advanced",
+      "professional": "Professional",
+      "intermediate": "Intermediate",
+      "beginner": "Beginner",
+      "basic": "Basic"
     },
     "languages": {
       "bahasa_indonesia": {
         "name": "Bahasa Indonesia",
         "level": "Native",
-        "level_display": "ネイティブまたはバイリンガル"
+        "level_display": "Native or Bilingual",
+        "locale": "id"
       },
       "english": {
         "name": "English",
         "level": "Limited working proficiency",
-        "level_display": "限定的な業務遂行能力"
+        "level_display": "Limited Working Proficiency",
+        "locale": "en"
       },
       "japanese": {
         "name": "日本語",
         "level": "Elementary",
-        "level_display": "基礎レベル (A1)"
+        "level_display": "Elementary (A1)",
+        "locale": "jp"
       }
     },
-    "items": []
-  },
-
-  "footer": {
-    "copyright": "© {year} pinje. 無断転載禁止。"
+    "skills": {
+      "programmingLanguages": ["HTML", "CSS", "Javascript", "Typescript", "Python", "PHP"],
+      "frameworks": ["Tailwind CSS", "React", "Bootstrap", "Express.js", "Next.js", "Node.js", "Laravel"],
+      "databases": ["MongoDB", "PostgreSQL"],
+      "tools": ["Git", "Figma", "Postman", "Docker"],
+      "cloud": ["Google Cloud Platform (GCP)"]
+    }
   },
 
   "common": {
-    "loading": "読み込み中...",
-    "error": "エラーが発生しました",
-    "readMore": "続きを読む",
-    "learnMore": "詳しく見る",
     "lastUpdate": {
       "message": "サイトは現在改修中です",
       "label": "最終更新",
@@ -450,168 +812,139 @@
   "certificatesPage": {
     "title": "資格",
     "labels": {
-      "noCertificates": "表示する資格がありません。"
+      "noCertificates": "表示する資格がありません。",
+      "search": "資格を検索...",
+      "sortBy": "並べ替え",
+      "newestFirst": "新しい順",
+      "oldestFirst": "古い順",
+      "modal": {
+        "close": "閉じる",
+        "previousCertificate": "前の資格",
+        "nextCertificate": "次の資格",
+        "viewCredential": "資格を見る",
+        "goToCertificate": "{n}番目の資格に移動"
+      }
     },
     "items": [
+      {
+        "id": "english-business",
+        "title": "English for Business Communication",
+        "organization": "The British Institute",
+        "date": "2024",
+        "thumbnail": "/img/certificates/english-business.png",
+        "credentialUrl": "https://drive.google.com/file/d/1VOdJK_eCWIrow8Yvh7LlFSEFmzReV7Ti/view"
+      },
       {
         "id": "google-it-support",
         "title": "Google IT Support Specialization",
         "organization": "Google",
         "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
+        "thumbnail": "/img/certificates/google-it-support.jpeg",
+        "credentialUrl": "https://www.coursera.org/account/accomplishments/specialization/HWMBCFKJYVSJ"
       },
       {
         "id": "google-cloud-foundations",
         "title": "Google Cloud Computing Foundations",
         "organization": "Google Cloud",
         "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "belajar-dasar-web",
-        "title": "Belajar Dasar Pemrograman Web",
-        "organization": "Dicoding Indonesia",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "aws-cloud-practitioner",
-        "title": "Cloud Practitioner Essentials (AWS Cloud)",
-        "organization": "Amazon Web Services",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
+        "thumbnail": "/img/certificates/google-skills.png",
+        "credentialUrl": "https://www.skills.google/public_profiles/b0d61c2e-5c20-4fe3-9327-a7688f3b62d0"
       },
       {
         "id": "google-cloud-engineer",
         "title": "Menjadi Google Cloud Engineer",
         "organization": "Google Cloud",
         "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
+        "thumbnail": "/img/certificates/menjadi-google-cloud-engineer.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/72ZDV8D3JZYW"
+      },
+      {
+        "id": "aws-cloud-practitioner",
+        "title": "Cloud Practitioner Essentials (AWS Cloud)",
+        "organization": "Amazon Web Services",
+        "date": "2024",
+        "thumbnail": "/img/certificates/cloud-practitioner.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/JMZV3Y09NPN9"
+      },
+      {
+        "id": "javascript-dasar",
+        "title": "Belajar Dasar Pemrograman JavaScript",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/img/certificates/dasar-js.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/6RPNV9KQ4Z2M"
+      },
+      {
+        "id": "dasar-pemrograman",
+        "title": "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/img/certificates/dasasr-pemograman.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/N9ZOON4EDZG5"
+      },
+      {
+        "id": "belajar-dasar-web",
+        "title": "Belajar Dasar Pemrograman Web",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/img/certificates/belajar-dasar-pemrograman-web.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/81P2V677YPOY"
+      },
+      {
+        "id": "python-prosedural",
+        "title": "Belajar Pemrograman Prosedural dengan Python",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/img/certificates/prosedural-python.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/07Z6W4KMMZQR"
+      },
+      {
+        "id": "backend-pemula-js",
+        "title": "Belajar Back-End Pemula dengan JavaScript",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/img/certificates/be-js.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/NVP7452NRPR0"
       },
       {
         "id": "react-web-app",
         "title": "Belajar Membuat Aplikasi Web dengan React",
         "organization": "Dicoding Indonesia",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
+        "date": "2023",
+        "thumbnail": "/img/certificates/belajar-membuat-aplikasi-web-dengan-react.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/4EXG4KR59PRL"
       },
       {
         "id": "react-frontend-pemula",
         "title": "Belajar Membuat Front-End Web untuk Pemula",
         "organization": "Dicoding Indonesia",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
+        "date": "2023",
+        "thumbnail": "/img/certificates/react-pemula.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/4EXG4NE5DPRL"
       },
       {
         "id": "manajemen-proyek",
         "title": "Belajar Dasar Manajemen Proyek",
         "organization": "Dicoding Indonesia",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
+        "date": "2023",
+        "thumbnail": "/img/certificates/dasar-manajemen.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/EYX46E4LRPDL"
       },
       {
         "id": "belajar-sql",
         "title": "Belajar Dasar Structured Query Language (SQL)",
         "organization": "Dicoding Indonesia",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
+        "date": "2023",
+        "thumbnail": "/img/certificates/dasar-sql.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/1RXY6V42MZVM"
       },
       {
         "id": "ux-design-dasar",
         "title": "Belajar Dasar UX Design",
         "organization": "Dicoding Indonesia",
         "date": "2023",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "javascript-dasar",
-        "title": "Belajar Dasar Pemrograman JavaScript",
-        "organization": "Dicoding Indonesia",
-        "date": "2023",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "dasar-pemrograman",
-        "title": "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
-        "organization": "Dicoding Indonesia",
-        "date": "2023",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "python-prosedural",
-        "title": "Belajar Pemrograman Prosedural dengan Python",
-        "organization": "Dicoding Indonesia",
-        "date": "2023",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "backend-pemula-js",
-        "title": "Belajar Back-End Pemula dengan JavaScript",
-        "organization": "Dicoding Indonesia",
-        "date": "2023",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "english-business",
-        "title": "English for Business Communication",
-        "organization": "The British Institute",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "bangkit-capstone",
-        "title": "Bangkit Academy 2024 修了証明書",
-        "organization": "Bangkit Academy by Google, Gojek, Tokopedia & Traveloka",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "google-cloud-essentials",
-        "title": "Google Cloud Essentials",
-        "organization": "Google Cloud",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "google-cloud-compute",
-        "title": "Perform Foundational Infrastructure Tasks in Google Cloud",
-        "organization": "Google Cloud",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "google-cloud-hybrid",
-        "title": "Set Up a Google Cloud Notebook Environment",
-        "organization": "Google Cloud",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "intermediate-python",
-        "title": "Intermediate Python",
-        "organization": "Sololearn",
-        "date": "2023",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
+        "thumbnail": "/img/certificates/dasar-ux.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/6RPNWEMG4P2M"
       }
     ]
   }

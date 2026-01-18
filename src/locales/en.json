@@ -15,133 +15,406 @@
     "title": "Projects",
     "labels": {
       "viewDetails": "View Details",
-      "noProjects": "No projects to display yet."
+      "noProjects": "No projects to display yet.",
+      "search": "Search projects...",
+      "filterBy": "Filter by",
+      "sortBy": "Sort by",
+      "allTech": "All Technologies",
+      "newestFirst": "Newest first",
+      "oldestFirst": "Oldest first",
+      "pinned": "Pinned"
     },
     "items": [
       {
+        "id": "pinje-portofolio",
+        "title": "Portofolio",
+        "description": "A modern, responsive personal portfolio website built with Next.js 16, TypeScript, and Tailwind CSS v4.",
+        "thumbnail": "/img/projects/portofolio-banner.png",
+        "techStack": ["Next.js", "Typescript", "Tailwind CSS", "CSS"],
+        "pinned": true
+      },
+      {
+        "id": "blogspot-archive-scrapper",
+        "title": "Blogspot Archive Scrapper",
+        "description": "",
+        "thumbnail": "/img/projects/blogspot-scrapper-banner.png",
+        "techStack": ["Python"],
+        "pinned": false
+      },
+      {
+        "id": "nt-sims-ppob",
+        "title": "Nutech FE Test: SIMS PPOB",
+        "description": "Dashboard website for Takehome Test Nutech Frontend Developer (React)",
+        "thumbnail": "/img/projects/sims-banner.png",
+        "techStack": ["Next.js", "Javascript", "Tailwind CSS", "Redux"],
+        "pinned": false
+      },
+      {
+        "id": "what-to-cook",
+        "title": "What to Cook",
+        "description": "'What to Cook' is a web-based application designed to help users find recipes based on the ingredients they have.",
+        "thumbnail": "/img/projects/what-to-cook-banner.png",
+        "techStack": ["React", "Javascript", "Tailwind CSS", "Vite"],
+        "pinned": false
+      },
+      {
+        "id": "lock-screen-app",
+        "title": "Fake Screen Off",
+        "description": "A simple Android app that simulates fakes screen off made because my power button stopped working.",
+        "thumbnail": "/img/projects/lockscreen-banner.jfif",
+        "techStack": ["Kotlin"],
+        "pinned": false
+      },
+      {
+        "id": "webgis-assignment-s8",
+        "title": "WebGIS Hospital at Kota Bogor",
+        "description": "This project is a simple Leaflet.js-based WebGIS that displays hospital locations in Bogor City. The data displayed is dummy/hardcoded and does not represent official data.",
+        "thumbnail": "/img/projects/webgis-banner.png",
+        "techStack": ["HTML", "CSS", "Javascript", "Leaflet.js"],
+        "pinned": false
+      },
+      {
+        "id": "easysell",
+        "title": "Easy Sell",
+        "description": "Step-by-step guides to help you start your online business with confidence, even if you're new to technology.",
+        "thumbnail": "/img/projects/easysell-banner.png",
+        "techStack": ["React", "Tailwind CSS", "Javascript", "Vite"],
+        "pinned": false
+      },
+      {
+        "id": "discord-bot",
+        "title": "Discord Bot (Crab Rave)",
+        "description": "Simple Bot to notify when someone in/out.",
+        "thumbnail": "/img/projects/discord-bot-banner.png",
+        "techStack": ["Node.js", "Javascript"],
+        "pinned": false
+      },
+      {
+        "id": "linktree-clone",
+        "title": "Linktree Clone",
+        "description": "This project just making simple things complicated, I just convert my vanilla linktree to React + Typescript. I didn't even break the code into components yet.",
+        "thumbnail": "/img/projects/linktree-clone-banner.png",
+        "techStack": ["React", "Typescript", "CSS"],
+        "pinned": false
+      },
+      {
+        "id": "spk-weighted-product",
+        "title": "Decision Support System in Javascript",
+        "description": "The Decision Support System (Sistem Pendukung Keputusan) for selecting outstanding students utilizes the Weighted Product (WP) method. This application allows users to input criteria, alternatives, and their respective scores to compute final scores for each alternative based on user-defined weights.",
+        "thumbnail": "/img/projects/spk-banner.png",
+        "techStack": ["React", "Javascript", "Tailwind CSS"],
+        "pinned": false
+      },
+      {
+        "id": "porto-web-html-tailwind",
+        "title": "Portofolio Web (HTML + Tailwind)",
+        "description": "Portofolio website when learning Tailwindcss using HTML.",
+        "thumbnail": "/img/projects/web-porto-tailwind-banner.png",
+        "techStack": ["HTML", "CSS", "Tailwind CSS", "Javascript"],
+        "pinned": false
+      },
+      {
         "id": "toursantara",
         "title": "Toursantara",
-        "description": "An integrated vacation trip planning app that simplifies travel planning by combining ML recommendations, mobile interface, and cloud backend.",
+        "description": "Toursantara, an integrated vacation trip planning app aimed at simplifying travel planning. Utilized technologies including JavaScript, Node.js, Docker, Python, and Kotlin, merging elements from Machine Learning, Mobile Development, and Cloud Computing",
         "thumbnail": "/img/projects/toursantara-banner.png",
-        "techStack": ["Javascript", "Node.js", "Docker", "Python", "Google Cloud Platform (GCP)"],
-        "featured": true
+        "techStack": [
+          "Google Cloud Platform (GCP)",
+          "Cloud Computing",
+          "Node.js",
+          "Docker",
+          "Hapi.js",
+          "Javascript"
+        ],
+        "pinned": true
       },
       {
-        "id": "ica-chatbot-platform",
-        "title": "ICA - AI Chatbot Builder Platform",
-        "description": "Enterprise chatbot platform with real-time STT, document training, and customizable appearance settings.",
-        "thumbnail": "/projects/ica-thumb.png",
-        "techStack": ["Next.js", "React", "Node.js", "MongoDB", "Python"],
-        "featured": true
+        "id": "personal-website-bootstrap",
+        "title": "Personal Website [Bootstrap]",
+        "description": "Portofolio website when learning Bootstrap using HTML",
+        "thumbnail": "/img/projects/web-bootstrap-banner.png",
+        "techStack": ["HTML", "CSS", "Bootstrap"],
+        "pinned": false
       },
       {
-        "id": "portfolio-site",
-        "title": "Portfolio Website",
-        "description": "Multi-language portfolio site built with modern web technologies and i18n support.",
-        "thumbnail": "/projects/portfolio-thumb.png",
-        "techStack": ["Next.js", "Typescript", "Tailwind CSS"],
-        "featured": false
+        "id": "personal-website-vanilla",
+        "title": "Personal Website Vanilla",
+        "description": "My second website, Vanilla Personal Website (HTML & CSS)",
+        "thumbnail": "/img/projects/web-second-banner.png",
+        "techStack": ["HTML", "CSS"],
+        "pinned": false
       }
     ]
   },
 
   "projectDetailPage": {
     "details": {
+      "pinje-portofolio": {
+        "title": "Portofolio",
+        "subtitle": "A modern, responsive personal portfolio website built with Next.js 16, TypeScript, and Tailwind CSS v4.",
+        "description": "A modern, responsive personal portfolio website built with Next.js 16, TypeScript, and Tailwind CSS v4. Features multi-language support (English, Indonesian, Japanese), dark/light theme, and a clean minimalist design.",
+        "images": ["/img/projects/portofolio-banner.png"],
+        "projectStart": "2025",
+        "deployedUrl": "https://pinje.vercel.app/",
+        "githubUrl": "https://github.com/pinje0/pinje",
+        "license": "MIT License",
+        "techStack": {
+          "languages": ["Typescript", "Javascript", "CSS"],
+          "frameworks": ["Next.js"],
+          "library": ["Tailwind CSS"],
+          "tools": ["Visual Studio Code"]
+        },
+        "features": [
+          "Multi-language Support - Available in English, Indonesian, and Japanese with instant language switching",
+          "Dark/Light Mode - Seamless theme switching with smooth transitions",
+          "Responsive Design - Fully optimized for desktop, tablet, and mobile devices",
+          "Modern Tech Stack - Built with Next.js 16, TypeScript, and Tailwind CSS v4",
+          "Accessible Components - Uses Radix UI primitives for keyboard navigation and screen reader support",
+          "Project Showcase - Interactive project gallery with detailed views",
+          "Certificate Gallery - Album-style certificate viewer with zoom and navigation",
+          "Skills Display - Categorized skills with icons for easy recognition",
+          "Experience Timeline - Professional experience and education history"
+        ],
+        "myRole": null,
+        "teamMembers": null
+      },
+      "blogspot-archive-scrapper": {
+        "title": "Blogspot Archive Scrapper",
+        "subtitle": "",
+        "description": "",
+        "images": ["/img/projects/blogspot-scrapper-banner.png"],
+        "projectStart": "2025",
+        "deployedUrl": null,
+        "githubUrl": "https://github.com/pinje0/blogspot-archive-scrapper",
+        "license": "MIT License",
+        "techStack": {
+          "languages": ["Python"],
+          "tools": ["Visual Studio Code"]
+        },
+        "features": [],
+        "myRole": null,
+        "teamMembers": null
+      },
+      "nt-sims-ppob": {
+        "title": "Nutech Frontend Dev (React) Test: SIMS PPOB",
+        "subtitle": "Dashboard website for Takehome Test Nutech Frontend Developer (React)",
+        "description": "Dashboard website for Takehome Test Nutech Frontend Developer (React)",
+        "images": ["/img/projects/sims-banner.png"],
+        "projectStart": "2025",
+        "deployedUrl": "https://nt-sims-ppob-melvin-austin.vercel.app/",
+        "githubUrl": "https://github.com/pinje0/nt-sims-ppob-melvin-austin",
+        "license": "MIT License",
+        "techStack": {
+          "frontend": ["Next.js", "Javascript"],
+          "library": ["Tailwind CSS", "Redux"],
+          "tools": ["Visual Studio Code"]
+        },
+        "features": [
+          "Registrasi",
+          "Login",
+          "Lihat Profile",
+          "Update Profile Data",
+          "Update Profile Picture",
+          "Top Up",
+          "Pembayaran",
+          "Riwayat Transaksi"
+        ],
+        "myRole": null,
+        "teamMembers": null
+      },
+      "what-to-cook": {
+        "title": "What to Cook",
+        "subtitle": "'What to Cook' is a web-based application designed to help users find recipes based on the ingredients they have.",
+        "description": "'What to Cook' is a web-based application designed to simplify meal planning by providing recipe recommendations based on ingredients you already have. The app aims to reduce food waste, enhance cooking experiences, and make meal preparation effortless for everyone.",
+        "images": ["/img/projects/what-to-cook-banner.png"],
+        "projectStart": "2025",
+        "deployedUrl": "https://what-to-cook-nu.vercel.app/",
+        "githubUrl": "https://github.com/pinje0/what-to-cook",
+        "license": "MIT License",
+        "techStack": {
+          "frontend": ["React", "Javascript"],
+          "styling": ["Tailwind CSS"],
+          "tools": ["Vite"]
+        },
+        "features": [
+          "Ingredient-Based Recipe Search: Enter the ingredients you have to get personalized recipe recommendations.",
+          "Save Favorites: Mark and save recipes for quick access later.",
+          "Recipe Details: View step-by-step instructions, cooking time, and necessary ingredients.",
+          "Dynamic Pagination: Access up to 5 recipes at a time, with smooth navigation.",
+          "Responsive Design: Optimized for both mobile and desktop viewing."
+        ],
+        "myRole": null,
+        "teamMembers": null
+      },
+      "lock-screen-app": {
+        "title": "Fake Screen Off",
+        "subtitle": "A simple Android app that simulates fakes screen off made because my power button stopped working.",
+        "description": "A simple Android app that simulates fakes screen off made because my power button stopped working.",
+        "images": ["/img/projects/lockscreen-banner.jfif"],
+        "projectStart": "2025",
+        "githubUrl": "https://github.com/pinje0/lock-screen-app",
+        "license": "MIT License",
+        "techStack": {
+          "languages": ["Kotlin"],
+          "tools": ["Visual Studio Code"]
+        },
+        "myRole": null,
+        "teamMembers": null
+      },
+      "webgis-assignment-s8": {
+        "title": "WebGIS Hospital at Kota Bogor",
+        "subtitle": "PLACEHOLDER_SUBTITLEThis project is a simple Leaflet.js-based WebGIS that displays hospital locations in Bogor City. The data displayed is dummy/hardcoded and does not represent official data.",
+        "description": "This project is a simple Leaflet.js-based WebGIS that displays hospital locations in Bogor City. The data displayed is dummy/hardcoded and does not represent official data.",
+        "images": ["/img/projects/webgis-banner.png"],
+        "projectStart": "2025",
+        "deployedUrl": "https://webgis-assignment-s8.vercel.app/",
+        "githubUrl": "https://github.com/pinje0/webgis-assignment-s8",
+        "license": "MIT License",
+        "techStack": {
+          "frontend": ["HTML", "CSS", "Javascript"],
+          "library": ["Leaflet.js"]
+        },
+        "features": [
+          "Displays a map of Bogor City with hospital locations.",
+          "Click on the marker (hospital icon) to view detailed hospital information.",
+          "Uses custom hospital icons for better visualization.",
+          "Modern and responsive interface with Bootstrap 5.",
+          "Displays the total number of hospitals on the map.",
+          "A warning explains that the data is simulated."
+        ],
+        "myRole": null,
+        "teamMembers": null
+      },
+      "easysell": {
+        "title": "Easy Sell",
+        "subtitle": "Step-by-step guides to help you start your online business with confidence, even if you're new to technology.",
+        "description": "Step-by-step guides to help you start your online business with confidence, even if you're new to technology.",
+        "images": ["/img/projects/easysell-banner.png"],
+        "projectStart": "2025",
+        "deployedUrl": "https://easysell-puce.vercel.app/",
+        "githubUrl": "https://github.com/pinje0/easysell",
+        "license": "MIT License",
+        "techStack": {
+          "frontend": ["React"],
+          "styling": ["Tailwind CSS"],
+          "tools": ["Vite"]
+        },
+        "myRole": null,
+        "teamMembers": null
+      },
+      "discord-bot": {
+        "title": "Discord Bot (Crab Rave)",
+        "description": "Simple Bot to notify when someone in/out.",
+        "images": ["/img/projects/discord-bot-banner.png"],
+        "projectStart": "2025",
+        "githubUrl": "https://github.com/pinje0/discord-bot",
+        "license": "MIT License",
+        "techStack": {
+          "languages": ["Javascript"],
+          "tools": ["Node.js"]
+        },
+        "myRole": null,
+        "teamMembers": null
+      },
+      "linktree-clone": {
+        "title": "Linktree Clone",
+        "description": "This project just making simple things complicated, I just convert my vanilla linktree to React + Typescript. I didn't even break the code into components yet.",
+        "images": ["/img/projects/linktree-clone-banner.png"],
+        "projectStart": "2025",
+        "deployedUrl": "https://pinje0.github.io/linktree/",
+        "githubUrl": "https://github.com/pinje0/linktree",
+        "license": "MIT License",
+        "techStack": {
+          "frontend": ["React", "Typescript"],
+          "styling": ["Tailwind CSS", "CSS"]
+        },
+        "myRole": null,
+        "teamMembers": null
+      },
+      "spk-weighted-product": {
+        "title": "Decision Support System in Javascript",
+        "subtitle": "Decision Support System Weight Product in Javascript",
+        "description": "The Decision Support System (Sistem Pendukung Keputusan) for selecting outstanding students utilizes the Weighted Product (WP) method. This application allows users to input criteria, alternatives, and their respective scores to compute final scores for each alternative based on user-defined weights.",
+        "images": ["/img/projects/spk-banner.png"],
+        "projectStart": "2024",
+        "deployedUrl": "https://10121709-spk-weighted-product.vercel.app/",
+        "githubUrl": "https://github.com/pinje0/spk-weighted-product",
+        "license": "MIT License",
+        "techStack": {
+          "frontend": ["React", "Javascript"],
+          "styling": ["CSS", "Tailwind CSS"],
+          "tools": ["Visual Studio Code"]
+        },
+        "myRole": null,
+        "teamMembers": null
+      },
+      "porto-web-html-tailwind": {
+        "title": "Portofolio Web (HTML + Tailwind)",
+        "description": "Making portofolio website while learning Tailwindcss with HTML",
+        "images": ["/img/projects/web-porto-tailwind-banner.png"],
+        "projectStart": "2024",
+        "deployedUrl": "https://yurak-twcss.vercel.app/",
+        "githubUrl": "https://github.com/pinje0/personal-website-tailwindcss",
+        "license": "MIT License",
+        "techStack": {
+          "frontend": ["HTML", "Javascript"],
+          "styling": ["CSS", "Tailwind CSS"]
+        },
+        "myRole": null,
+        "teamMembers": null
+      },
       "toursantara": {
         "title": "Toursantara",
-        "subtitle": "Integrated Vacation Trip Planning Application",
-        "description": "Toursantara is a comprehensive vacation planning application developed as a capstone project for Bangkit Academy 2024. The app aims to simplify travel planning by integrating machine learning recommendations, mobile development, and cloud computing technologies. Users can discover destinations, plan itineraries, and receive personalized travel suggestions all in one place.",
-        "images": [
-          "/img/projects/toursantara-banner.png",
-          "/projects/toursantara-2.png",
-          "/projects/toursantara-3.png"
-        ],
-        "projectStart": "February 2024",
-        "projectEnd": "July 2024",
-        "deployedUrl": null,
-        "githubUrl": "https://github.com/yourusername/toursantara",
+        "subtitle": "Toursantara, an integrated vacation trip planning app aimed at simplifying travel planning.",
+        "description": "Toursantara, an integrated vacation trip planning app aimed at simplifying travel planning. Utilized technologies including JavaScript, Node.js, Docker, Python, and Kotlin, merging elements from Machine Learning, Mobile Development, and Cloud Computing.",
+        "images": ["/img/projects/toursantara-banner.png"],
+        "projectStart": "2024",
+        "githubUrl": "https://github.com/Toursantara",
         "license": "MIT License",
         "techStack": {
           "languages": ["Javascript", "Python"],
-          "frameworks": ["Node.js", "hapi.js"],
+          "frameworks": ["Node.js", "Hapi.js"],
           "tools": ["Docker", "Google Cloud Platform (GCP)"]
         },
-        "features": [
-          "RESTful API for destination and user management",
-          "Machine learning-based destination recommendations",
-          "Cloud deployment using Docker and GCP Cloud Run",
-          "Comprehensive API documentation for scalability"
-        ],
-        "myRole": "Backend Developer & Cloud Engineer",
+        "myRole": "Backend Engineer & Cloud Engineer",
         "teamMembers": [
-          {
-            "name": "Team Member 1",
-            "role": "Machine Learning Engineer",
-            "linkedin": "https://linkedin.com/in/member1"
-          },
-          {
-            "name": "Team Member 2",
-            "role": "Mobile Developer",
-            "linkedin": "https://linkedin.com/in/member2"
-          }
-        ],
-        "demoVideo": null
+          "Fabiansyah Rinanto Suryadi",
+          "Mirza Avisena Djohan",
+          "Favian Naufal",
+          "Melvin Austin Korwa",
+          "Muhammad Zidan Hafidz",
+          "Muhammad Aditya Raytama",
+          "Muhammad Haikal Musyaffa"
+        ]
       },
-      "ica-chatbot-platform": {
-        "title": "ICA - AI Chatbot Builder Platform",
-        "subtitle": "Enterprise AI Chatbot Solution",
-        "description": "ICA is an enterprise-grade AI chatbot builder platform developed during my internship at Telkom Indonesia. The platform enables users to create, customize, and deploy intelligent chatbots with advanced features including real-time speech-to-text, document training, and comprehensive analytics. The system supports multi-modal interactions and provides detailed insights into chatbot performance and usage.",
-        "images": ["/projects/ica-1.png", "/projects/ica-2.png"],
-        "projectStart": "February 2025",
-        "projectEnd": "July 2025",
-        "deployedUrl": null,
-        "githubUrl": null,
-        "license": "Proprietary",
-        "techStack": {
-          "frontend": ["Next.js", "React", "Tailwind CSS", "Javascript"],
-          "backend": ["Node.js", "Restify", "Python"],
-          "database": ["MongoDB"],
-          "storage": ["MinIO"],
-          "testing": ["Mocha"]
-        },
-        "features": [
-          "Real-time Speech-to-Text with WebSocket integration",
-          "Document training with status tracking",
-          "Customizable chatbot appearance (avatar, colors, messages)",
-          "Analytics dashboard with token usage visualization",
-          "Audio/video transcription service",
-          "RESTful API with comprehensive documentation"
-        ],
-        "myRole": "Full Stack Developer Intern",
-        "teamMembers": null,
-        "demoVideo": null
-      },
-      "portfolio-site": {
-        "title": "Portfolio Website",
-        "subtitle": "Multi-language Personal Portfolio",
-        "description": "A modern, responsive portfolio website built with Next.js 14 and TypeScript. Features multi-language support (English, Indonesian, Japanese) using i18n, animated interactions, and a clean minimalist design. The site showcases my professional experience, projects, and technical skills with a focus on excellent user experience and accessibility.",
-        "images": ["/projects/portfolio-1.png"],
-        "projectStart": "November 2025",
-        "projectEnd": "Present",
-        "deployedUrl": "https://yourportfolio.com",
-        "githubUrl": "https://github.com/pinje0/portfolio",
+      "personal-website-bootstrap": {
+        "title": "Personal Website [Bootstrap]",
+        "description": "Portofolio website when learning Bootstrap using HTML",
+        "images": ["/img/projects/web-bootstrap-banner.png"],
+        "projectStart": "2023",
+        "githubUrl": "https://github.com/pinje0/personal-website-bootstrap",
         "license": "MIT License",
         "techStack": {
-          "frontend": ["Next.js", "Typescript", "React"],
-          "styling": ["Tailwind CSS"],
-          "tools": ["i18n"]
+          "frontend": ["HTML"],
+          "styling": ["CSS", "Bootstrap"]
         },
-        "features": [
-          "Multi-language support (EN, ID, JP)",
-          "Responsive design with mobile-first approach",
-          "Custom animated components and interactions",
-          "Dark/Light theme toggle",
-          "Timeline-based experience showcase",
-          "Project portfolio with detailed views"
-        ],
-        "myRole": "Solo Developer",
-        "teamMembers": null,
-        "demoVideo": null
+        "myRole": null,
+        "teamMembers": null
+      },
+      "personal-website-vanilla": {
+        "title": "Personal Website Vanilla",
+        "description": "My second website, Vanilla Personal Website (HTML & CSS)",
+        "images": ["/img/projects/web-second-banner.png"],
+        "projectStart": "2023",
+        "deployedUrl": "https://pinje-website.vercel.app/",
+        "githubUrl": "https://github.com/pinje0/vanilla-website",
+        "license": "MIT License",
+        "techStack": {
+          "frontend": ["HTML"],
+          "styling": ["CSS"]
+        },
+        "myRole": null,
+        "teamMembers": null
       }
     },
     "labels": {
@@ -193,38 +466,34 @@
   },
 
   "homePage": {
-    "hero": {
-      "greeting": "Hi, I'm Melvin Austin",
-      "tagline": "Full Stack Developer | Cloud Enthusiast"
-    },
     "experience": {
       "items": [
         {
           "role": "Full Stack  Developer Intern",
           "status": "past",
           "organization": "Katadata Indonesia",
-          "orgUrl": "https://www.linkedin.com/company/katadata",
+          "orgUrl": "https:/www.linkedin.com/company/katadata",
           "period": "Oct 2025 - Jan 2026"
         },
         {
           "role": "Full Stack Developer Intern",
           "status": "past",
           "organization": "Telkom Indonesia",
-          "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia",
+          "orgUrl": "https:/www.linkedin.com/company/telekomunikasi-indonesia",
           "period": "Feb 2025 - Jul 2025"
         },
         {
           "role": "Cloud Computing Graduate",
           "status": "past",
           "organization": "Bangkit Academy 2024",
-          "orgUrl": "https://linkedin.com/company/bangkit-academy",
+          "orgUrl": "https:/linkedin.com/company/bangkit-academy",
           "period": "Feb 2024 - Jul 2024"
         },
         {
           "role": "Information Technology Graduate",
           "status": "graduated",
           "organization": "Universitas Gunadarma",
-          "orgUrl": "https://www.linkedin.com/school/universitas-gunadarma/",
+          "orgUrl": "https:/www.linkedin.com/school/universitas-gunadarma/",
           "period": "2021 - 2025"
         }
       ],
@@ -250,27 +519,26 @@
       }
     },
     "socials": {
-      "title": "Find me on",
       "links": [
         {
           "name": "LinkedIn",
           "label": "LinkedIn",
-          "url": "https://www.linkedin.com/in/melvin-austin/"
+          "url": "https:/www.linkedin.com/in/melvin-austin/"
         },
         {
           "name": "GitHub",
           "label": "GitHub",
-          "url": "https://github.com/pinje0"
+          "url": "https:/github.com/pinje0"
         },
         {
           "name": "Steam",
           "label": "Steam",
-          "url": "https://steamcommunity.com/id/kyotorainn"
+          "url": "https:/steamcommunity.com/id/kyotorainn"
         },
         {
           "name": "Spotify",
           "label": "Spotify",
-          "url": "https://open.spotify.com/user/21mxjp3gplpyos5ef7ung3iwq"
+          "url": "https:/open.spotify.com/user/21mxjp3gplpyos5ef7ung3iwq"
         }
       ]
     }
@@ -281,13 +549,13 @@
     "items": [
       {
         "company": "Katadata Indonesia",
-        "orgUrl": "https://www.linkedin.com/company/katadata",
+        "orgUrl": "https:/www.linkedin.com/company/katadata",
         "employmentType": "Internship",
-        "duration": "4 Months",
+        "duration": "3 Months",
         "location": "Jakarta, Indonesia • Hybrid",
         "roles": [
           {
-            "title": "Full Stack Web Developer Intern",
+            "title": "Full Stack Developer Intern",
             "start": "Oct 2025",
             "end": "Jan 2026",
             "locationType": "Hybrid",
@@ -295,17 +563,16 @@
               "frontend": [
                 "Developed a user dashboard for an internal product platform using Next.js, TypeScript, and Tailwind CSS. Implemented features such as product creation, product management, and revenue visualization.",
                 "Built the COP30 microsite using Next.js (TypeScript) and Tailwind CSS for Katadata's coverage of the 30th UN climate conference (COP30).",
-                "Refactored and migrated asset dependencies for several Shorthand-based longform microsites, including 'Data Center Batang' and 'Hutan Hilang, Sumatra Tenggelam'.",
-                "Implemented a registration system for various events using HTML, CSS, and JavaScript with Laravel integration."
+                "Refactored and migrated asset dependencies for several Shorthand-based longform microsites, including 'Data Center Batam' and 'Hutan Hilang, Sumatra Tenggelam.'",
+                "Implemented a registration system for various events using Laravel and MySQL"
               ],
               "backend": [
-                "Developed backend payment functionality using Node.js (TypeScript), PostgreSQL, and Midtrans, and integrated the payment API with the frontend.",
-                "Implemented a registration system for various events using Laravel and MySQL."
+                "Developed backend payment using Node.js (TypeScript), PostgreSQL, and Midtrans, and integrated the payment API with the frontend."
               ]
             },
             "skills": [
               "Next.js",
-              "TypeScript",
+              "Typescript",
               "Tailwind CSS",
               "Node.js",
               "PostgreSQL",
@@ -314,14 +581,14 @@
               "MySQL",
               "HTML",
               "CSS",
-              "JavaScript"
+              "Javascript"
             ]
           }
         ]
       },
       {
         "company": "Telkom Indonesia",
-        "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia",
+        "orgUrl": "https:/www.linkedin.com/company/telekomunikasi-indonesia",
         "employmentType": "Internship",
         "duration": "6 Months",
         "location": "Jakarta, Indonesia • Hybrid",
@@ -343,14 +610,14 @@
               "backend": [
                 "Integrated an AI-powered audio/video transcription service by leveraging Python to handle file uploads and retrieve accurate transcriptions via API endpoints.",
                 "Built backend services for chatbot appearance customization settings in Node.js, including RESTful APIs using Restify, MongoDB integration, and MinIO for asset management. Wrote unit tests using Mocha for service reliability.",
-                "Created API documentation for the ICA project by converting the Postman collection to Excel, then structured and labeled the data to make backend endpoints easier to reference."
+                "Created API documentation for the ICA project by converting the Postman collection to Excel, then structured and labeled the data to make backend endpoints easier to reference"
               ]
             },
             "skills": [
               "Next.js",
               "React",
               "Tailwind CSS",
-              "TypeScript",
+              "Typescript",
               "WebSocket",
               "Node.js",
               "Restify",
@@ -365,8 +632,8 @@
       },
       {
         "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
-        "orgUrl": "https://www.linkedin.com/company/indosat",
-        "employmentType": "Learning Path",
+        "orgUrl": "https:/www.linkedin.com/company/idcamp/",
+        "employmentType": "Coding Scholarship Program",
         "duration": "7 Months",
         "location": "Online",
         "roles": [
@@ -375,27 +642,29 @@
             "start": "Dec 2024",
             "end": "Mar 2025",
             "locationType": "Remote",
-            "description": [
-              "Completed intermediate level back-end development learning path covering advanced concepts in server-side programming, database management, and API development."
-            ],
-            "skills": ["Node.js", "RESTful APIs", "Database Management", "Server Programming"]
+            "description": [],
+            "skills": ["Node.js", "PostgreSQL", "Javascript", "Hapi.js", "REST APIs", "Postman"]
           },
           {
             "title": "Back-End Developer - Beginner Level",
             "start": "Sep 2024",
             "end": "Dec 2024",
             "locationType": "Remote",
-            "description": [
-              "Completed beginner level back-end development learning path covering fundamental concepts of server-side programming, HTTP protocols, and basic database operations."
-            ],
-            "skills": ["JavaScript", "Node.js Basics", "HTTP", "Database Fundamentals"]
+            "description": [],
+            "skills": [
+              "Javascript",
+              "Node.js",
+              "Hapi.js",
+              "Amazon Web Service (AWS)",
+              "Artificial Intelligence (AI)"
+            ]
           }
         ]
       },
       {
         "company": "Bangkit Academy 2024",
-        "orgUrl": "https://linkedin.com/company/bangkit-academy",
-        "employmentType": "Cohort Program",
+        "orgUrl": "https:/www.linkedin.com/company/bangkit-academy/",
+        "employmentType": "Career Readiness Program",
         "duration": "6 Months",
         "location": "Online",
         "roles": [
@@ -412,21 +681,21 @@
               "Assisted in creating comprehensive API documentation to support project maintenance and scalability."
             ],
             "skills": [
-              "JavaScript",
+              "Google Cloud Platform (GCP)",
+              "Cloud Computing",
+              "Javascript",
               "Node.js",
               "Docker",
               "Python",
-              "Google Cloud Platform (GCP)",
-              "Hapi.js",
-              "GCP Cloud Run"
+              "Hapi.js"
             ]
           }
         ]
       },
       {
         "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
-        "orgUrl": "https://www.linkedin.com/company/indosat",
-        "employmentType": "Learning Path",
+        "orgUrl": "https:/www.linkedin.com/company/idcamp/",
+        "employmentType": "Coding Scholarship Program",
         "duration": "4 Months",
         "location": "Online",
         "roles": [
@@ -439,13 +708,13 @@
               "Developed a responsive web application using HTML, CSS, and JavaScript.",
               "Created a bookshelf application as a final project, and built a note-taking app using React."
             ],
-            "skills": ["React.js", "HTML", "CSS", "JavaScript"]
+            "skills": ["React", "HTML", "CSS", "Javascript"]
           }
         ]
       },
       {
         "company": "Dicoding Indonesia",
-        "orgUrl": "https://www.linkedin.com/company/dicoding",
+        "orgUrl": "https:/www.linkedin.com/company/dicoding",
         "employmentType": "Training Program",
         "duration": "4 Months",
         "location": "Online",
@@ -460,7 +729,7 @@
               "Learned Agile methodologies, including Scrum and Sprint planning, enhancing project management skills.",
               "Gained foundational skills in SQL for database management."
             ],
-            "skills": ["Figma", "UX Design", "Agile", "Scrum", "SQL", "Project Management"]
+            "skills": ["SQL", "Javascript", "User Experience (UX)", "Figma"]
           }
         ]
       }
@@ -478,16 +747,6 @@
     ]
   },
 
-  "labels": {
-    "employmentType": "Employment Type",
-    "location": "Location",
-    "skills": "Skills",
-    "present": "Present",
-    "remote": "Remote",
-    "onsite": "On-site",
-    "hybrid": "Hybrid"
-  },
-
   "footer": {
     "copyright": "© {year} pinje. All rights reserved."
   },
@@ -503,15 +762,6 @@
       "softSkills": "Soft Skills",
       "languageProficiency": "Language Proficiency"
     },
-    "categories": {
-      "languages": "Languages",
-      "frameworks": "Frameworks",
-      "tools": "Tools",
-      "databases": "Databases",
-      "cloud": "Cloud & DevOps",
-      "soft Skills": "Soft Skills",
-      "languages": "Languages"
-    },
     "proficiency": {
       "native": "Native",
       "fluent": "Fluent",
@@ -525,226 +775,32 @@
       "bahasa_indonesia": {
         "name": "Bahasa Indonesia",
         "level": "Native",
-        "level_display": "Native or Bilingual"
+        "level_display": "Native or Bilingual",
+        "locale": "id"
       },
       "english": {
         "name": "English",
         "level": "Limited working proficiency",
-        "level_display": "Limited Working Proficiency"
+        "level_display": "Limited Working Proficiency",
+        "locale": "en"
       },
       "japanese": {
         "name": "Japanese (日本語)",
         "level": "Elementary",
-        "level_display": "Elementary (A1)"
+        "level_display": "Elementary (A1)",
+        "locale": "jp"
       }
     },
-    "items": [
-      {
-        "name": "HTML",
-        "category": "languages",
-        "proficiency": "advanced",
-        "icon": "SiHtml5"
-      },
-      {
-        "name": "CSS",
-        "category": "languages",
-        "proficiency": "advanced",
-        "icon": "SiCss3"
-      },
-      {
-        "name": "JavaScript",
-        "category": "languages",
-        "proficiency": "advanced",
-        "icon": "SiJavascript"
-      },
-      {
-        "name": "TypeScript",
-        "category": "languages",
-        "proficiency": "advanced",
-        "icon": "SiTypescript"
-      },
-      {
-        "name": "Python",
-        "category": "languages",
-        "proficiency": "intermediate",
-        "icon": "SiPython"
-      },
-      {
-        "name": "PHP",
-        "category": "languages",
-        "proficiency": "basic",
-        "icon": "SiPhp"
-      },
-      {
-        "name": "Laravel",
-        "category": "frameworks",
-        "proficiency": "intermediate",
-        "icon": "SiLaravel"
-      },
-      {
-        "name": "Tailwind CSS",
-        "category": "frameworks",
-        "proficiency": "advanced",
-        "icon": "SiTailwindcss"
-      },
-      {
-        "name": "React.js",
-        "category": "frameworks",
-        "proficiency": "advanced",
-        "icon": "SiReact"
-      },
-      {
-        "name": "Bootstrap",
-        "category": "frameworks",
-        "proficiency": "intermediate",
-        "icon": "SiBootstrap"
-      },
-      {
-        "name": "Express.js",
-        "category": "frameworks",
-        "proficiency": "intermediate",
-        "icon": "SiExpress"
-      },
-      {
-        "name": "Next.js",
-        "category": "frameworks",
-        "proficiency": "advanced",
-        "icon": "SiNextdotjs"
-      },
-      {
-        "name": "Node.js",
-        "category": "frameworks",
-        "proficiency": "intermediate",
-        "icon": "SiNodedotjs"
-      },
-      {
-        "name": "Hapi.js",
-        "category": "frameworks",
-        "proficiency": "basic",
-        "icon": "SiHapi"
-      },
-      {
-        "name": "Restify",
-        "category": "frameworks",
-        "proficiency": "basic",
-        "icon": "Server"
-      },
-      {
-        "name": "MongoDB",
-        "category": "databases",
-        "proficiency": "intermediate",
-        "icon": "SiMongodb"
-      },
-      {
-        "name": "PostgreSQL",
-        "category": "databases",
-        "proficiency": "intermediate",
-        "icon": "SiPostgresql"
-      },
-      {
-        "name": "SQL",
-        "category": "databases",
-        "proficiency": "intermediate",
-        "icon": "SiMysql"
-      },
-      {
-        "name": "NoSQL",
-        "category": "databases",
-        "proficiency": "basic",
-        "icon": "Database"
-      },
-      {
-        "name": "MySQL",
-        "category": "databases",
-        "proficiency": "intermediate",
-        "icon": "SiMysql"
-      },
-      {
-        "name": "Git",
-        "category": "tools",
-        "proficiency": "advanced",
-        "icon": "SiGit"
-      },
-      {
-        "name": "Docker",
-        "category": "tools",
-        "proficiency": "intermediate",
-        "icon": "SiDocker"
-      },
-      {
-        "name": "Figma",
-        "category": "tools",
-        "proficiency": "intermediate",
-        "icon": "SiFigma"
-      },
-      {
-        "name": "Postman",
-        "category": "tools",
-        "proficiency": "intermediate",
-        "icon": "SiPostman"
-      },
-      {
-        "name": "MinIO",
-        "category": "tools",
-        "proficiency": "basic",
-        "icon": "Cloud"
-      },
-      {
-        "name": "Midtrans",
-        "category": "tools",
-        "proficiency": "basic",
-        "icon": "CreditCard"
-      },
-      {
-        "name": "Zustand",
-        "category": "tools",
-        "proficiency": "intermediate",
-        "icon": "SiZustand"
-      },
-      {
-        "name": "Cloud Computing",
-        "category": "cloud",
-        "proficiency": "basic",
-        "icon": "SiCloudflare"
-      },
-      {
-        "name": "Google Cloud Platform",
-        "category": "cloud",
-        "proficiency": "beginner",
-        "icon": "SiGooglecloud"
-      },
-      {
-        "name": "Problem Solving",
-        "category": "soft Skills",
-        "proficiency": "advanced",
-        "icon": "Lightbulb"
-      },
-      {
-        "name": "Team Collaboration",
-        "category": "soft Skills",
-        "proficiency": "advanced",
-        "icon": "Users"
-      },
-      {
-        "name": "Critical Thinking",
-        "category": "soft Skills",
-        "proficiency": "advanced",
-        "icon": "Brain"
-      },
-      {
-        "name": "Adaptability",
-        "category": "soft Skills",
-        "proficiency": "advanced",
-        "icon": "RefreshCw"
-      }
-    ]
+    "skills": {
+      "programmingLanguages": ["HTML", "CSS", "Javascript", "Typescript", "Python", "PHP"],
+      "frameworks": ["Tailwind CSS", "React", "Bootstrap", "Express.js", "Next.js", "Node.js", "Laravel"],
+      "databases": ["MongoDB", "PostgreSQL"],
+      "tools": ["Git", "Figma", "Postman", "Docker"],
+      "cloud": ["Google Cloud Platform (GCP)"]
+    }
   },
 
   "common": {
-    "loading": "Loading...",
-    "error": "Something went wrong",
-    "readMore": "Read more",
-    "learnMore": "Learn more",
     "lastUpdate": {
       "message": "Site is still under reconstruction",
       "label": "Last Update",
@@ -756,168 +812,139 @@
   "certificatesPage": {
     "title": "Certificates",
     "labels": {
-      "noCertificates": "No certificates to display yet."
+      "noCertificates": "No certificates to display yet.",
+      "search": "Search certificates...",
+      "sortBy": "Sort by",
+      "newestFirst": "Newest first",
+      "oldestFirst": "Oldest first",
+      "modal": {
+        "close": "Close",
+        "previousCertificate": "Previous certificate",
+        "nextCertificate": "Next certificate",
+        "viewCredential": "View Credential",
+        "goToCertificate": "Go to certificate {n}"
+      }
     },
     "items": [
+      {
+        "id": "english-business",
+        "title": "English for Business Communication",
+        "organization": "The British Institute",
+        "date": "2024",
+        "thumbnail": "/img/certificates/english-business.png",
+        "credentialUrl": "https:/drive.google.com/file/d/1VOdJK_eCWIrow8Yvh7LlFSEFmzReV7Ti/view"
+      },
       {
         "id": "google-it-support",
         "title": "Google IT Support Specialization",
         "organization": "Google",
         "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
+        "thumbnail": "/img/certificates/google-it-support.jpeg",
+        "credentialUrl": "https:/www.coursera.org/account/accomplishments/specialization/HWMBCFKJYVSJ"
       },
       {
         "id": "google-cloud-foundations",
         "title": "Google Cloud Computing Foundations",
         "organization": "Google Cloud",
         "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "belajar-dasar-web",
-        "title": "Belajar Dasar Pemrograman Web",
-        "organization": "Dicoding Indonesia",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "aws-cloud-practitioner",
-        "title": "Cloud Practitioner Essentials (AWS Cloud)",
-        "organization": "Amazon Web Services",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
+        "thumbnail": "/img/certificates/google-skills.png",
+        "credentialUrl": "https://www.skills.google/public_profiles/b0d61c2e-5c20-4fe3-9327-a7688f3b62d0"
       },
       {
         "id": "google-cloud-engineer",
         "title": "Menjadi Google Cloud Engineer",
         "organization": "Google Cloud",
         "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
+        "thumbnail": "/img/certificates/menjadi-google-cloud-engineer.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/72ZDV8D3JZYW"
+      },
+      {
+        "id": "aws-cloud-practitioner",
+        "title": "Cloud Practitioner Essentials (AWS Cloud)",
+        "organization": "Amazon Web Services",
+        "date": "2024",
+        "thumbnail": "/img/certificates/cloud-practitioner.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/JMZV3Y09NPN9"
+      },
+      {
+        "id": "javascript-dasar",
+        "title": "Belajar Dasar Pemrograman JavaScript",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/img/certificates/dasar-js.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/6RPNV9KQ4Z2M"
+      },
+      {
+        "id": "dasar-pemrograman",
+        "title": "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/img/certificates/dasasr-pemograman.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/N9ZOON4EDZG5"
+      },
+      {
+        "id": "belajar-dasar-web",
+        "title": "Belajar Dasar Pemrograman Web",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/img/certificates/belajar-dasar-pemrograman-web.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/81P2V677YPOY"
+      },
+      {
+        "id": "python-prosedural",
+        "title": "Belajar Pemrograman Prosedural dengan Python",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/img/certificates/prosedural-python.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/07Z6W4KMMZQR"
+      },
+      {
+        "id": "backend-pemula-js",
+        "title": "Belajar Back-End Pemula dengan JavaScript",
+        "organization": "Dicoding Indonesia",
+        "date": "2024",
+        "thumbnail": "/img/certificates/be-js.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/NVP7452NRPR0"
       },
       {
         "id": "react-web-app",
         "title": "Belajar Membuat Aplikasi Web dengan React",
         "organization": "Dicoding Indonesia",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
+        "date": "2023",
+        "thumbnail": "/img/certificates/belajar-membuat-aplikasi-web-dengan-react.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/4EXG4KR59PRL"
       },
       {
         "id": "react-frontend-pemula",
         "title": "Belajar Membuat Front-End Web untuk Pemula",
         "organization": "Dicoding Indonesia",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
+        "date": "2023",
+        "thumbnail": "/img/certificates/react-pemula.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/4EXG4NE5DPRL"
       },
       {
         "id": "manajemen-proyek",
         "title": "Belajar Dasar Manajemen Proyek",
         "organization": "Dicoding Indonesia",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
+        "date": "2023",
+        "thumbnail": "/img/certificates/dasar-manajemen.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/EYX46E4LRPDL"
       },
       {
         "id": "belajar-sql",
         "title": "Belajar Dasar Structured Query Language (SQL)",
         "organization": "Dicoding Indonesia",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
+        "date": "2023",
+        "thumbnail": "/img/certificates/dasar-sql.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/1RXY6V42MZVM"
       },
       {
         "id": "ux-design-dasar",
         "title": "Belajar Dasar UX Design",
         "organization": "Dicoding Indonesia",
         "date": "2023",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "javascript-dasar",
-        "title": "Belajar Dasar Pemrograman JavaScript",
-        "organization": "Dicoding Indonesia",
-        "date": "2023",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "dasar-pemrograman",
-        "title": "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
-        "organization": "Dicoding Indonesia",
-        "date": "2023",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "python-prosedural",
-        "title": "Belajar Pemrograman Prosedural dengan Python",
-        "organization": "Dicoding Indonesia",
-        "date": "2023",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "backend-pemula-js",
-        "title": "Belajar Back-End Pemula dengan JavaScript",
-        "organization": "Dicoding Indonesia",
-        "date": "2023",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "english-business",
-        "title": "English for Business Communication",
-        "organization": "The British Institute",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "bangkit-capstone",
-        "title": "Bangkit Academy 2024 Certificate of Completion",
-        "organization": "Bangkit Academy by Google, Gojek, Tokopedia & Traveloka",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "google-cloud-essentials",
-        "title": "Google Cloud Essentials",
-        "organization": "Google Cloud",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "google-cloud-compute",
-        "title": "Perform Foundational Infrastructure Tasks in Google Cloud",
-        "organization": "Google Cloud",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "google-cloud-hybrid",
-        "title": "Set Up a Google Cloud Notebook Environment",
-        "organization": "Google Cloud",
-        "date": "2024",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
-      },
-      {
-        "id": "intermediate-python",
-        "title": "Intermediate Python",
-        "organization": "Sololearn",
-        "date": "2023",
-        "thumbnail": "/certificates/placeholder.png",
-        "credentialUrl": "#"
+        "thumbnail": "/img/certificates/dasar-ux.png",
+        "credentialUrl": "https://www.dicoding.com/certificates/6RPNWEMG4P2M"
       }
     ]
   }

@@ -13,7 +13,29 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  webpack: (config, { dev, isServer }) => {
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+          {
+            key: "X-Frame-Options",
+            value: "DENY",
+          },
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
+          },
+        ],
+      },
+    ];
+  },
+
+  webpack: (config, { dev }) => {
     if (dev) {
       config.devtool = "eval-cheap-module-source-map";
       config.ignoreWarnings = [/Failed to parse source map/, /sourceMapURL could not be parsed/];

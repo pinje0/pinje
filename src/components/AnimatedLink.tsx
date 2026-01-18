@@ -12,6 +12,18 @@ interface AnimatedLinkProps
   href: string;
 }
 
+function isValidUrl(url: string): boolean {
+  if (!url || typeof url !== "string") return false;
+  if (url.startsWith("/") || url.startsWith("#")) return true;
+  if (url.startsWith("mailto:") || url.startsWith("tel:")) return true;
+  try {
+    const parsed = new URL(url);
+    return ["http:", "https:"].includes(parsed.protocol);
+  } catch {
+    return false;
+  }
+}
+
 export default function AnimatedLink({
   href,
   children,
@@ -22,6 +34,12 @@ export default function AnimatedLink({
 }: AnimatedLinkProps) {
   const isExternal =
     typeof href === "string" && (href.startsWith("http://") || href.startsWith("https://"));
+  const isValid = typeof href === "string" && isValidUrl(href);
+
+  if (!isValid) {
+    console.warn(`Invalid URL detected: ${href}`);
+    return null;
+  }
 
   return (
     <Link

@@ -19,6 +19,13 @@ interface CertificateModalProps {
   onClose: () => void;
   certificates: Certificate[];
   initialIndex: number;
+  labels?: {
+    close?: string;
+    previousCertificate?: string;
+    nextCertificate?: string;
+    viewCredential?: string;
+    goToCertificate?: string;
+  };
 }
 
 export default function CertificateModal({
@@ -26,6 +33,7 @@ export default function CertificateModal({
   onClose,
   certificates,
   initialIndex,
+  labels = {},
 }: CertificateModalProps) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [mounted, setMounted] = useState(false);
@@ -81,7 +89,7 @@ export default function CertificateModal({
           <button
             onClick={onClose}
             className="absolute top-4 right-4 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors z-10"
-            aria-label="Close"
+            aria-label={labels.close || "Close"}
           >
             <X className="h-5 w-5" />
           </button>
@@ -103,7 +111,7 @@ export default function CertificateModal({
                     goToPrev();
                   }}
                   className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors"
-                  aria-label="Previous certificate"
+                  aria-label={labels.previousCertificate || "Previous certificate"}
                 >
                   <ChevronLeft className="h-6 w-6" />
                 </button>
@@ -113,7 +121,7 @@ export default function CertificateModal({
                     goToNext();
                   }}
                   className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors"
-                  aria-label="Next certificate"
+                  aria-label={labels.nextCertificate || "Next certificate"}
                 >
                   <ChevronRight className="h-6 w-6" />
                 </button>
@@ -135,7 +143,7 @@ export default function CertificateModal({
                   rel="noopener noreferrer"
                   className="text-xs px-3 py-1.5 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors shrink-0"
                 >
-                  View Credential
+                  {labels.viewCredential || "View Credential"}
                 </a>
               )}
             </div>
@@ -152,7 +160,7 @@ export default function CertificateModal({
                         ? "bg-primary"
                         : "bg-muted hover:bg-muted-foreground/50"
                     )}
-                    aria-label={`Go to certificate ${index + 1}`}
+                    aria-label={(labels.goToCertificate || "Go to certificate {n}").replace("{n}", String(index + 1))}
                   />
                 ))}
               </div>

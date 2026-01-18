@@ -23,12 +23,15 @@ import {
   SiExpress,
   SiGit,
   SiPostman,
-  SiCloudflare,
+  SiMysql,
+  SiRedux,
+  SiVite,
+  SiKotlin,
+  SiLeaflet,
 } from "react-icons/si";
-import {
-  LuBrain,
-  LuRefreshCw,
-} from "react-icons/lu";
+import { GiArtificialIntelligence } from "react-icons/gi";
+import { TbCloudComputing, TbSql } from "react-icons/tb";
+import { VscVscode } from "react-icons/vsc";
 
 export const skillIcons: Record<string, React.ReactNode> = {
   "Next.js": <SiNextdotjs />,
@@ -54,12 +57,15 @@ export const skillIcons: Record<string, React.ReactNode> = {
   "Express.js": <SiExpress />,
   "Git": <SiGit />,
   "Postman": <SiPostman />,
-  "Cloud Computing": <SiCloudflare />,
   "NoSQL": <SiMongodb />,
   "SQL/PostgreSQL": <SiPostgresql />,
-  "Critical Thinking": <LuBrain />,
-  "Adaptability": <LuRefreshCw />,
-  "hapi.js": <span className="text-xs font-bold">hapi</span>,
-  "Restify": <span className="text-xs font-bold">restify</span>,
-  "i18n": <span className="text-xs font-bold">i18n</span>,
+  "MySQL": <SiMysql />,
+  "Artificial Intelligence (AI)": <GiArtificialIntelligence />,
+  "Cloud Computing": <TbCloudComputing />,
+  "SQL": <TbSql />,
+  "Redux": <SiRedux />,
+  "Vite": <SiVite />,
+  "Kotlin": <SiKotlin />,
+  "Leaflet.js": <SiLeaflet />,
+  "Visual Studio Code": <VscVscode />,
 };
