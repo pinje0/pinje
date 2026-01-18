@@ -2,7 +2,7 @@
 
 A modern, responsive personal portfolio website built with Next.js 16, TypeScript, and Tailwind CSS v4. Features multi-language support (English, Indonesian, Japanese), dark/light theme, and a clean minimalist design.
 
-![Portfolio Preview](./preview.png)
+![Portfolio Preview](/public//img/projects/portofolio-banner.png)
 
 ## Features
 
@@ -37,7 +37,7 @@ A modern, responsive personal portfolio website built with Next.js 16, TypeScrip
 
 ```bash
 # Clone the repository
-git clone https://github.com/pinje0/portfolio.git
+git clone https://github.com/pinje0/pinje
 cd portfolio
 
 # Install dependencies
