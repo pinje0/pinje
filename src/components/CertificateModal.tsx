@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react-hooks/set-state-in-effect */
+
 import { useEffect, useCallback, useState } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
@@ -36,9 +38,10 @@ export default function CertificateModal({
   labels = {},
 }: CertificateModalProps) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState(() => false);
 
   useEffect(() => {
+    // Intentionally setting state in effect for hydration safety
     setMounted(true);
   }, []);
 
@@ -52,7 +55,9 @@ export default function CertificateModal({
 
   useEffect(() => {
     if (isOpen) {
-      setCurrentIndex(initialIndex);
+      if (currentIndex !== initialIndex) {
+        setCurrentIndex(initialIndex);
+      }
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
@@ -60,7 +65,7 @@ export default function CertificateModal({
     return () => {
       document.body.style.overflow = "";
     };
-  }, [isOpen, initialIndex]);
+  }, [isOpen, initialIndex, currentIndex]);
 
   useEffect(() => {
     if (!isOpen) return;

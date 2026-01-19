@@ -12,6 +12,40 @@ interface CertificateItem {
   credentialUrl?: string;
 }
 
+interface CertificatesPageLabels {
+  title: string;
+  items: CertificateItem[];
+  labels: {
+    viewDetails: string;
+    noCertificates: string;
+    search: string;
+    filterBy: string;
+    sortBy: string;
+    allTech: string;
+    newestFirst: string;
+    oldestFirst: string;
+    pinned: string;
+  };
+  modal: {
+    close?: string;
+    previousCertificate?: string;
+    nextCertificate?: string;
+    viewCredential?: string;
+    goToCertificate?: string;
+  };
+}
+
+interface MetaPages {
+  pages: {
+    certificates: string;
+  };
+}
+
+interface Dictionary {
+  meta: MetaPages;
+  certificatesPage: CertificatesPageLabels;
+}
+
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "id" }, { locale: "jp" }];
 }
@@ -22,7 +56,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = (await getDictionary(locale)) as any;
+  const t = await getDictionary(locale) as unknown as Dictionary;
 
   return {
     title: t.meta.pages.certificates,
@@ -39,10 +73,10 @@ export default async function CertificatesPage({
   const validLocales = ["en", "id", "jp"];
   if (!validLocales.includes(locale)) notFound();
 
-  const t = (await getDictionary(locale)) as any;
-  const certificates = t.certificatesPage.items as CertificateItem[];
-  const labels = t.certificatesPage?.labels || {};
-  const modalLabels = labels.modal || {};
+  const t = await getDictionary(locale) as unknown as Dictionary;
+  const certificates = t.certificatesPage.items;
+  const labels = t.certificatesPage?.labels || ({} as CertificatesPageLabels["labels"]);
+  const modalLabels = t.certificatesPage?.modal || {};
 
   return <CertificatesGrid certificates={certificates} title={t.certificatesPage.title} labels={labels} modalLabels={modalLabels} />;
 }

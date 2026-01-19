@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react-hooks/set-state-in-effect */
+
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
@@ -13,9 +15,30 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { Moon, Sun, Menu, X } from "lucide-react";
 import AnimatedLink from "./AnimatedLink";
 
+interface NavbarLabels {
+  navbar: {
+    links: {
+      home: string;
+      experience: string;
+      projects: string;
+      skills: string;
+      certificates: string;
+    };
+    language: {
+      en: string;
+      id: string;
+      jp: string;
+      label: string;
+    };
+    theme: {
+      label: string;
+    };
+  };
+}
+
 interface NavbarProps {
   locale: string;
-  t: any;
+  t: NavbarLabels;
 }
 
 export default function Navbar({ locale, t }: NavbarProps) {
@@ -26,7 +49,10 @@ export default function Navbar({ locale, t }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    // Intentionally setting state in effect for hydration safety
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);

@@ -14,14 +14,7 @@ interface TeamMember {
   linkedin: string;
 }
 
-interface ProjectItem {
-  id: string;
-  title: string;
-  description: string;
-  thumbnail: string;
-  techStack: string[];
-  featured: boolean;
-}
+type TeamMemberEntry = TeamMember | string;
 
 interface ProjectDetail {
   title: string;
@@ -36,8 +29,39 @@ interface ProjectDetail {
   techStack: Record<string, string[]>;
   features: string[];
   myRole?: string;
-  teamMembers?: TeamMember[] | null;
+  teamMembers?: TeamMemberEntry[] | null;
   demoVideo?: string | null;
+}
+
+interface MetaPages {
+  pages: {
+    projects: string;
+  };
+}
+
+interface ProjectDetailLabels {
+  backToProjects: string;
+  viewProject: string;
+  viewCode: string;
+  overview: string;
+  features: string;
+  techStack: string;
+  team: string;
+  screenshots: string;
+  demo: string;
+  projectInfo: string;
+  timeline: string;
+  myRole: string;
+  quickLinks: string;
+  [key: string]: string;
+}
+
+interface ProjectDetailPageDictionary {
+  meta: MetaPages;
+  projectDetailPage: {
+    labels: ProjectDetailLabels;
+    details: Record<string, ProjectDetail>;
+  };
 }
 
 export async function generateStaticParams() {
@@ -45,7 +69,7 @@ export async function generateStaticParams() {
   const params: { locale: string; id: string }[] = [];
 
   for (const locale of locales) {
-    const t = await getDictionary(locale) as any;
+    const t = await getDictionary(locale) as unknown as ProjectDetailPageDictionary;
     const projects = t.projectDetailPage?.details;
     if (projects) {
       Object.keys(projects).forEach((id) => {
@@ -63,7 +87,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string; id: string }>;
 }): Promise<Metadata> {
   const { locale, id } = await params;
-  const t = await getDictionary(locale) as any;
+  const t = await getDictionary(locale) as unknown as ProjectDetailPageDictionary;
 
   const project = t.projectDetailPage?.details?.[id];
   if (!project) return { title: "Project Not Found" };
@@ -83,9 +107,9 @@ export default async function ProjectDetailPage({
   const validLocales = ["en", "id", "jp"];
   if (!validLocales.includes(locale)) notFound();
 
-  const t = await getDictionary(locale) as any;
+  const t = await getDictionary(locale) as unknown as ProjectDetailPageDictionary;
   const project = t.projectDetailPage?.details?.[id] as ProjectDetail;
-  const labels = t.projectDetailPage?.labels || {};
+  const labels = t.projectDetailPage?.labels || {} as ProjectDetailLabels;
 
   if (!project) notFound();
 
@@ -214,12 +238,18 @@ export default async function ProjectDetailPage({
                 {labels.team}
               </h2>
               <div className="space-y-2">
-                {project.teamMembers.map((member: TeamMember, index: number) => (
+                {project.teamMembers?.map((member: TeamMemberEntry, index: number) => (
                   <div key={index} className="text-[14px]">
-                    <AnimatedLink href={member.linkedin} mode="text">
-                      {member.name}
-                    </AnimatedLink>
-                    <span className="text-muted-foreground"> - {member.role}</span>
+                    {typeof member === "string" ? (
+                      <span>{member}</span>
+                    ) : (
+                      <>
+                        <AnimatedLink href={member.linkedin} mode="text">
+                          {member.name}
+                        </AnimatedLink>
+                        <span className="text-muted-foreground"> - {member.role}</span>
+                      </>
+                    )}
                   </div>
                 ))}
               </div>

@@ -478,13 +478,41 @@
         },
         "myRole": "バックエンドエンジニア & クラウドエンジニア",
         "teamMembers": [
-          "Fabiansyah Rinanto Suryadi",
-          "Mirza Avisena Djohan",
-          "Favian Naufal",
-          "Melvin Austin Korwa",
-          "Muhammad Zidan Hafidz",
-          "Muhammad Aditya Raytama",
-          "Muhammad Haikal Musyaffa"
+          {
+            "name": "Fabiansyah Rinanto Suryadi",
+            "role": "Machine Learning",
+            "linkedin": "https://www.linkedin.com/in/fabiansyah-rinanto-suryadi/"
+          },
+          {
+            "name": "Mirza Avisena Djohan",
+            "role": "Machine Learning",
+            "linkedin": "https://www.linkedin.com/in/mirza-djohan/"
+          },
+          {
+            "name": "Favian Naufal",
+            "role": "Machine Learning",
+            "linkedin": "https://www.linkedin.com/in/favian-naufal/"
+          },
+          {
+            "name": "Melvin Austin Korwa",
+            "role": "Cloud Computing",
+            "linkedin": "https://www.linkedin.com/in/melvin-austin/"
+          },
+          {
+            "name": "Muhammad Zidan Hafidz",
+            "role": "Cloud Computing",
+            "linkedin": "https://www.linkedin.com/in/zidan-hafidz-3aa8b4220/"
+          },
+          {
+            "name": "Muhammad Aditya Raytama",
+            "role": "Mobile Dev",
+            "linkedin": "https://www.linkedin.com/in/muhammadadityaraytama/"
+          },
+          {
+            "name": "Muhammad Haikal Musyaffa",
+            "role": "Mobile Dev",
+            "linkedin": "https://www.linkedin.com/in/muhammad-haikal-musyaffa-279856172/"
+          }
         ]
       },
       "personal-website-bootstrap": {

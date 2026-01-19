@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 
 export function useMenuDictionary(locale: string) {
-  const [t, setT] = useState<any>(null);
+  const [t, setT] = useState<Record<string, unknown> | null>(null);
 
   useEffect(() => {
     async function loadDict() {
-      let dict;
+      let dict: Record<string, unknown>;
 
       switch (locale) {
         case "id":

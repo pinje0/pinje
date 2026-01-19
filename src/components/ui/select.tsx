@@ -48,7 +48,21 @@ interface SelectItemProps {
 }
 
 function SelectItem({ value, children }: SelectItemProps) {
-  return <option value={value}>{children}</option>;
+  const getTextContent = (node: React.ReactNode): string => {
+    if (typeof node === "string") return node;
+    if (typeof node === "number") return String(node);
+    if (React.isValidElement(node) && node.props && typeof node.props === "object" && "children" in node.props) {
+      const props = node.props as { children: React.ReactNode };
+      const childArray = Array.isArray(props.children) ? props.children : [props.children];
+      return childArray.map(getTextContent).join("");
+    }
+    return "";
+  };
+
+  const childArray = React.Children.toArray(children);
+  const textContent = childArray.map(getTextContent).join("") || value;
+
+  return <option value={value}>{textContent}</option>;
 }
 
 export { Select, SelectItem };
