@@ -65,7 +65,7 @@ export default function CertificateModal({
     return () => {
       document.body.style.overflow = "";
     };
-  }, [isOpen, initialIndex, currentIndex]);
+  }, [isOpen, initialIndex]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -104,7 +104,7 @@ export default function CertificateModal({
               src={certificate.thumbnail}
               alt={certificate.title}
               fill
-              className="object-contain"
+              className="object-contain pointer-events-none"
               priority
             />
 
@@ -115,7 +115,7 @@ export default function CertificateModal({
                     e.stopPropagation();
                     goToPrev();
                   }}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors z-20"
                   aria-label={labels.previousCertificate || "Previous certificate"}
                 >
                   <ChevronLeft className="h-6 w-6" />
@@ -125,7 +125,7 @@ export default function CertificateModal({
                     e.stopPropagation();
                     goToNext();
                   }}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors z-20"
                   aria-label={labels.nextCertificate || "Next certificate"}
                 >
                   <ChevronRight className="h-6 w-6" />
