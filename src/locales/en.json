@@ -36,7 +36,7 @@
       {
         "id": "blogspot-archive-scrapper",
         "title": "Blogspot Archive Scrapper",
-        "description": "",
+        "description": "A Python web scraping tool that extracts fanfiction content from Blogspot blogs via the Internet Archive and exports it to Word documents (.docx format).",
         "thumbnail": "/img/projects/blogspot-scrapper-banner.png",
         "techStack": ["Python"],
         "pinned": false
@@ -181,7 +181,7 @@
       "blogspot-archive-scrapper": {
         "title": "Blogspot Archive Scrapper",
         "subtitle": "",
-        "description": "",
+        "description": "A Python web scraping tool that extracts fanfiction content from Blogspot blogs via the Internet Archive and exports it to Word documents (.docx format).",
         "images": ["/img/projects/blogspot-scrapper-banner.png"],
         "projectStart": "2025",
         "deployedUrl": null,
@@ -500,28 +500,28 @@
           "role": "Full Stack  Developer Intern",
           "status": "past",
           "organization": "Katadata Indonesia",
-          "orgUrl": "https:/www.linkedin.com/company/katadata",
+          "orgUrl": "https://www.linkedin.com/company/katadata",
           "period": "Oct 2025 - Jan 2026"
         },
         {
           "role": "Full Stack Developer Intern",
           "status": "past",
           "organization": "Telkom Indonesia",
-          "orgUrl": "https:/www.linkedin.com/company/telekomunikasi-indonesia",
+          "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia",
           "period": "Feb 2025 - Jul 2025"
         },
         {
           "role": "Cloud Computing Graduate",
           "status": "past",
           "organization": "Bangkit Academy 2024",
-          "orgUrl": "https:/linkedin.com/company/bangkit-academy",
+          "orgUrl": "https://linkedin.com/company/bangkit-academy",
           "period": "Feb 2024 - Jul 2024"
         },
         {
           "role": "Information Technology Graduate",
           "status": "graduated",
           "organization": "Universitas Gunadarma",
-          "orgUrl": "https:/www.linkedin.com/school/universitas-gunadarma/",
+          "orgUrl": "https://www.linkedin.com/school/universitas-gunadarma/",
           "period": "2021 - 2025"
         }
       ],
@@ -551,22 +551,22 @@
         {
           "name": "LinkedIn",
           "label": "LinkedIn",
-          "url": "https:/www.linkedin.com/in/melvin-austin/"
+          "url": "https://www.linkedin.com/in/melvin-austin/"
         },
         {
           "name": "GitHub",
           "label": "GitHub",
-          "url": "https:/github.com/pinje0"
+          "url": "https://github.com/pinje0"
         },
         {
           "name": "Steam",
           "label": "Steam",
-          "url": "https:/steamcommunity.com/id/kyotorainn"
+          "url": "https://steamcommunity.com/id/kyotorainn"
         },
         {
           "name": "Spotify",
           "label": "Spotify",
-          "url": "https:/open.spotify.com/user/21mxjp3gplpyos5ef7ung3iwq"
+          "url": "https://open.spotify.com/user/21mxjp3gplpyos5ef7ung3iwq"
         }
       ]
     }
@@ -577,7 +577,7 @@
     "items": [
       {
         "company": "Katadata Indonesia",
-        "orgUrl": "https:/www.linkedin.com/company/katadata",
+        "orgUrl": "https://www.linkedin.com/company/katadata",
         "employmentType": "Internship",
         "duration": "3 Months",
         "location": "Jakarta, Indonesia • Hybrid",
@@ -616,7 +616,7 @@
       },
       {
         "company": "Telkom Indonesia",
-        "orgUrl": "https:/www.linkedin.com/company/telekomunikasi-indonesia",
+        "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia",
         "employmentType": "Internship",
         "duration": "6 Months",
         "location": "Jakarta, Indonesia • Hybrid",
@@ -660,7 +660,7 @@
       },
       {
         "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
-        "orgUrl": "https:/www.linkedin.com/company/idcamp/",
+        "orgUrl": "https://www.linkedin.com/company/idcamp/",
         "employmentType": "Coding Scholarship Program",
         "duration": "7 Months",
         "location": "Online",
@@ -691,7 +691,7 @@
       },
       {
         "company": "Bangkit Academy 2024",
-        "orgUrl": "https:/www.linkedin.com/company/bangkit-academy/",
+        "orgUrl": "https://www.linkedin.com/company/bangkit-academy/",
         "employmentType": "Career Readiness Program",
         "duration": "6 Months",
         "location": "Online",
@@ -722,7 +722,7 @@
       },
       {
         "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
-        "orgUrl": "https:/www.linkedin.com/company/idcamp/",
+        "orgUrl": "https://www.linkedin.com/company/idcamp/",
         "employmentType": "Coding Scholarship Program",
         "duration": "4 Months",
         "location": "Online",
@@ -742,7 +742,7 @@
       },
       {
         "company": "Dicoding Indonesia",
-        "orgUrl": "https:/www.linkedin.com/company/dicoding",
+        "orgUrl": "https://www.linkedin.com/company/dicoding",
         "employmentType": "Training Program",
         "duration": "4 Months",
         "location": "Online",
@@ -868,7 +868,7 @@
         "organization": "The British Institute",
         "date": "2024",
         "thumbnail": "/img/certificates/english-business.png",
-        "credentialUrl": "https:/drive.google.com/file/d/1VOdJK_eCWIrow8Yvh7LlFSEFmzReV7Ti/view"
+        "credentialUrl": "https://drive.google.com/file/d/1VOdJK_eCWIrow8Yvh7LlFSEFmzReV7Ti/view"
       },
       {
         "id": "google-it-support",
@@ -876,7 +876,7 @@
         "organization": "Google",
         "date": "2024",
         "thumbnail": "/img/certificates/google-it-support.jpeg",
-        "credentialUrl": "https:/www.coursera.org/account/accomplishments/specialization/HWMBCFKJYVSJ"
+        "credentialUrl": "https://www.coursera.org/account/accomplishments/specialization/HWMBCFKJYVSJ"
       },
       {
         "id": "google-cloud-foundations",

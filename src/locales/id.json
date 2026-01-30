@@ -136,7 +136,7 @@
       {
         "id": "blogspot-archive-scrapper",
         "title": "Blogspot Archive Scrapper",
-        "description": "",
+        "description": "Alat peng scraping web Python yang mengekstrak konten fanfiction dari blog Blogspot melalui Internet Archive dan mengekspornya ke dokumen Word (.docx format).",
         "thumbnail": "/img/projects/blogspot-scrapper-banner.png",
         "techStack": ["Python"],
         "pinned": false
@@ -281,7 +281,7 @@
       "blogspot-archive-scrapper": {
         "title": "Blogspot Archive Scrapper",
         "subtitle": "",
-        "description": "",
+        "description": "Alat peng scraping web Python yang mengekstrak konten fanfiction dari blog Blogspot melalui Internet Archive dan mengekspornya ke dokumen Word (.docx format).",
         "images": ["/img/projects/blogspot-scrapper-banner.png"],
         "projectStart": "2025",
         "deployedUrl": null,

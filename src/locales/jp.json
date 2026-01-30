@@ -136,7 +136,7 @@
       {
         "id": "blogspot-archive-scrapper",
         "title": "Blogspot Archive Scrapper",
-        "description": "",
+        "description": "インターネットアーカイブを通じてBlogspotブログからファンフィクションコンテンツを抽出し、Word文書（.docx形式）にエクスポートするPythonのウェブスクレイピングツール。",
         "thumbnail": "/img/projects/blogspot-scrapper-banner.png",
         "techStack": ["Python"],
         "pinned": false
@@ -281,7 +281,7 @@
       "blogspot-archive-scrapper": {
         "title": "Blogspot Archive Scrapper",
         "subtitle": "",
-        "description": "",
+        "description": "インターネットアーカイブを通じてBlogspotブログからファンフィクションコンテンツを抽出し、Word文書（.docx形式）にエクスポートするPythonのウェブスクレイピングツール。",
         "images": ["/img/projects/blogspot-scrapper-banner.png"],
         "projectStart": "2025",
         "deployedUrl": null,
