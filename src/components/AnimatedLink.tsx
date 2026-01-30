@@ -3,8 +3,7 @@ import { cn } from "@/lib/utils";
 import { AnchorHTMLAttributes, ReactNode } from "react";
 
 interface AnimatedLinkProps
-  extends Omit<LinkProps, "href">,
-    AnchorHTMLAttributes<HTMLAnchorElement> {
+  extends Omit<LinkProps, "href">, AnchorHTMLAttributes<HTMLAnchorElement> {
   children: ReactNode;
   block?: boolean;
   className?: string;
@@ -53,7 +52,7 @@ export default function AnimatedLink({
         className={cn(
           "link-rise-bg inline-block align-baseline",
           mode === "text" && "link-reset",
-          className?.includes("flex") && "!flex" // Override inline-block if flex is needed
+          className?.includes("flex") && "!flex", // Override inline-block if flex is needed
         )}
       >
         {children}
