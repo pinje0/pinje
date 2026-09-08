@@ -39,14 +39,14 @@
           "role": "Intern Web Developer Full Stack",
           "status": "past",
           "organization": "Katadata Indonesia",
-          "orgUrl": "https://www.linkedin.com/company/katadata",
+          "orgUrl": "https://linkedin.com/company/katadata",
           "period": "Okt 2025 - Jan 2026"
         },
         {
           "role": "Intern Full Stack Developer",
           "status": "past",
           "organization": "Telkom Indonesia",
-          "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia",
+          "orgUrl": "https://linkedin.com/company/telekomunikasi-indonesia",
           "period": "Feb 2025 - Jul 2025"
         },
         {
@@ -60,7 +60,7 @@
           "role": "Lulusan Teknologi Informasi",
           "status": "graduated",
           "organization": "Universitas Gunadarma",
-          "orgUrl": "https://www.linkedin.com/school/universitas-gunadarma/",
+          "orgUrl": "https://linkedin.com/school/universitas-gunadarma/",
           "period": "2021 - 2025"
         }
       ],
@@ -74,13 +74,13 @@
       "text": "Perjalanan saya dimulai sebagai programmer otodidak, dan sejak saat itu, saya terus belajar dan berkembang melalui berbagai proyek, dengan fokus khusus pada Frontend Development. Seiring waktu, saya berkembang ke Full-Stack Development dan saat ini sedang memperdalam kemampuan saya di teknologi backend dan layanan cloud. Didorong oleh pembelajaran berkelanjutan dan rasa ingin tahu terhadap teknologi baru, saya selalu mencari peluang untuk menghadapi tantangan baru dan berkembang sebagai developer."
     },
     "current": {
-      "status": "Terbuka untuk Bekerja",
-      "role": "Full Stack Developer",
+      "status": "Frontend Developer (R&D)",
+      "role": "@",
       "preposition": "",
-      "company": "",
-      "companyUrl": "",
-      "startDate": "",
-      "endDate": "",
+      "company": "Helios Informatika Nusantara",
+      "companyUrl": "https://linkedin.com/company/pt--helios-informatika-nusantara",
+      "startDate": "Apr 2026",
+      "endDate": "Sekarang",
       "labels": {
         "dateSeparator": " - "
       }
@@ -90,7 +90,7 @@
         {
           "name": "LinkedIn",
           "label": "LinkedIn",
-          "url": "https://www.linkedin.com/in/melvin-austin/"
+          "url": "https://linkedin.com/in/melvin-austin/"
         },
         {
           "name": "GitHub",
@@ -481,37 +481,37 @@
           {
             "name": "Fabiansyah Rinanto Suryadi",
             "role": "Machine Learning",
-            "linkedin": "https://www.linkedin.com/in/fabiansyah-rinanto-suryadi/"
+            "linkedin": "https://linkedin.com/in/fabiansyah-rinanto-suryadi/"
           },
           {
             "name": "Mirza Avisena Djohan",
             "role": "Machine Learning",
-            "linkedin": "https://www.linkedin.com/in/mirza-djohan/"
+            "linkedin": "https://linkedin.com/in/mirza-djohan/"
           },
           {
             "name": "Favian Naufal",
             "role": "Machine Learning",
-            "linkedin": "https://www.linkedin.com/in/favian-naufal/"
+            "linkedin": "https://linkedin.com/in/favian-naufal/"
           },
           {
             "name": "Melvin Austin Korwa",
             "role": "Cloud Computing",
-            "linkedin": "https://www.linkedin.com/in/melvin-austin/"
+            "linkedin": "https://linkedin.com/in/melvin-austin/"
           },
           {
             "name": "Muhammad Zidan Hafidz",
             "role": "Cloud Computing",
-            "linkedin": "https://www.linkedin.com/in/zidan-hafidz-3aa8b4220/"
+            "linkedin": "https://linkedin.com/in/zidan-hafidz-3aa8b4220/"
           },
           {
             "name": "Muhammad Aditya Raytama",
             "role": "Mobile Dev",
-            "linkedin": "https://www.linkedin.com/in/muhammadadityaraytama/"
+            "linkedin": "https://linkedin.com/in/muhammadadityaraytama/"
           },
           {
             "name": "Muhammad Haikal Musyaffa",
             "role": "Mobile Dev",
-            "linkedin": "https://www.linkedin.com/in/muhammad-haikal-musyaffa-279856172/"
+            "linkedin": "https://linkedin.com/in/muhammad-haikal-musyaffa-279856172/"
           }
         ]
       },
@@ -574,12 +574,43 @@
 
   "experiencePage": {
     "title": "Pengalaman",
+    "labels": {
+      "month": "Bulan",
+      "months": "Bulan"
+    },
     "items": [
       {
+        "company": "PT Helios Informatika Nusantara",
+        "orgUrl": "https://linkedin.com/company/pt--helios-informatika-nusantara",
+        "employmentType": "Full Time",
+        "startMonth": "2026-04",
+        "endMonth": null,
+        "location": "Jakarta, Indonesia • Hybrid",
+        "roles": [
+          {
+            "title": "Frontend Developer - R&D",
+            "start": "Apr 2026",
+            "end": "Sekarang",
+            "locationType": "Hybrid",
+            "description": "Frontend dev yang juga mengerjakan hal-hal backend. Ya, pada dasarnya fullstack developer.",
+            "skills": [
+              "Next.js",
+              "Go",
+              "Typescript",
+              "Redux.js",
+              "PostgreSQL",
+              "Cloud Firestore",
+              "NoSQL"
+            ]
+          }
+        ]
+      },
+      {
         "company": "Katadata Indonesia",
-        "orgUrl": "https://www.linkedin.com/company/katadata",
+        "orgUrl": "https://linkedin.com/company/katadata",
         "employmentType": "Magang",
-        "duration": "3 Bulan",
+        "startMonth": "2025-10",
+        "endMonth": "2026-01",
         "location": "Jakarta, Indonesia • Hybrid",
         "roles": [
           {
@@ -616,9 +647,10 @@
       },
       {
         "company": "Telkom Indonesia",
-        "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia",
+        "orgUrl": "https://linkedin.com/company/telekomunikasi-indonesia",
         "employmentType": "Magang",
-        "duration": "6 Bulan",
+        "startMonth": "2025-02",
+        "endMonth": "2025-07",
         "location": "Jakarta, Indonesia • Hybrid",
         "roles": [
           {
@@ -660,9 +692,10 @@
       },
       {
         "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
-        "orgUrl": "https://www.linkedin.com/company/idcamp/",
+        "orgUrl": "https://linkedin.com/company/idcamp/",
         "employmentType": "Program Beasiswa Coding",
-        "duration": "7 Bulan",
+        "startMonth": "2024-09",
+        "endMonth": "2025-03",
         "location": "Online",
         "roles": [
           {
@@ -691,9 +724,10 @@
       },
       {
         "company": "Bangkit Academy 2024",
-        "orgUrl": "https://www.linkedin.com/company/bangkit-academy/",
+        "orgUrl": "https://linkedin.com/company/bangkit-academy/",
         "employmentType": "Program Persiapan Karir",
-        "duration": "6 Bulan",
+        "startMonth": "2024-02",
+        "endMonth": "2024-07",
         "location": "Online",
         "roles": [
           {
@@ -722,9 +756,10 @@
       },
       {
         "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
-        "orgUrl": "https://www.linkedin.com/company/idcamp/",
+        "orgUrl": "https://linkedin.com/company/idcamp/",
         "employmentType": "Program Beasiswa Coding",
-        "duration": "4 Bulan",
+        "startMonth": "2023-09",
+        "endMonth": "2023-12",
         "location": "Online",
         "roles": [
           {
@@ -742,9 +777,10 @@
       },
       {
         "company": "Dicoding Indonesia",
-        "orgUrl": "https://www.linkedin.com/company/dicoding",
+        "orgUrl": "https://linkedin.com/company/dicoding",
         "employmentType": "Program Pelatihan",
-        "duration": "4 Bulan",
+        "startMonth": "2023-08",
+        "endMonth": "2023-11",
         "location": "Online",
         "roles": [
           {
@@ -832,7 +868,7 @@
     "lastUpdate": {
       "message": "Situs masih dalam perbaikan",
       "label": "Pembaruan Terakhir",
-      "date": "Januari 2026",
+      "date": "September 2026",
       "translationWarning": "Terjemahan tidak dijamin 100% akurat"
     }
   },

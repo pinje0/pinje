@@ -381,37 +381,37 @@
           {
             "name": "Fabiansyah Rinanto Suryadi",
             "role": "Machine Learning",
-            "linkedin": "https://www.linkedin.com/in/fabiansyah-rinanto-suryadi/"
+            "linkedin": "https://linkedin.com/in/fabiansyah-rinanto-suryadi/"
           },
           {
             "name": "Mirza Avisena Djohan",
             "role": "Machine Learning",
-            "linkedin": "https://www.linkedin.com/in/mirza-djohan/"
+            "linkedin": "https://linkedin.com/in/mirza-djohan/"
           },
           {
             "name": "Favian Naufal",
             "role": "Machine Learning",
-            "linkedin": "https://www.linkedin.com/in/favian-naufal/"
+            "linkedin": "https://linkedin.com/in/favian-naufal/"
           },
           {
             "name": "Melvin Austin Korwa",
             "role": "Cloud Computing",
-            "linkedin": "https://www.linkedin.com/in/melvin-austin/"
+            "linkedin": "https://linkedin.com/in/melvin-austin/"
           },
           {
             "name": "Muhammad Zidan Hafidz",
             "role": "Cloud Computing",
-            "linkedin": "https://www.linkedin.com/in/zidan-hafidz-3aa8b4220/"
+            "linkedin": "https://linkedin.com/in/zidan-hafidz-3aa8b4220/"
           },
           {
             "name": "Muhammad Aditya Raytama",
             "role": "Mobile Dev",
-            "linkedin": "https://www.linkedin.com/in/muhammadadityaraytama/"
+            "linkedin": "https://linkedin.com/in/muhammadadityaraytama/"
           },
           {
             "name": "Muhammad Haikal Musyaffa",
             "role": "Mobile Dev",
-            "linkedin": "https://www.linkedin.com/in/muhammad-haikal-musyaffa-279856172/"
+            "linkedin": "https://linkedin.com/in/muhammad-haikal-musyaffa-279856172/"
           }
         ]
       },
@@ -500,14 +500,14 @@
           "role": "Full Stack  Developer Intern",
           "status": "past",
           "organization": "Katadata Indonesia",
-          "orgUrl": "https://www.linkedin.com/company/katadata",
+          "orgUrl": "https://linkedin.com/company/katadata",
           "period": "Oct 2025 - Jan 2026"
         },
         {
           "role": "Full Stack Developer Intern",
           "status": "past",
           "organization": "Telkom Indonesia",
-          "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia",
+          "orgUrl": "https://linkedin.com/company/telekomunikasi-indonesia",
           "period": "Feb 2025 - Jul 2025"
         },
         {
@@ -521,7 +521,7 @@
           "role": "Information Technology Graduate",
           "status": "graduated",
           "organization": "Universitas Gunadarma",
-          "orgUrl": "https://www.linkedin.com/school/universitas-gunadarma/",
+          "orgUrl": "https://linkedin.com/school/universitas-gunadarma/",
           "period": "2021 - 2025"
         }
       ],
@@ -535,13 +535,13 @@
       "text": "My journey began as a self-taught programmer, and since then, I've been learning and growing through various projects, with a special focus on Frontend Development. Over time, I've expanded into Full-Stack Development and am now deepening my skills in backend technologies and cloud services. Driven by continuous learning and a curiosity for new technologies, I'm always looking for opportunities to take on new challenges and grow as a developer."
     },
     "current": {
-      "status": "Currently Unemployed",
-      "role": "| Open to work",
+      "status": "Frontend Developer (R&D)",
+      "role": "@",
       "preposition": "",
-      "company": "",
-      "companyUrl": "",
-      "startDate": "",
-      "endDate": "",
+      "company": "Helios Informatika Nusantara",
+      "companyUrl": "https://linkedin.com/company/pt--helios-informatika-nusantara",
+      "startDate": "Apr 2026",
+      "endDate": "Present",
       "labels": {
         "dateSeparator": " - "
       }
@@ -551,7 +551,7 @@
         {
           "name": "LinkedIn",
           "label": "LinkedIn",
-          "url": "https://www.linkedin.com/in/melvin-austin/"
+          "url": "https://linkedin.com/in/melvin-austin/"
         },
         {
           "name": "GitHub",
@@ -574,12 +574,43 @@
 
   "experiencePage": {
     "title": "Experience",
+    "labels": {
+      "month": "Month",
+      "months": "Months"
+    },
     "items": [
       {
+        "company": "PT Helios Informatika Nusantara",
+        "orgUrl": "https://linkedin.com/company/pt--helios-informatika-nusantara",
+        "employmentType": "Full Time",
+        "startMonth": "2026-04",
+        "endMonth": null,
+        "location": "Jakarta, Indonesia • Hybrid",
+        "roles": [
+          {
+            "title": "Frontend Developer - R&D",
+            "start": "Apr 2026",
+            "end": "Present",
+            "locationType": "Hybrid",
+            "description": "FE dev also doing BE stuff. Well... basically a fullstack dev.",
+            "skills": [
+              "Next.js",
+              "Go",
+              "Typescript",
+              "Redux.js",
+              "PostgreSQL",
+              "Cloud Firestore",
+              "NoSQL"
+            ]
+          }
+        ]
+      },
+      {
         "company": "Katadata Indonesia",
-        "orgUrl": "https://www.linkedin.com/company/katadata",
+        "orgUrl": "https://linkedin.com/company/katadata",
         "employmentType": "Internship",
-        "duration": "3 Months",
+        "startMonth": "2025-10",
+        "endMonth": "2026-01",
         "location": "Jakarta, Indonesia • Hybrid",
         "roles": [
           {
@@ -616,9 +647,10 @@
       },
       {
         "company": "Telkom Indonesia",
-        "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia",
+        "orgUrl": "https://linkedin.com/company/telekomunikasi-indonesia",
         "employmentType": "Internship",
-        "duration": "6 Months",
+        "startMonth": "2025-02",
+        "endMonth": "2025-07",
         "location": "Jakarta, Indonesia • Hybrid",
         "roles": [
           {
@@ -660,9 +692,10 @@
       },
       {
         "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
-        "orgUrl": "https://www.linkedin.com/company/idcamp/",
+        "orgUrl": "https://linkedin.com/company/idcamp/",
         "employmentType": "Coding Scholarship Program",
-        "duration": "7 Months",
+        "startMonth": "2024-09",
+        "endMonth": "2025-03",
         "location": "Online",
         "roles": [
           {
@@ -691,9 +724,10 @@
       },
       {
         "company": "Bangkit Academy 2024",
-        "orgUrl": "https://www.linkedin.com/company/bangkit-academy/",
+        "orgUrl": "https://linkedin.com/company/bangkit-academy/",
         "employmentType": "Career Readiness Program",
-        "duration": "6 Months",
+        "startMonth": "2024-02",
+        "endMonth": "2024-07",
         "location": "Online",
         "roles": [
           {
@@ -722,9 +756,10 @@
       },
       {
         "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
-        "orgUrl": "https://www.linkedin.com/company/idcamp/",
+        "orgUrl": "https://linkedin.com/company/idcamp/",
         "employmentType": "Coding Scholarship Program",
-        "duration": "4 Months",
+        "startMonth": "2023-09",
+        "endMonth": "2023-12",
         "location": "Online",
         "roles": [
           {
@@ -742,9 +777,10 @@
       },
       {
         "company": "Dicoding Indonesia",
-        "orgUrl": "https://www.linkedin.com/company/dicoding",
+        "orgUrl": "https://linkedin.com/company/dicoding",
         "employmentType": "Training Program",
-        "duration": "4 Months",
+        "startMonth": "2023-08",
+        "endMonth": "2023-11",
         "location": "Online",
         "roles": [
           {
@@ -840,7 +876,7 @@
     "lastUpdate": {
       "message": "Site is still under reconstruction",
       "label": "Last Update",
-      "date": "January 2026",
+      "date": "September 2026",
       "translationWarning": "Translation not guaranteed to be 100% accurate"
     }
   },

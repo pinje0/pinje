@@ -39,14 +39,14 @@
           "role": "フルスタックWeb開発インターン",
           "status": "past",
           "organization": "Katadata Indonesia",
-          "orgUrl": "https://www.linkedin.com/company/katadata",
+          "orgUrl": "https://linkedin.com/company/katadata",
           "period": "2025年10月 - 2026年1月"
         },
         {
           "role": "フルスタック開発インターン",
           "status": "past",
           "organization": "Telkom Indonesia",
-          "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia",
+          "orgUrl": "https://linkedin.com/company/telekomunikasi-indonesia",
           "period": "2025年2月 - 2025年7月"
         },
         {
@@ -60,7 +60,7 @@
           "role": "情報工学卒業生",
           "status": "graduated",
           "organization": "Gunadarma University",
-          "orgUrl": "https://www.linkedin.com/school/universitas-gunadarma/",
+          "orgUrl": "https://linkedin.com/school/universitas-gunadarma/",
           "period": "2021年 - 2025年"
         }
       ],
@@ -74,13 +74,13 @@
       "text": "私の旅は独学のプログラマーとして始まり、それ以来、様々なプロジェクトを通じて学び、成長してきました。特にフロントエンド開発に重点を置いています。時間が経つにつれて、フルスタック開発に拡大し、現在はバックエンド技術とクラウドサービスのスキルを深めています。継続的な学習と新しい技術への好奇心に駆られ、常に新しい課題に取り組み、開発者として成長する機会を探しています。"
     },
     "current": {
-      "status": "就職活動中",
-      "role": "フルスタックデベロッパー",
+      "status": "フロントエンド開発者 (R&D)",
+      "role": "@",
       "preposition": "",
-      "company": "",
-      "companyUrl": "",
-      "startDate": "",
-      "endDate": "",
+      "company": "Helios Informatika Nusantara",
+      "companyUrl": "https://linkedin.com/company/pt--helios-informatika-nusantara",
+      "startDate": "2026年4月",
+      "endDate": "現在",
       "labels": {
         "dateSeparator": " - "
       }
@@ -90,7 +90,7 @@
         {
           "name": "LinkedIn",
           "label": "LinkedIn",
-          "url": "https://www.linkedin.com/in/melvin-austin/"
+          "url": "https://linkedin.com/in/melvin-austin/"
         },
         {
           "name": "GitHub",
@@ -481,37 +481,37 @@
           {
             "name": "Fabiansyah Rinanto Suryadi",
             "role": "Machine Learning",
-            "linkedin": "https://www.linkedin.com/in/fabiansyah-rinanto-suryadi/"
+            "linkedin": "https://linkedin.com/in/fabiansyah-rinanto-suryadi/"
           },
           {
             "name": "Mirza Avisena Djohan",
             "role": "Machine Learning",
-            "linkedin": "https://www.linkedin.com/in/mirza-djohan/"
+            "linkedin": "https://linkedin.com/in/mirza-djohan/"
           },
           {
             "name": "Favian Naufal",
             "role": "Machine Learning",
-            "linkedin": "https://www.linkedin.com/in/favian-naufal/"
+            "linkedin": "https://linkedin.com/in/favian-naufal/"
           },
           {
             "name": "Melvin Austin Korwa",
             "role": "Cloud Computing",
-            "linkedin": "https://www.linkedin.com/in/melvin-austin/"
+            "linkedin": "https://linkedin.com/in/melvin-austin/"
           },
           {
             "name": "Muhammad Zidan Hafidz",
             "role": "Cloud Computing",
-            "linkedin": "https://www.linkedin.com/in/zidan-hafidz-3aa8b4220/"
+            "linkedin": "https://linkedin.com/in/zidan-hafidz-3aa8b4220/"
           },
           {
             "name": "Muhammad Aditya Raytama",
             "role": "Mobile Dev",
-            "linkedin": "https://www.linkedin.com/in/muhammadadityaraytama/"
+            "linkedin": "https://linkedin.com/in/muhammadadityaraytama/"
           },
           {
             "name": "Muhammad Haikal Musyaffa",
             "role": "Mobile Dev",
-            "linkedin": "https://www.linkedin.com/in/muhammad-haikal-musyaffa-279856172/"
+            "linkedin": "https://linkedin.com/in/muhammad-haikal-musyaffa-279856172/"
           }
         ]
       },
@@ -574,12 +574,43 @@
 
   "experiencePage": {
     "title": "経歴",
+    "labels": {
+      "month": "ヶ月",
+      "months": "ヶ月"
+    },
     "items": [
       {
+        "company": "PT Helios Informatika Nusantara",
+        "orgUrl": "https://linkedin.com/company/pt--helios-informatika-nusantara",
+        "employmentType": "フルタイム",
+        "startMonth": "2026-04",
+        "endMonth": null,
+        "location": "インドネシア・ジャカルタ ハイブリッド",
+        "roles": [
+          {
+            "title": "フロントエンドデベロッパー - R&D",
+            "start": "2026年4月",
+            "end": "現在",
+            "locationType": "ハイブリッド",
+            "description": "FE開発者としてバックエンド関連の仕事も担当しています。まあ、基本的にはフルスタック開発者です。",
+            "skills": [
+              "Next.js",
+              "Go",
+              "Typescript",
+              "Redux.js",
+              "PostgreSQL",
+              "Cloud Firestore",
+              "NoSQL"
+            ]
+          }
+        ]
+      },
+      {
         "company": "Katadata Indonesia",
-        "orgUrl": "https://www.linkedin.com/company/katadata",
+        "orgUrl": "https://linkedin.com/company/katadata",
         "employmentType": "インターンシップ",
-        "duration": "3ヶ月",
+        "startMonth": "2025-10",
+        "endMonth": "2026-01",
         "location": "インドネシア・ジャカルタ ハイブリッド",
         "roles": [
           {
@@ -616,9 +647,10 @@
       },
       {
         "company": "Telkom Indonesia",
-        "orgUrl": "https://www.linkedin.com/company/telekomunikasi-indonesia",
+        "orgUrl": "https://linkedin.com/company/telekomunikasi-indonesia",
         "employmentType": "インターンシップ",
-        "duration": "6ヶ月",
+        "startMonth": "2025-02",
+        "endMonth": "2025-07",
         "location": "インドネシア・ジャカルタ ハイブリッド",
         "roles": [
           {
@@ -660,9 +692,10 @@
       },
       {
         "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
-        "orgUrl": "https://www.linkedin.com/company/idcamp/",
+        "orgUrl": "https://linkedin.com/company/idcamp/",
         "employmentType": "コーディング奨学金プログラム",
-        "duration": "7ヶ月",
+        "startMonth": "2024-09",
+        "endMonth": "2025-03",
         "location": "オンライン",
         "roles": [
           {
@@ -691,9 +724,10 @@
       },
       {
         "company": "Bangkit Academy 2024",
-        "orgUrl": "https://www.linkedin.com/company/bangkit-academy/",
+        "orgUrl": "https://linkedin.com/company/bangkit-academy/",
         "employmentType": "キャリア準備プログラム",
-        "duration": "6ヶ月",
+        "startMonth": "2024-02",
+        "endMonth": "2024-07",
         "location": "オンライン",
         "roles": [
           {
@@ -722,9 +756,10 @@
       },
       {
         "company": "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
-        "orgUrl": "https://www.linkedin.com/company/idcamp/",
+        "orgUrl": "https://linkedin.com/company/idcamp/",
         "employmentType": "コーディング奨学金プログラム",
-        "duration": "4ヶ月",
+        "startMonth": "2023-09",
+        "endMonth": "2023-12",
         "location": "オンライン",
         "roles": [
           {
@@ -742,9 +777,10 @@
       },
       {
         "company": "Dicoding Indonesia",
-        "orgUrl": "https://www.linkedin.com/company/dicoding",
+        "orgUrl": "https://linkedin.com/company/dicoding",
         "employmentType": "トレーニングプログラム",
-        "duration": "4ヶ月",
+        "startMonth": "2023-08",
+        "endMonth": "2023-11",
         "location": "オンライン",
         "roles": [
           {
@@ -832,7 +868,7 @@
     "lastUpdate": {
       "message": "サイトは現在改修中です",
       "label": "最終更新",
-      "date": "2026年1月",
+      "date": "2026年9月",
       "translationWarning": "翻訳が100%正確であることが保証されていません"
     }
   },

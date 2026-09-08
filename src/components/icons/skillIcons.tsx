@@ -28,6 +28,7 @@ import {
   SiVite,
   SiKotlin,
   SiLeaflet,
+  SiGo,
 } from "react-icons/si";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { TbCloudComputing, TbSql } from "react-icons/tb";
@@ -57,7 +58,6 @@ export const skillIcons: Record<string, React.ReactNode> = {
   "Express.js": <SiExpress />,
   "Git": <SiGit />,
   "Postman": <SiPostman />,
-  "NoSQL": <SiMongodb />,
   "SQL/PostgreSQL": <SiPostgresql />,
   "MySQL": <SiMysql />,
   "Artificial Intelligence (AI)": <GiArtificialIntelligence />,
@@ -68,4 +68,5 @@ export const skillIcons: Record<string, React.ReactNode> = {
   "Kotlin": <SiKotlin />,
   "Leaflet.js": <SiLeaflet />,
   "Visual Studio Code": <VscVscode />,
+  "Go": <SiGo />,
 };

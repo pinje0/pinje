@@ -4,6 +4,22 @@ import EducationItem from "@/components/timeline/EducationItem";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
+export const dynamic = "force-dynamic";
+
+function formatDuration(
+  startMonth: string,
+  endMonth: string | null,
+  labels: { month: string; months: string }
+) {
+  const [sy, sm] = startMonth.split("-").map(Number);
+  const now = new Date();
+  const [ey, em] = endMonth
+    ? endMonth.split("-").map(Number)
+    : [now.getFullYear(), now.getMonth() + 1];
+  const months = Math.max(1, (ey - sy) * 12 + (em - sm) + 1);
+  return `${months} ${months === 1 ? labels.month : labels.months}`;
+}
+
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "id" }, { locale: "jp" }];
 }
@@ -41,7 +57,7 @@ export default async function ExperiencePage({ params }: { params: Promise<{ loc
           company={item.company}
           orgUrl={item.orgUrl}
           employmentType={item.employmentType}
-          duration={item.duration}
+          duration={formatDuration(item.startMonth, item.endMonth, t.experiencePage.labels)}
           location={item.location}
           roles={item.roles}
         />
